@@ -37,7 +37,7 @@ export default function Home() {
           >
             {/* Logo */}
             <div className="mb-8 md:mb-10 inline-block">
-               <img src="/yvagaguazu_logo.png" alt="Yvaga Guazú Logo" className="w-44 md:w-56 lg:w-64 drop-shadow-xl" />
+               <img src="/YvagaGuazuLogoPNG.png" alt="Yvaga Guazú Logo" className="w-44 md:w-56 lg:w-64 drop-shadow-xl" />
             </div>
             
             <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-yvaga-white leading-[1.2] font-medium mb-6 md:mb-8 w-full max-w-none">
