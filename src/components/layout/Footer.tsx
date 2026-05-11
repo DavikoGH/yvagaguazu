@@ -5,7 +5,7 @@ export default function Footer() {
         <div className="text-center md:text-left">
           <h3 className="font-serif text-3xl mb-2 text-yvaga-white">Yvaga Guazú</h3>
           <p className="opacity-80 text-sm font-sans">
-            Donde la naturaleza se protege... y tú vuelves a sentirla.
+            Donde la Naturaleza se protege... y tú vuelves a sentirla.
           </p>
         </div>
         <div className="flex gap-6 opacity-60 text-sm">

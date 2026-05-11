@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { motion, animate, useInView } from "motion/react";
 import { Leaf, Navigation, Trees, Heart, Users, MapPin, CheckCircle, ShieldCheck } from "lucide-react";
@@ -36,13 +36,14 @@ export default function Home() {
             className="w-full max-w-4xl"
           >
             {/* Logo */}
-            <div className="mb-8 md:mb-10 inline-block">
-               <img src="/YvagaGuazuLogoPNG.png" alt="Yvaga Guazú Logo" className="w-44 md:w-56 lg:w-64 drop-shadow-xl" />
+            <div className="mb-[8vh] md:mb-10 inline-block -mt-[10vh] md:mt-[5vh]">
+               <img src="/YvagaGuazuLogoPNG.png" alt="Yvaga Guazú Logo" className="w-44 md:w-56 lg:w-64 drop-shadow-xl scale-[1.13] origin-top-left md:scale-100 md:origin-center" />
             </div>
             
-            <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-yvaga-white leading-[1.2] font-medium mb-6 md:mb-8 w-full max-w-none">
-              <span className="whitespace-nowrap">Donde la naturaleza se protege...</span><br />
-              <span className="text-yvaga-acc italic font-light whitespace-nowrap">y tú vuelves a sentirla</span>
+            <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-yvaga-white leading-[1.2] md:leading-[1.05] font-medium mb-6 md:mb-8 w-full max-w-none">
+              <span className="block whitespace-nowrap overflow-hidden text-ellipsis">Donde la Naturaleza</span>
+              <span className="block whitespace-nowrap overflow-hidden text-ellipsis">se protege...</span>
+              <span className="block text-yvaga-acc italic font-light whitespace-nowrap overflow-hidden text-ellipsis mt-2 md:-mt-1">y tú vuelves a sentirla</span>
             </h1>
 
             <p className="font-sans text-lg md:text-xl text-yvaga-white/90 leading-relaxed mb-8 md:mb-10 max-w-2xl">
@@ -53,7 +54,7 @@ export default function Home() {
               onClick={() => navigate('/contacto')}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
-              className="flex items-center gap-3 bg-yvaga-acc text-white px-8 py-4 rounded-full font-sans font-semibold tracking-wide shadow-xl shadow-yvaga-acc/30 hover:bg-[#68982a] transition-colors"
+              className="flex items-center gap-3 bg-yvaga-acc text-white px-8 py-4 rounded-full font-sans font-semibold tracking-wide shadow-xl shadow-yvaga-acc/30 hover:bg-[#68982a] transition-colors md:-translate-y-[2vh]"
             >
               <Leaf strokeWidth={2.5} className="w-5 h-5" />
               Reserva tu experiencia
@@ -395,9 +396,16 @@ function Counter({ value, prefix = "", suffix = "", duration = 2.5 }: { value: n
 
 // Helper component for FlipCards
 function FlipCard({ number, title, icon: Icon, image, backText }: { number: string, title: string, icon: any, image: string, backText: string }) {
+  const [isFlipped, setIsFlipped] = React.useState(false);
+  
   return (
-    <div className="group h-[340px] md:h-[400px] w-full perspective-1000 cursor-pointer">
-      <div className="relative w-full h-full transition-all duration-700 transform-style-3d group-hover:rotate-y-180">
+    <div 
+      className="group h-[340px] md:h-[400px] w-full perspective-1000 cursor-pointer"
+      onMouseEnter={() => setIsFlipped(true)}
+      onMouseLeave={() => setIsFlipped(false)}
+      onClick={() => setIsFlipped(!isFlipped)}
+    >
+      <div className={`relative w-full h-full transition-all duration-700 transform-style-3d ${isFlipped ? '[transform:rotateY(180deg)]' : ''}`}>
         
         {/* Front */}
         <div className="absolute inset-0 backface-hidden bg-yvaga-dark rounded-[24px] overflow-hidden shadow-sm border border-yvaga-dark/5">
@@ -416,7 +424,7 @@ function FlipCard({ number, title, icon: Icon, image, backText }: { number: stri
         </div>
 
         {/* Back */}
-        <div className="absolute inset-0 backface-hidden rotate-y-180 bg-yvaga-dark text-yvaga-white border border-yvaga-sec rounded-[24px] p-5 md:p-6 flex flex-col justify-center items-center text-center shadow-md">
+        <div className="absolute inset-0 backface-hidden [transform:rotateY(180deg)] bg-yvaga-dark text-yvaga-white border border-yvaga-sec rounded-[24px] p-5 md:p-6 flex flex-col justify-center items-center text-center shadow-md">
            <Icon className="w-8 h-8 md:w-10 md:h-10 text-yvaga-acc mb-3 md:mb-4 opacity-80" />
            <p className="font-serif text-sm md:text-base leading-relaxed font-light text-yvaga-white/90">
              {backText}

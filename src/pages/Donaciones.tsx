@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion, AnimatePresence } from "motion/react";
 import { Heart, Leaf, PawPrint, TreeDeciduous, HandHeart, Sprout, BookOpen, Landmark, CreditCard, BadgeDollarSign, Star, Facebook, Instagram, Phone, X } from "lucide-react";
 import { cn } from "../lib/utils";
 
@@ -133,7 +134,7 @@ export default function Donaciones() {
 
             <button 
               onClick={() => setShowModal(true)}
-              className="inline-flex items-center gap-3 bg-[#598420] hover:bg-[#436715] text-white font-sans px-8 py-4 rounded-xl transition-all shadow-lg transform hover:-translate-y-1 hover:shadow-xl"
+              className="inline-flex items-center gap-3 bg-[#598420] hover:bg-[#436715] text-white font-sans px-8 py-4 rounded-xl transition-all shadow-lg transform hover:-translate-y-1 active:scale-95 hover:shadow-xl"
             >
               <PawPrint className="w-5 h-5 fill-current" />
               Conoce a nuestros animales
@@ -403,14 +404,24 @@ export default function Donaciones() {
       </section>
 
       {/* Modal / Popup de Animales */}
-      {showModal && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 lg:p-8">
-          <div 
-            className="absolute inset-0 bg-[#0D2012]/90 backdrop-blur-md"
-            onClick={() => setShowModal(false)}
-          />
-          <div className="relative w-full h-full max-h-[90vh] bg-[#F9F7F2] rounded-[32px] shadow-2xl flex flex-col overflow-hidden animate-in fade-in zoom-in duration-300">
-            {/* Cabecera del Popup */}
+      <AnimatePresence>
+        {showModal && (
+          <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 lg:p-8">
+            <motion.div 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="absolute inset-0 bg-[#0D2012]/90 backdrop-blur-md"
+              onClick={() => setShowModal(false)}
+            />
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.95 }}
+              transition={{ type: "spring", stiffness: 300, damping: 30 }}
+              className="relative w-full h-full max-h-[90vh] bg-[#F9F7F2] rounded-[32px] shadow-2xl flex flex-col overflow-hidden"
+            >
+              {/* Cabecera del Popup */}
             <div className="flex items-center justify-between p-6 lg:p-8 bg-white border-b border-[#2C4A22]/10 z-10 shrink-0 shadow-sm">
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 rounded-full bg-[#8EBC3F]/20 flex items-center justify-center text-[#598420]">
@@ -437,7 +448,7 @@ export default function Donaciones() {
             {/* Contenido / Custom Masonry de 12 columnas */}
             <div className="flex-1 overflow-y-auto p-4 sm:p-6 lg:p-8 bg-[#F9F7F2]">
               {(() => {
-                const ImageCard = ({ src, idx }: { src: string, idx: string | number }) => (
+                const ImageCard: React.FC<{ src: string, idx: string | number }> = ({ src, idx }) => (
                   <div key={idx} className="relative group rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 bg-white border border-[#2C4A22]/5">
                     <img 
                       src={src} 
@@ -532,9 +543,10 @@ export default function Donaciones() {
                 );
               })()}
             </div>
-          </div>
+          </motion.div>
         </div>
-      )}
+        )}
+      </AnimatePresence>
 
     </div>
   );
