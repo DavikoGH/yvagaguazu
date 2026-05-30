@@ -38,8 +38,8 @@ export default function Navbar() {
               to={link.path}
               className={({ isActive }) =>
                 cn(
-                  "group relative flex items-center p-3 rounded-full bg-yvaga-dark/60 backdrop-blur-md text-yvaga-white border border-yvaga-white/10 shadow-lg hover:bg-yvaga-dark hover:border-yvaga-acc/50 transition-all duration-300",
-                  isActive && "bg-yvaga-dark border-yvaga-acc text-yvaga-acc"
+                  "group relative flex items-center p-3 rounded-full bg-yvaga-dark/60 backdrop-blur-md text-yvaga-white border border-yvaga-white/10 shadow-lg hover:bg-yvaga-sec hover:border-yvaga-light/50 transition-all duration-300",
+                  isActive && "bg-yvaga-light/90 border-transparent text-yvaga-dark shadow-md"
                 )
               }
             >

@@ -97,31 +97,31 @@ export default function Nosotros() {
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto flex flex-col items-center">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 mb-24 w-full">
-            <div className="bg-yvaga-white/10 backdrop-blur-md border border-yvaga-white/20 p-10 md:p-14 rounded-[40px] text-yvaga-white flex flex-col items-center text-center">
-               <div className="w-20 h-20 rounded-full border border-yvaga-white/30 flex items-center justify-center mb-8">
-                 <Leaf className="w-10 h-10 text-yvaga-acc" />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 mb-24 w-full -translate-y-[15%]">
+            <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/60 via-white/30 to-transparent px-4 py-8 md:px-8 md:py-12 rounded-[40px] text-white/80 flex flex-col items-center text-center">
+               <div className="w-20 h-20 rounded-full border border-white/30 flex items-center justify-center mb-8">
+                 <Leaf className="w-10 h-10 text-white" />
                </div>
-               <h3 className="font-serif text-3xl font-bold mb-6 tracking-wide uppercase">Nuestra Misión</h3>
-               <p className="font-sans font-light leading-relaxed text-lg opacity-90">
+               <h3 className="font-serif text-5xl md:text-[44px] font-bold mb-6 tracking-wide uppercase text-white/80 shadow-sm">Nuestra Misión</h3>
+               <p className="font-sans font-normal leading-relaxed text-[22px] text-white/80">
                  Generar una conexión real entre el ser humano y la naturaleza, sensibilizando a cada visitante para que valore, respete, proteja y ame el entorno natural.
                  A través de experiencias vivas, buscamos despertar conciencia sobre la importancia de los árboles, la biodiversidad y el equilibrio de la vida, mientras brindamos refugio y cuidado a animales que han sufrido maltrato, ofreciéndoles una segunda oportunidad.
                </p>
             </div>
 
-            <div className="bg-yvaga-white/10 backdrop-blur-md border border-yvaga-white/20 p-10 md:p-14 rounded-[40px] text-yvaga-white flex flex-col items-center text-center">
-               <div className="w-20 h-20 rounded-full border border-yvaga-white/30 flex items-center justify-center mb-8">
-                 <Globe className="w-10 h-10 text-yvaga-acc" />
+            <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/60 via-white/30 to-transparent px-4 py-8 md:px-8 md:py-12 rounded-[40px] text-white/80 flex flex-col items-center text-center">
+               <div className="w-20 h-20 rounded-full border border-white/30 flex items-center justify-center mb-8">
+                 <Globe className="w-10 h-10 text-white" />
                </div>
-               <h3 className="font-serif text-3xl font-bold mb-6 tracking-wide uppercase">Nuestra Visión</h3>
-               <p className="font-sans font-light leading-relaxed text-lg opacity-90">
+               <h3 className="font-serif text-5xl md:text-[44px] font-bold mb-6 tracking-wide uppercase text-white/80 shadow-sm">Nuestra Visión</h3>
+               <p className="font-sans font-normal leading-relaxed text-[22px] text-white/80">
                  Lograr que cada persona que nos visite vea la naturaleza con otros ojos… y decida amarla, entendiendo su valor, su importancia y el impacto que tiene en nuestra vida y en el futuro del planeta.
                </p>
             </div>
           </div>
 
-          <div className="max-w-4xl mx-auto text-center border-t border-b border-yvaga-white/20 py-12">
-            <p className="font-serif text-2xl md:text-3xl lg:text-4xl text-yvaga-white uppercase tracking-wider leading-relaxed">
+          <div className="max-w-4xl mx-auto text-center border-t border-b border-yvaga-white/20 py-12 -mt-16">
+            <p className="font-rouge text-5xl md:text-6xl text-yvaga-white leading-relaxed font-normal py-4">
               "La naturaleza puede vivir sin el hombre,<br className="hidden md:block"/> pero el hombre no puede vivir sin la naturaleza."
             </p>
           </div>
