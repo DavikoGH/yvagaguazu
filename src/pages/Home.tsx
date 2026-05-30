@@ -24,8 +24,8 @@ export default function Home() {
              {/* Fallback image */}
              <img src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?q=80&w=2727&auto=format&fit=crop" alt="Bosque Yvaga Guazú" className="w-full h-full object-cover" />
           </video>
-          {/* Overlay to improve reading */}
-          <div className="absolute inset-0 bg-gradient-to-r from-yvaga-dark/90 via-yvaga-dark/60 to-yvaga-dark/20"></div>
+          {/* Overlay to improve reading without green tint */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent"></div>
         </div>
 
         <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 flex flex-col items-start gap-8 mt-16 md:mt-0">
@@ -33,20 +33,19 @@ export default function Home() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="w-full max-w-4xl"
+            className="w-full max-w-4xl -translate-y-[10vh]"
           >
             {/* Logo */}
-            <div className="mb-[8vh] md:mb-10 inline-block -mt-[10vh] md:mt-[5vh]">
-               <img src="/YvagaGuazuLogoPNG.png" alt="Yvaga Guazú Logo" className="w-44 md:w-56 lg:w-64 drop-shadow-xl scale-[1.13] origin-top-left md:scale-100 md:origin-center" />
+            <div className="mb-[8vh] md:mb-10 inline-block">
+               <img src="/YvagaGuazuLogoPNG.png" alt="Yvaga Guazú Logo" className="w-[211px] md:w-[268px] lg:w-[307px] drop-shadow-xl scale-[1.13] origin-top-left md:scale-100 md:origin-center" />
             </div>
             
-            <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-yvaga-white leading-[1.2] md:leading-[1.05] font-medium mb-6 md:mb-8 w-full max-w-none">
-              <span className="block whitespace-nowrap overflow-hidden text-ellipsis">Donde la Naturaleza</span>
-              <span className="block whitespace-nowrap overflow-hidden text-ellipsis">se protege...</span>
-              <span className="block text-yvaga-acc italic font-light whitespace-nowrap overflow-hidden text-ellipsis mt-2 md:-mt-1">y tú vuelves a sentirla</span>
+            <h1 className="font-serif text-[21px] sm:text-[25px] md:text-[34px] lg:text-[43px] text-yvaga-white leading-[1.2] md:leading-[1.05] font-medium mb-4 md:mb-6 w-full max-w-none">
+              <span className="block whitespace-nowrap overflow-hidden text-ellipsis">Donde la Naturaleza se protege...</span>
+              <span className="block text-yvaga-acc text-[24px] sm:text-[28px] md:text-[38px] lg:text-[48px] italic font-light whitespace-nowrap overflow-hidden text-ellipsis mt-2 md:-mt-1">y tú vuelves a sentirla</span>
             </h1>
 
-            <p className="font-sans text-lg md:text-xl text-yvaga-white/90 leading-relaxed mb-8 md:mb-10 max-w-2xl">
+            <p className="font-sans text-[14.5px] md:text-[16px] text-yvaga-white/90 leading-relaxed mb-8 md:mb-10 max-w-2xl">
               Explora 14 hectáreas de vida real, con más de 6.000 especies de árboles y más de 350 animales rescatados que hoy tienen una segunda oportunidad.
             </p>
 
@@ -54,9 +53,9 @@ export default function Home() {
               onClick={() => navigate('/contacto')}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
-              className="flex items-center gap-3 bg-yvaga-acc text-white px-8 py-4 rounded-full font-sans font-semibold tracking-wide shadow-xl shadow-yvaga-acc/30 hover:bg-[#68982a] transition-colors md:-translate-y-[2vh]"
+              className="flex items-center gap-2.5 bg-yvaga-acc text-white px-7 py-3 text-[14px] rounded-full font-sans font-semibold tracking-wide shadow-xl shadow-yvaga-acc/30 hover:bg-[#68982a] transition-colors md:-translate-y-[2vh]"
             >
-              <Leaf strokeWidth={2.5} className="w-5 h-5" />
+              <Leaf strokeWidth={2.5} className="w-[18px] h-[18px]" />
               Reserva tu experiencia
             </motion.button>
           </motion.div>
@@ -408,10 +407,10 @@ function FlipCard({ number, title, icon: Icon, image, backText }: { number: stri
       <div className={`relative w-full h-full transition-all duration-700 transform-style-3d ${isFlipped ? '[transform:rotateY(180deg)]' : ''}`}>
         
         {/* Front */}
-        <div className="absolute inset-0 backface-hidden bg-yvaga-dark rounded-[24px] overflow-hidden shadow-sm border border-yvaga-dark/5">
+        <div className="absolute inset-0 backface-hidden bg-black rounded-[24px] overflow-hidden shadow-sm border border-black/5">
           <img src={image} alt={title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-125" />
-          <div className="absolute inset-0 bg-yvaga-dark/40" />
-          <div className="absolute inset-0 bg-gradient-to-t from-yvaga-dark/90 via-yvaga-dark/30 to-transparent" />
+          <div className="absolute inset-0 bg-black/10" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
           <div className="absolute inset-0 p-5 md:p-6 flex flex-col justify-end z-10">
             <div className="flex items-center gap-3 mb-3">
               <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-yvaga-white/20 backdrop-blur-md text-yvaga-white border border-yvaga-white/30 flex items-center justify-center">
@@ -419,14 +418,14 @@ function FlipCard({ number, title, icon: Icon, image, backText }: { number: stri
               </div>
               <span className="font-sans font-bold text-yvaga-white/70 text-lg md:text-xl drop-shadow-md">{number}</span>
             </div>
-            <h3 className="font-serif text-xl md:text-2xl text-yvaga-white leading-tight drop-shadow-lg">{title}</h3>
+            <h3 className="font-serif text-[22px] md:text-[26px] text-yvaga-white leading-tight drop-shadow-lg">{title}</h3>
           </div>
         </div>
 
         {/* Back */}
         <div className="absolute inset-0 backface-hidden [transform:rotateY(180deg)] bg-yvaga-dark text-yvaga-white border border-yvaga-sec rounded-[24px] p-5 md:p-6 flex flex-col justify-center items-center text-center shadow-md">
            <Icon className="w-8 h-8 md:w-10 md:h-10 text-yvaga-acc mb-3 md:mb-4 opacity-80" />
-           <p className="font-serif text-sm md:text-base leading-relaxed font-light text-yvaga-white/90">
+           <p className="font-serif text-[18px] md:text-[20px] leading-relaxed font-light text-yvaga-white/90">
              {backText}
            </p>
         </div>
