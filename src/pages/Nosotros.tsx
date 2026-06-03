@@ -121,7 +121,7 @@ export default function Nosotros() {
           </div>
 
           <div className="max-w-4xl mx-auto text-center border-t border-b border-yvaga-white/20 py-12 -mt-16">
-            <p className="font-rouge text-5xl md:text-6xl text-yvaga-white leading-relaxed font-normal py-4">
+            <p className="font-caveat-brush text-5xl md:text-6xl text-yvaga-white leading-relaxed font-normal py-4">
               "La naturaleza puede vivir sin el hombre,<br className="hidden md:block"/> pero el hombre no puede vivir sin la naturaleza."
             </p>
           </div>
