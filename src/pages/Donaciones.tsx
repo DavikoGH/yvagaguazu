@@ -202,76 +202,71 @@ export default function Donaciones() {
       {/* SECCIÓN 5: Dona hoy y sé parte del cambio */}
       <section className="bg-[#F9F7F2] py-24 px-6 md:px-12 w-full border-t border-[#3A4E33]/10">
         <div className="max-w-7xl mx-auto">
-          <div className="flex items-center gap-4 mb-12">
-            <h2 className="font-serif text-4xl md:text-5xl text-[#3A4E33]">
+          <div className="flex items-center justify-center gap-4 mb-12">
+            <h2 className="font-serif text-4xl md:text-5xl text-[#3A4E33] text-center">
               Dona hoy y sé parte del cambio
             </h2>
             <Heart className="w-10 h-10 text-[#598420] opacity-80" />
           </div>
 
-          <div className="flex flex-col lg:flex-row gap-12 lg:gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 mb-16">
             
-            {/* Columna Izquierda: Información */}
-            <div className="w-full lg:w-[70%] flex flex-col md:flex-row gap-8 lg:gap-12 pb-8 lg:pb-0 overflow-x-auto lg:overflow-visible my-auto">
-              
-              {/* Tu donación se transforma en: */}
-              <div className="flex-1 min-w-[280px]">
-                <h3 className="font-sans font-bold text-lg text-[#3A4E33] mb-6 whitespace-nowrap">Tu donación se transforma en:</h3>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                  
-                  <div className="flex flex-col items-center text-center border-l border-[#3A4E33]/20 pl-4 h-full">
-                    <PawPrint className="w-8 h-8 text-[#598420] mb-3" />
-                    <p className="font-sans text-xs text-yvaga-dark/80 leading-relaxed">Alimentación y cuidado de los animales rescatados</p>
-                  </div>
-                  
-                  <div className="flex flex-col items-center text-center border-l border-[#3A4E33]/20 pl-4 h-full">
-                    <Leaf className="w-8 h-8 text-[#598420] mb-3" />
-                    <p className="font-sans text-xs text-yvaga-dark/80 leading-relaxed">Mantenimiento y conservación de las 14 hectáreas</p>
-                  </div>
-
-                  <div className="flex flex-col items-center text-center border-l border-[#3A4E33]/20 pl-4 h-full">
-                    <BookOpen className="w-8 h-8 text-[#598420] mb-3" />
-                    <p className="font-sans text-xs text-yvaga-dark/80 leading-relaxed">Educación ambiental para niños, escuelas y comunidades</p>
-                  </div>
-
-                  <div className="flex flex-col items-center text-center border-l border-[#3A4E33]/20 pl-4 h-full">
-                    <HandHeart className="w-8 h-8 text-[#598420] mb-3" />
-                    <p className="font-sans text-xs text-yvaga-dark/80 leading-relaxed">Rescate y rehabilitación de animales vulnerables</p>
-                  </div>
-
+            {/* 7 Columnas: Tu donación se transforma en: */}
+            <div className="lg:col-span-7 flex flex-col pt-4">
+              <h3 className="font-sans font-bold text-lg text-[#3A4E33] mb-6 whitespace-nowrap">Tu donación se transforma en:</h3>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                
+                <div className="flex flex-col items-center text-center border-l bg-[#3A4E33]/5 rounded-r-xl p-3 border-[#3A4E33]/20 h-full">
+                  <PawPrint className="w-8 h-8 text-[#598420] mb-3" />
+                  <p className="font-sans text-[15px] text-yvaga-dark/80 leading-snug">Alimentación y cuidado de los animales rescatados</p>
                 </div>
-              </div>
-
-              {/* VR */}
-              <div className="hidden md:block w-px bg-[#3A4E33]/20"></div>
-
-              {/* Formas de donar */}
-              <div className="flex-[0.8] min-w-[240px]">
-                <h3 className="font-sans font-bold text-lg text-[#3A4E33] mb-6 text-center">Formas de donar</h3>
-                <div className="grid grid-cols-3 gap-2">
-                  
-                  <div className="flex flex-col items-center text-center border-l border-[#3A4E33]/20 pl-4 h-full justify-start">
-                    <Landmark className="w-8 h-8 text-[#598420] mb-3" />
-                    <p className="font-sans text-xs text-yvaga-dark/80 leading-relaxed">Transferencia bancaria</p>
-                  </div>
-
-                  <div className="flex flex-col items-center text-center border-l border-[#3A4E33]/20 pl-4 h-full justify-start">
-                    <CreditCard className="w-8 h-8 text-[#598420] mb-3" />
-                    <p className="font-sans text-xs text-yvaga-dark/80 leading-relaxed">Mercado Pago</p>
-                  </div>
-
-                  <div className="flex flex-col items-center text-center border-l border-[#3A4E33]/20 pl-4 h-full justify-start">
-                    <BadgeDollarSign className="w-8 h-8 text-[#598420] mb-3" />
-                    <p className="font-sans text-xs text-yvaga-dark/80 leading-relaxed">Donaciones internacionales (PayPal)</p>
-                  </div>
-
+                
+                <div className="flex flex-col items-center text-center border-l bg-[#3A4E33]/5 rounded-r-xl p-3 border-[#3A4E33]/20 h-full">
+                  <Leaf className="w-8 h-8 text-[#598420] mb-3" />
+                  <p className="font-sans text-[15px] text-yvaga-dark/80 leading-snug">Mantenimiento y conservación de las 14 hectáreas</p>
                 </div>
+
+                <div className="flex flex-col items-center text-center border-l bg-[#3A4E33]/5 rounded-r-xl p-3 border-[#3A4E33]/20 h-full">
+                  <BookOpen className="w-8 h-8 text-[#598420] mb-3" />
+                  <p className="font-sans text-[15px] text-yvaga-dark/80 leading-snug">Educación ambiental para niños, escuelas y comunidades</p>
+                </div>
+
+                <div className="flex flex-col items-center text-center border-l bg-[#3A4E33]/5 rounded-r-xl p-3 border-[#3A4E33]/20 h-full">
+                  <HandHeart className="w-8 h-8 text-[#598420] mb-3" />
+                  <p className="font-sans text-[15px] text-yvaga-dark/80 leading-snug">Rescate y rehabilitación de animales vulnerables</p>
+                </div>
+
               </div>
             </div>
 
-            {/* Columna Derecha: CTA Box */}
-            <div className="w-full lg:w-[30%]">
-              <div className="bg-[#1E3316] rounded-3xl p-8 text-white flex flex-col justify-center h-full shadow-2xl relative overflow-hidden">
+            {/* 5 Columnas: Formas de donar */}
+            <div className="lg:col-span-5 flex flex-col pt-4 lg:pl-10 lg:border-l border-[#3A4E33]/20">
+              <h3 className="font-sans font-bold text-lg text-[#3A4E33] mb-6 text-center">Formas de donar</h3>
+              <div className="grid grid-cols-3 gap-3">
+                
+                <div className="flex flex-col items-center text-center border-l bg-[#3A4E33]/5 rounded-r-xl p-3 border-[#3A4E33]/20 h-full justify-start">
+                  <Landmark className="w-8 h-8 text-[#598420] mb-3" />
+                  <p className="font-sans text-[15px] text-yvaga-dark/80 leading-snug">Transferencia bancaria</p>
+                </div>
+
+                <div className="flex flex-col items-center text-center border-l bg-[#3A4E33]/5 rounded-r-xl p-3 border-[#3A4E33]/20 h-full justify-start">
+                  <CreditCard className="w-8 h-8 text-[#598420] mb-3" />
+                  <p className="font-sans text-[15px] text-yvaga-dark/80 leading-snug">Mercado Pago</p>
+                </div>
+
+                <div className="flex flex-col items-center text-center border-l bg-[#3A4E33]/5 rounded-r-xl p-3 border-[#3A4E33]/20 h-full justify-start">
+                  <BadgeDollarSign className="w-8 h-8 text-[#598420] mb-3" />
+                  <p className="font-sans text-[15px] text-yvaga-dark/80 leading-snug">Donaciones internacionales (PayPal)</p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          {/* Cuadro verde: 4 Columnas Centrado Abajo */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 w-full mt-4">
+            <div className="lg:col-start-5 lg:col-span-4">
+              <div className="bg-[#1E3316] rounded-3xl p-8 text-white flex flex-col justify-center h-full shadow-2xl relative overflow-hidden text-center">
                 <Leaf className="w-32 h-32 text-white/5 absolute -bottom-8 -right-8 transform rotate-12" />
                 <h3 className="font-sans text-xl md:text-2xl leading-snug mb-8 relative z-10 font-normal">
                   Gracias a ti,<br/>podemos seguir<br/>protegiendo<br/>vidas.
@@ -287,7 +282,6 @@ export default function Donaciones() {
                 </a>
               </div>
             </div>
-
           </div>
         </div>
       </section>
