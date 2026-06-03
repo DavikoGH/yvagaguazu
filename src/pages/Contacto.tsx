@@ -125,23 +125,24 @@ export default function Contacto() {
         <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
           <div className="sticky top-0 left-0 w-full h-[100dvh] flex items-center z-10 pointer-events-auto">
             {/* Overlay to ensure text readability that stays with the text */}
-            <div className="absolute inset-0 bg-gradient-to-r from-yvaga-dark/95 via-yvaga-dark/50 to-transparent -z-10"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent -z-10"></div>
             
             <div className="w-full max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
-              <div className="max-w-2xl">
-                <Leaf className="w-12 h-12 md:w-16 md:h-16 text-yvaga-acc mb-6" />
-              <h1 className="font-serif text-yvaga-white tracking-wide uppercase leading-none">
-                <span className="block text-2xl md:text-3xl font-medium tracking-widest mb-2">Ponte en</span>
-                <span className="block text-6xl md:text-8xl xl:text-9xl font-bold mb-2">Contacto</span>
-                <span className="block font-writing text-5xl md:text-7xl xl:text-8xl text-yvaga-acc lowercase tracking-normal">con nosotros</span>
-              </h1>
-              <div className="w-24 h-1 bg-yvaga-acc/50 mt-6 mb-8"></div>
-              <p className="font-sans text-lg md:text-xl text-yvaga-white/90 leading-relaxed max-w-xl">
-                Estamos aquí para escucharte, resolver tus dudas y brindarte toda la información que necesites sobre conservación, nuestras actividades y cómo puedes ser parte de esta misión.
-              </p>
+              <div className="w-full grid grid-cols-12">
+                <div className="col-span-12 lg:col-span-12">
+                  <Leaf className="w-12 h-12 md:w-16 md:h-16 text-yvaga-acc mb-6" />
+                  <h1 className="font-serif text-yvaga-white tracking-wide uppercase leading-none">
+                    <span className="block text-2xl md:text-3xl font-medium tracking-widest mb-2">Ponte en</span>
+                    <span className="block text-6xl md:text-8xl xl:text-9xl font-bold mb-2">Contacto</span>
+                    <span className="block font-writing text-5xl md:text-7xl xl:text-8xl text-[#FFD700] lowercase tracking-normal">con nosotros</span>
+                  </h1>
+                  <div className="w-24 h-1 bg-yvaga-acc/50 mt-6 mb-8"></div>
+                  <p className="font-sans text-[20.5px] md:text-[22px] text-yvaga-white/90 leading-relaxed col-span-11 w-11/12">
+                    Estamos aquí para escucharte, resolver tus dudas y brindarte toda la información que necesites sobre conservación, nuestras actividades y cómo puedes ser parte de esta misión.
+                  </p>
 
-              {/* Redes Sociales en el Hero */}
-              <div className="flex gap-6 mt-12 flex-wrap">
+                  {/* Redes Sociales en el Hero */}
+                  <div className="flex gap-6 mt-12 flex-wrap">
                 <a 
                   href="https://www.facebook.com/yvagaguazu" 
                   target="_blank" 
@@ -176,6 +177,7 @@ export default function Contacto() {
                 >
                   <Mail className="w-5 h-5" />
                 </a>
+              </div>
               </div>
             </div>
           </div>

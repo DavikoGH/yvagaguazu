@@ -62,11 +62,11 @@ export default function Servicios() {
       <section className="relative min-h-[100dvh] flex flex-col items-center justify-center px-6">
         <div className="absolute inset-0 z-0">
           <img 
-            src="/portadaservicios.jpg" 
+            src="/portada_servicios.jpg" 
             alt="Vive la experiencia Yvaga Guazú" 
             className="w-full h-full object-cover object-top"
           />
-          <div className="absolute inset-0 bg-yvaga-dark/50 bg-gradient-to-b from-yvaga-dark/60 via-yvaga-dark/30 to-yvaga-dark/60"></div>
+          <div className="absolute inset-0 bg-black/40"></div>
         </div>
 
         <div className="relative z-10 text-center flex flex-col items-center">

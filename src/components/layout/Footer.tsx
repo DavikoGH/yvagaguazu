@@ -23,16 +23,18 @@ export default function Footer() {
             <h4 className="font-serif text-xl tracking-wide text-yvaga-white uppercase">Redes Sociales</h4>
             <div className="w-12 h-px bg-yvaga-white/20"></div>
             <div className="flex gap-4">
-              <a href="#" aria-label="Facebook" className="w-11 h-11 rounded-full bg-yvaga-white/5 border border-yvaga-white/10 flex items-center justify-center text-yvaga-white hover:bg-yvaga-dark hover:border-yvaga-dark transition-all duration-300">
+              <a href="https://www.facebook.com/yvagaguazu" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="w-11 h-11 rounded-full bg-yvaga-white/5 border border-yvaga-white/10 flex items-center justify-center text-yvaga-white hover:bg-yvaga-dark hover:border-yvaga-dark transition-all duration-300">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="#" aria-label="Instagram" className="w-11 h-11 rounded-full bg-yvaga-white/5 border border-yvaga-white/10 flex items-center justify-center text-yvaga-white hover:bg-yvaga-dark hover:border-yvaga-dark transition-all duration-300">
+              <a href="https://www.instagram.com/oficialyvagaguazu" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="w-11 h-11 rounded-full bg-yvaga-white/5 border border-yvaga-white/10 flex items-center justify-center text-yvaga-white hover:bg-yvaga-dark hover:border-yvaga-dark transition-all duration-300">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="#" aria-label="YouTube" className="w-11 h-11 rounded-full bg-yvaga-white/5 border border-yvaga-white/10 flex items-center justify-center text-yvaga-white hover:bg-yvaga-dark hover:border-yvaga-dark transition-all duration-300">
-                <Youtube className="w-5 h-5" />
+              <a href="https://www.tiktok.com/@yvagaguazu" target="_blank" rel="noopener noreferrer" aria-label="TikTok" className="w-11 h-11 rounded-full bg-yvaga-white/5 border border-yvaga-white/10 flex items-center justify-center text-yvaga-white hover:bg-yvaga-dark hover:border-yvaga-dark transition-all duration-300">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
+                  <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+                </svg>
               </a>
-              <a href="mailto:yvagaguazu@gmail.com" aria-label="Correo Electrónico" className="w-11 h-11 rounded-full bg-yvaga-white/5 border border-yvaga-white/10 flex items-center justify-center text-yvaga-white hover:bg-yvaga-dark hover:border-yvaga-dark transition-all duration-300">
+              <a href="mailto:parqueyvagaguazu@hotmail.com" aria-label="Correo Electrónico" className="w-11 h-11 rounded-full bg-yvaga-white/5 border border-yvaga-white/10 flex items-center justify-center text-yvaga-white hover:bg-yvaga-dark hover:border-yvaga-dark transition-all duration-300">
                 <Mail className="w-5 h-5" />
               </a>
             </div>
