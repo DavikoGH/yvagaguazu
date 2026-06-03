@@ -33,7 +33,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="w-full max-w-4xl"
+            className="w-full max-w-none"
           >
             {/* Logo */}
             <div className="mb-[6vh] md:mb-8 inline-block">
@@ -42,10 +42,10 @@ export default function Home() {
             
             <h1 className="font-serif text-[21px] sm:text-[25px] md:text-[34px] lg:text-[43px] text-yvaga-white leading-[1.2] md:leading-[1.05] font-medium mb-4 md:mb-6 w-full max-w-none">
               <span className="block whitespace-nowrap overflow-hidden text-ellipsis">Donde la Naturaleza se protege...</span>
-              <span className="block text-yvaga-acc text-[24px] sm:text-[28px] md:text-[38px] lg:text-[48px] italic font-light whitespace-nowrap overflow-hidden text-ellipsis mt-2 md:-mt-1">y tú vuelves a sentirla</span>
+              <span className="block text-[#FFD700] text-[26px] sm:text-[30px] md:text-[40px] lg:text-[50px] italic font-light whitespace-nowrap overflow-hidden text-ellipsis mt-2 md:-mt-1 drop-shadow-md">y tú vuelves a sentirla</span>
             </h1>
 
-            <p className="font-sans text-[14.5px] md:text-[16px] text-yvaga-white/90 leading-relaxed mb-8 md:mb-10 max-w-2xl">
+            <p className="font-sans text-[18.5px] md:text-[20px] text-yvaga-white/90 leading-relaxed mb-8 md:mb-10 col-span-11 w-11/12">
               Explora 14 hectáreas de vida real, con más de 6.000 especies de árboles y más de 350 animales rescatados que hoy tienen una segunda oportunidad.
             </p>
 
@@ -76,7 +76,7 @@ export default function Home() {
           transition={{ duration: 0.8 }}
           className="max-w-4xl mx-auto text-center flex flex-col items-center"
         >
-          <span className="text-sm font-sans font-semibold text-yvaga-sec tracking-[0.2em] uppercase mb-4">
+          <span className="text-[22px] font-sans font-semibold text-yvaga-sec tracking-[0.2em] uppercase mb-4">
             MÁS QUE UN PARQUE... ES UNA MISIÓN DE VIDA
           </span>
           
@@ -157,7 +157,7 @@ export default function Home() {
               <div className="font-serif text-6xl xl:text-7xl text-yvaga-sec mb-2">
                  <Counter value={1200} prefix="+" />
               </div>
-              <h3 className="font-sans text-base md:text-lg font-bold text-yvaga-dark uppercase tracking-wide mb-3">Variedades de plantas</h3>
+              <h3 className="font-sans text-base md:text-lg font-bold text-yvaga-dark uppercase tracking-wide mb-3">Especies de flora</h3>
               <div className="w-10 h-px bg-yvaga-sec/30 mb-4"></div>
               <p className="font-serif text-yvaga-dark/80 text-sm md:text-base leading-relaxed">
                 Gran biodiversidad de flora resguardada en nuestro parque.
@@ -237,7 +237,7 @@ export default function Home() {
             alt="Bosque"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-yvaga-dark/80 backdrop-blur-[2px]"></div>
+          <div className="absolute inset-0 bg-black/60 backdrop-blur-[2px]"></div>
         </div>
 
         <div className="relative z-10 max-w-5xl mx-auto flex flex-col items-center text-center">
@@ -247,8 +247,8 @@ export default function Home() {
             viewport={{ once: true }}
             className="mb-16"
           >
-            <p className="font-rouge text-5xl md:text-6xl font-normal max-w-4xl leading-relaxed">
-              "Este es un espacio para detenerte, observar y conectar. Buscamos sensibilizar a cada visitante, despertando respeto, empatía y una nueva forma de relacionarse con la naturaleza."
+            <p className="font-caveat-brush text-[31px] md:text-[45px] font-normal max-w-4xl leading-[1.45]">
+              "Este es un espacio para detenerte, observar y conectar. Buscamos sensibilizar a cada visitante, despertando respeto, empatía y una nueva forma de relacionarse con la NATURALEZA."
             </p>
           </motion.div>
 
@@ -266,7 +266,7 @@ export default function Home() {
                 { icon: MapPin, text: "Construimos un futuro mejor" }
               ].map((item, i) => (
                 <div key={i} className="flex flex-col items-center text-center gap-3">
-                  <div className="w-16 h-16 rounded-full bg-yvaga-light/50 flex items-center justify-center text-yvaga-sec">
+                  <div className="w-16 h-16 rounded-full bg-yvaga-light/50 flex items-center justify-center text-yvaga-sec scale-110 mb-1 mt-1">
                     <item.icon className="w-8 h-8" strokeWidth={1.5} />
                   </div>
                   <span className="font-serif text-lg font-medium">{item.text}</span>
@@ -280,8 +280,8 @@ export default function Home() {
             </Link>
 
             <div className="mt-10 pt-6 border-t border-yvaga-dark/10">
-              <p className="font-rouge text-yvaga-dark/80 text-3xl md:text-4xl text-center md:text-left pt-2 font-normal">
-                "Cada pequeña acción hace una gran diferencia. Gracias por ser parte de esta misión."
+              <p className="font-caveat-brush text-yvaga-dark/80 text-[28px] md:text-[34px] text-center pt-2 font-normal leading-[1.15]">
+                "Cada pequeña acción hace una gran diferencia.<br />Gracias por ser parte de esta misión."
               </p>
             </div>
           </div>

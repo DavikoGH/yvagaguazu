@@ -43,7 +43,7 @@ export default function Navbar() {
                 )
               }
             >
-              <Icon className="w-5 h-5 relative z-10" />
+              <Icon className="w-5 h-5 relative z-10 scale-110" />
               <div className="absolute right-full mr-4 bg-yvaga-dark/90 text-white px-4 py-2 rounded-xl backdrop-blur-md border border-white/10 opacity-0 -translate-x-4 pointer-events-none group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 whitespace-nowrap shadow-xl">
                 <span className="font-sans font-light tracking-wide">{link.label}</span>
               </div>
