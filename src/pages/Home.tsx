@@ -76,7 +76,7 @@ export default function Home() {
           transition={{ duration: 0.8 }}
           className="max-w-4xl mx-auto text-center flex flex-col items-center"
         >
-          <span className="text-[22px] font-sans font-semibold text-yvaga-sec tracking-[0.2em] uppercase mb-4">
+          <span className="text-[32px] md:text-[40px] font-caveat-brush text-yvaga-sec mb-4">
             MÁS QUE UN PARQUE... ES UNA MISIÓN DE VIDA
           </span>
           
@@ -133,9 +133,9 @@ export default function Home() {
               <div className="font-serif text-6xl xl:text-7xl text-yvaga-sec mb-2">
                  <Counter value={14} />
               </div>
-              <h3 className="font-sans text-base md:text-lg font-bold text-yvaga-dark uppercase tracking-wide mb-3">Hectáreas</h3>
+              <h3 className="font-sans text-lg md:text-xl font-bold text-yvaga-dark uppercase tracking-wide mb-3">Hectáreas</h3>
               <div className="w-10 h-px bg-yvaga-sec/30 mb-4"></div>
-              <p className="font-serif text-yvaga-dark/80 text-sm md:text-base leading-relaxed">
+              <p className="font-serif text-yvaga-dark/80 text-lg md:text-xl leading-relaxed">
                 De puro bosque protegido y conservado para ti.
               </p>
             </div>
@@ -145,9 +145,9 @@ export default function Home() {
               <div className="font-serif text-6xl xl:text-7xl text-yvaga-sec mb-2">
                  <Counter value={6300} />
               </div>
-              <h3 className="font-sans text-base md:text-lg font-bold text-yvaga-dark uppercase tracking-wide mb-3">Árboles inventariados</h3>
+              <h3 className="font-sans text-lg md:text-xl font-bold text-yvaga-dark uppercase tracking-wide mb-3">Árboles inventariados</h3>
               <div className="w-10 h-px bg-yvaga-sec/30 mb-4"></div>
-              <p className="font-serif text-yvaga-dark/80 text-sm md:text-base leading-relaxed">
+              <p className="font-serif text-yvaga-dark/80 text-lg md:text-xl leading-relaxed">
                 Refugio de vida protegido y preservado.
               </p>
             </div>
@@ -157,9 +157,9 @@ export default function Home() {
               <div className="font-serif text-6xl xl:text-7xl text-yvaga-sec mb-2">
                  <Counter value={1200} prefix="+" />
               </div>
-              <h3 className="font-sans text-base md:text-lg font-bold text-yvaga-dark uppercase tracking-wide mb-3">Especies de flora</h3>
+              <h3 className="font-sans text-lg md:text-xl font-bold text-yvaga-dark uppercase tracking-wide mb-3">Especies de flora</h3>
               <div className="w-10 h-px bg-yvaga-sec/30 mb-4"></div>
-              <p className="font-serif text-yvaga-dark/80 text-sm md:text-base leading-relaxed">
+              <p className="font-serif text-yvaga-dark/80 text-lg md:text-xl leading-relaxed">
                 Gran biodiversidad de flora resguardada en nuestro parque.
               </p>
             </div>
@@ -169,9 +169,9 @@ export default function Home() {
               <div className="font-serif text-6xl xl:text-7xl text-yvaga-sec mb-2">
                  <Counter value={350} prefix="+" />
               </div>
-              <h3 className="font-sans text-base md:text-lg font-bold text-yvaga-dark uppercase tracking-wide mb-3">Animales rescatados</h3>
+              <h3 className="font-sans text-lg md:text-xl font-bold text-yvaga-dark uppercase tracking-wide mb-3">Animales rescatados</h3>
               <div className="w-10 h-px bg-yvaga-sec/30 mb-4"></div>
-              <p className="font-serif text-yvaga-dark/80 text-sm md:text-base leading-relaxed">
+              <p className="font-serif text-yvaga-dark/80 text-lg md:text-xl leading-relaxed">
                 Refugio seguro que les brinda otra oportunidad de vida.
               </p>
             </div>
@@ -233,11 +233,11 @@ export default function Home() {
         {/* Background Image with heavy overlay */}
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=2670&auto=format&fit=crop"
+            src="/arboles_atardecer.jpg"
             alt="Bosque"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-black/60 backdrop-blur-[2px]"></div>
+          <div className="absolute inset-0 bg-black/30 backdrop-blur-[2px]"></div>
         </div>
 
         <div className="relative z-10 max-w-5xl mx-auto flex flex-col items-center text-center">
@@ -297,11 +297,11 @@ export default function Home() {
             <h2 className="font-serif text-4xl md:text-5xl text-yvaga-sec mb-4">
               Certificación Internacional Green Globe
             </h2>
-            <h3 className="font-sans text-xl md:text-xl font-bold text-yvaga-sec/80 mb-6 uppercase tracking-wide">
+            <h3 className="font-sans text-[23px] md:text-[23px] font-bold text-yvaga-sec/80 mb-6 uppercase tracking-wide">
               Somos parte de la élite del turismo sostenible en el mundo.
             </h3>
             
-            <p className="text-lg md:text-xl text-yvaga-sec/90 mb-10 font-light leading-relaxed">
+            <p className="text-[20px] md:text-[22px] text-yvaga-sec/90 mb-10 font-light leading-relaxed">
               En el Parque Ecológico Yvaga Guazú contamos con la certificación internacional Green Globe, uno de los reconocimientos más importantes en sostenibilidad turística a nivel global.
             </p>
 
@@ -354,8 +354,8 @@ export default function Home() {
               <img src="/greenglobe.png" alt="Green Globe Certification" className="w-48 h-48 md:w-56 md:h-56 object-contain drop-shadow-2xl mb-8" />
 
               <div className="w-full pl-6 py-2 border-l-[4px] border-yvaga-sec">
-                <h4 className="font-sans font-bold text-base md:text-lg text-yvaga-sec mb-3 uppercase tracking-wide">Más que un reconocimiento, es una promesa.</h4>
-                <p className="font-rouge text-3xl md:text-4xl text-yvaga-sec/90 leading-relaxed font-normal">
+                <h4 className="font-caveat-brush font-normal text-[26px] md:text-[32px] text-yvaga-sec mb-3 tracking-wide leading-tight">MÁS QUE UN RECONOCIMIENTO, ES UNA PROMESA.</h4>
+                <p className="font-sans italic font-medium text-[20px] md:text-[22px] text-yvaga-sec/90 leading-relaxed">
                   "Esta certificación garantiza que cada experiencia que vivimos contigo protege la biodiversidad, educa y genera conciencia, y contribuye al futuro del planeta."
                 </p>
               </div>

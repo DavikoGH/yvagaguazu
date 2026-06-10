@@ -33,12 +33,20 @@ export default function Donaciones() {
 
         {/* Contenido fijo (Sticky) */}
         <div className="sticky top-0 left-0 w-full h-[100dvh] flex flex-col justify-center items-center z-10 px-4 md:px-8">
-          {/* Tarjeta Centrada */}
-          <div className="relative z-10 bg-[#0D2012]/70 rounded-[32px] p-6 lg:p-8 max-w-3xl w-full flex flex-col items-center text-center shadow-2xl border border-white/10 mt-12 md:mt-0">
-            <div className="mb-2 md:mb-4">
-              <Heart className="w-8 h-8 md:w-10 md:h-10 text-[#C6E5A8] mx-auto" />
-            </div>
-            <h1 className="font-serif text-3xl md:text-5xl text-[#E8F5D6] mb-4">
+          <div className="relative z-10 w-full max-w-[1400px] flex flex-col xl:flex-row items-end justify-center gap-6 mt-12 md:mt-0">
+             
+             {/* CUADRO IZQUIERDO (Desktop) */}
+             <div className="hidden xl:flex bg-[#0D2012]/80 rounded-[24px] p-6 lg:p-8 max-w-[280px] shadow-2xl border border-white/10 items-center justify-center mb-0 relative">
+               {/* Decoración opcional */}
+               <Leaf className="absolute -top-4 w-8 h-8 text-[#A3D152] opacity-80 rotate-12" />
+               <p className="font-caveat-brush text-[34px] text-[#E8F5D6] leading-[1.15] text-center tracking-wide">
+                 Una pequeña acción hace una gran diferencia.
+               </p>
+             </div>
+
+             {/* Tarjeta Centrada */}
+             <div className="bg-[#0D2012]/80 rounded-[32px] p-6 lg:p-8 max-w-3xl w-full flex flex-col items-center text-center shadow-2xl border border-white/10 flex-shrink-0">
+            <h1 className="font-serif text-3xl md:text-5xl text-[#E8F5D6] mb-4 mt-2">
               Únete a nuestra misión
             </h1>
             
@@ -48,35 +56,35 @@ export default function Donaciones() {
               <div className="h-px bg-[#C6E5A8]/30 w-12 md:w-20"></div>
             </div>
 
-            <p className="font-sans text-sm md:text-base text-[#D4EAB6] leading-relaxed mb-6 md:mb-8 max-w-2xl">
+            <p className="font-sans text-[18px] md:text-[20px] text-[#D4EAB6] leading-relaxed mb-6 md:mb-8 max-w-2xl">
               Nos sostenemos gracias a las personas que creen en la <strong className="font-bold text-[#E8F5D6]">NATURALEZA</strong> y deciden amarla.<br className="hidden md:block"/>
               No contamos con apoyo externo, por eso cada visita y cada aporte tuyo contribuyen directamente a proteger nuestro bosque y mantener este refugio activo.
             </p>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 w-full mb-6 md:mb-8">
               <div className="flex flex-col items-center">
-                <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-[#C6E5A8]/10 flex items-center justify-center mb-3 text-[#C6E5A8]">
-                  <PawPrint className="w-6 h-6 md:w-7 md:h-7" />
+                <div className="w-16 h-16 md:w-[72px] md:h-[72px] rounded-full bg-[#C6E5A8]/10 flex items-center justify-center mb-3 text-[#C6E5A8]">
+                  <PawPrint className="w-8 h-8 md:w-9 md:h-9" />
                 </div>
-                <p className="font-sans text-xs md:text-sm text-[#D4EAB6] font-medium leading-tight">Rescatamos<br/>vidas</p>
+                <p className="font-sans text-[15px] md:text-[18px] text-[#D4EAB6] font-medium leading-tight text-center">Rescatamos<br/>vidas</p>
               </div>
               <div className="flex flex-col items-center">
-                <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-[#C6E5A8]/10 flex items-center justify-center mb-3 text-[#C6E5A8]">
-                  <Sprout className="w-6 h-6 md:w-7 md:h-7" />
+                <div className="w-16 h-16 md:w-[72px] md:h-[72px] rounded-full bg-[#C6E5A8]/10 flex items-center justify-center mb-3 text-[#C6E5A8]">
+                  <Sprout className="w-8 h-8 md:w-9 md:h-9" />
                 </div>
-                <p className="font-sans text-xs md:text-sm text-[#D4EAB6] font-medium leading-tight">Protegemos<br/>la naturaleza</p>
+                <p className="font-sans text-[15px] md:text-[18px] text-[#D4EAB6] font-medium leading-tight text-center">Protegemos<br/>la NATURALEZA</p>
               </div>
               <div className="flex flex-col items-center">
-                <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-[#C6E5A8]/10 flex items-center justify-center mb-3 text-[#C6E5A8]">
-                  <TreeDeciduous className="w-6 h-6 md:w-7 md:h-7" />
+                <div className="w-16 h-16 md:w-[72px] md:h-[72px] rounded-full bg-[#C6E5A8]/10 flex items-center justify-center mb-3 text-[#C6E5A8]">
+                  <TreeDeciduous className="w-8 h-8 md:w-9 md:h-9" />
                 </div>
-                <p className="font-sans text-xs md:text-sm text-[#D4EAB6] font-medium leading-tight">Cuidamos<br/>este refugio</p>
+                <p className="font-sans text-[15px] md:text-[18px] text-[#D4EAB6] font-medium leading-tight text-center">Cuidamos<br/>este refugio</p>
               </div>
               <div className="flex flex-col items-center">
-                <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-[#C6E5A8]/10 flex items-center justify-center mb-3 text-[#C6E5A8]">
-                  <Heart className="w-6 h-6 md:w-7 md:h-7" fill="currentColor" />
+                <div className="w-16 h-16 md:w-[72px] md:h-[72px] rounded-full bg-[#C6E5A8]/10 flex items-center justify-center mb-3 text-[#C6E5A8]">
+                  <Heart className="w-8 h-8 md:w-9 md:h-9" fill="currentColor" />
                 </div>
-                <p className="font-sans text-xs md:text-sm text-[#D4EAB6] font-medium leading-tight">Construimos<br/>un futuro mejor</p>
+                <p className="font-sans text-[15px] md:text-[18px] text-[#D4EAB6] font-medium leading-tight text-center">Construimos<br/>un futuro mejor</p>
               </div>
             </div>
 
@@ -91,19 +99,27 @@ export default function Donaciones() {
             </a>
           </div>
 
-          {/* Cita inferior */}
-          <div className="absolute bottom-8 left-0 w-full px-6 z-20">
-            <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-center gap-2 md:gap-6">
-              <div className="flex items-center gap-2">
-                <Leaf className="w-4 h-4 md:w-5 md:h-5 text-yvaga-light" />
-                <p className="font-cursive text-xl md:text-2xl text-yvaga-light">Cada pequeña acción hace una gran diferencia.</p>
-              </div>
-              <div className="hidden md:block w-px h-6 bg-yvaga-light/30"></div>
-              <div className="flex items-center gap-2">
-                <PawPrint className="w-4 h-4 md:w-5 md:h-5 text-yvaga-light" />
-                <p className="font-cursive text-xl md:text-2xl text-yvaga-light">Gracias por ser parte de esta misión.</p>
-              </div>
-            </div>
+          {/* CUADRO DERECHO (Desktop) */}
+          <div className="hidden xl:flex bg-[#0D2012]/80 rounded-[24px] p-6 lg:p-8 max-w-[280px] shadow-2xl border border-white/10 items-center justify-center mb-0 relative">
+             <PawPrint className="absolute -top-3 w-8 h-8 text-[#A3D152] opacity-80 rotate-[-12deg]" />
+             <p className="font-caveat-brush text-[34px] text-[#E8F5D6] leading-[1.15] text-center tracking-wide">
+               Gracias por ser parte de esta misión.
+             </p>
+          </div>
+          </div>
+
+          {/* Versión móvil/tablet de las frases */}
+          <div className="xl:hidden mt-6 flex flex-col sm:flex-row items-center justify-center gap-4 px-4 w-full max-w-3xl">
+             <div className="bg-[#0D2012]/80 rounded-[24px] p-4 flex-1 shadow-xl border border-white/10 w-full text-center relative overflow-hidden">
+                <p className="font-caveat-brush text-[26px] md:text-[30px] text-[#E8F5D6] leading-[1.15] tracking-wide text-balance relative z-10">
+                 Una pequeña acción hace una gran diferencia.
+               </p>
+             </div>
+             <div className="bg-[#0D2012]/80 rounded-[24px] p-4 flex-1 shadow-xl border border-white/10 w-full text-center relative overflow-hidden">
+                <p className="font-caveat-brush text-[26px] md:text-[30px] text-[#E8F5D6] leading-[1.15] tracking-wide text-balance relative z-10">
+                 Gracias por ser parte de esta misión.
+               </p>
+             </div>
           </div>
         </div>
       </section>
@@ -128,13 +144,13 @@ export default function Donaciones() {
               </h2>
               <Heart className="w-10 h-10 md:w-12 md:h-12 text-[#598420] opacity-80 lg:mt-auto hidden lg:block" />
             </div>
-            <p className="font-sans text-base md:text-xl text-yvaga-dark/80 leading-relaxed mt-6 mb-12 max-w-2xl">
+            <p className="font-sans text-[18px] md:text-[22px] text-yvaga-dark/80 leading-relaxed mt-6 mb-12 max-w-2xl">
               Rescatamos animales que fueron víctimas del maltrato o del abandono. Aquí encuentran un hogar... y tú puedes conocer sus historias.
             </p>
 
             <button 
               onClick={() => setShowModal(true)}
-              className="inline-flex items-center gap-3 bg-[#598420] hover:bg-[#436715] text-white font-sans px-8 py-4 rounded-xl transition-all shadow-lg transform hover:-translate-y-1 active:scale-95 hover:shadow-xl"
+              className="inline-flex items-center gap-3 bg-[#598420] hover:bg-[#436715] text-white font-sans text-[20px] px-8 py-4 rounded-xl transition-all shadow-lg transform hover:-translate-y-1 active:scale-95 hover:shadow-xl"
             >
               <PawPrint className="w-5 h-5 fill-current" />
               Conoce a nuestros animales
@@ -149,16 +165,16 @@ export default function Donaciones() {
           {/* Text Area */}
           <div className="w-full md:w-1/2 p-8 md:p-16 lg:p-24 relative z-10 bg-gradient-to-r from-[#F9F7F2] via-[#F9F7F2]/90 to-transparent">
             <div className="flex items-center gap-3 mb-6">
-              <h2 className="font-serif text-4xl md:text-5xl text-yvaga-dark">
+              <h2 className="font-serif text-[42px] md:text-[54px] leading-tight text-yvaga-dark">
                 Tu apoyo <span className="text-[#436715] font-bold">hace la diferencia</span>
               </h2>
               <Heart className="w-10 h-10 text-[#436715]" />
             </div>
             
-            <p className="font-sans text-base md:text-lg text-yvaga-dark/80 leading-relaxed mb-6">
-              Yvaga Guazú no recibe ningún tipo de ayuda gubernamental ni de instituciones. Nos sostenemos gracias a personas como tú, que creen en la naturaleza y en la importancia de protegerla.
+            <p className="font-sans text-[20px] md:text-[22px] text-yvaga-dark/80 leading-relaxed mb-6">
+              Yvaga Guazú no recibe ningún tipo de ayuda gubernamental ni de instituciones. Nos sostenemos gracias a personas como tú, que creen en la NATURALEZA y en la importancia de protegerla.
             </p>
-            <p className="font-sans text-base md:text-lg text-yvaga-dark/80 leading-relaxed">
+            <p className="font-sans text-[20px] md:text-[22px] text-yvaga-dark/80 leading-relaxed">
               Cada donación nos permite seguir rescatando animales, cuidando el parque, educando a más personas y manteniendo este refugio vivo.
             </p>
           </div>
@@ -191,9 +207,9 @@ export default function Donaciones() {
         {/* Content */}
         <div className="relative z-10 text-center max-w-3xl mx-auto px-4">
           <h2 className="font-serif text-4xl md:text-6xl text-white mb-6 drop-shadow-lg">
-            Unidos por la naturaleza
+            Unidos por la NATURALEZA
           </h2>
-          <p className="font-sans text-white/90 text-lg md:text-xl drop-shadow-md">
+          <p className="font-sans text-white/90 text-[22px] md:text-[24px] drop-shadow-md">
             Gracias a las donaciones, visitas y compras solidarias, hacemos posible la conservación.
           </p>
         </div>
@@ -201,62 +217,62 @@ export default function Donaciones() {
 
       {/* SECCIÓN 5: Dona hoy y sé parte del cambio */}
       <section className="bg-[#F9F7F2] py-24 px-6 md:px-12 w-full border-t border-[#3A4E33]/10">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex items-center justify-center gap-4 mb-12">
-            <h2 className="font-serif text-4xl md:text-5xl text-[#3A4E33] text-center">
+        <div className="max-w-5xl mx-auto">
+          <div className="flex items-center justify-center gap-4 mb-14">
+            <h2 className="font-serif text-[42px] md:text-[54px] leading-tight text-[#3A4E33] text-center">
               Dona hoy y sé parte del cambio
             </h2>
-            <Heart className="w-10 h-10 text-[#598420] opacity-80" />
+            <Heart className="w-12 h-12 text-[#598420] opacity-80" />
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 mb-16">
+          <div className="flex flex-col gap-16 mb-16">
             
-            {/* 7 Columnas: Tu donación se transforma en: */}
-            <div className="lg:col-span-7 flex flex-col pt-4">
-              <h3 className="font-sans font-bold text-lg text-[#3A4E33] mb-6 whitespace-nowrap">Tu donación se transforma en:</h3>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {/* Tu donación se transforma en: */}
+            <div className="flex flex-col items-center w-full">
+              <h3 className="font-sans font-bold text-[28px] text-[#3A4E33] mb-8 text-center">Tu donación se transforma en:</h3>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 w-full">
                 
-                <div className="flex flex-col items-center text-center border-l bg-[#3A4E33]/5 rounded-r-xl p-3 border-[#3A4E33]/20 h-full">
-                  <PawPrint className="w-8 h-8 text-[#598420] mb-3" />
-                  <p className="font-sans text-[15px] text-yvaga-dark/80 leading-snug">Alimentación y cuidado de los animales rescatados</p>
+                <div className="flex flex-col items-center text-center border-l bg-[#3A4E33]/5 rounded-r-xl p-4 border-[#3A4E33]/20 h-full">
+                  <PawPrint className="w-11 h-11 text-[#598420] mb-4" />
+                  <p className="font-sans text-[21px] text-yvaga-dark/80 leading-snug">Alimentación y cuidado de los animales rescatados</p>
                 </div>
                 
-                <div className="flex flex-col items-center text-center border-l bg-[#3A4E33]/5 rounded-r-xl p-3 border-[#3A4E33]/20 h-full">
-                  <Leaf className="w-8 h-8 text-[#598420] mb-3" />
-                  <p className="font-sans text-[15px] text-yvaga-dark/80 leading-snug">Mantenimiento y conservación de las 14 hectáreas</p>
+                <div className="flex flex-col items-center text-center border-l bg-[#3A4E33]/5 rounded-r-xl p-4 border-[#3A4E33]/20 h-full">
+                  <Leaf className="w-11 h-11 text-[#598420] mb-4" />
+                  <p className="font-sans text-[21px] text-yvaga-dark/80 leading-snug">Mantenimiento y conservación de las 14 hectáreas</p>
                 </div>
 
-                <div className="flex flex-col items-center text-center border-l bg-[#3A4E33]/5 rounded-r-xl p-3 border-[#3A4E33]/20 h-full">
-                  <BookOpen className="w-8 h-8 text-[#598420] mb-3" />
-                  <p className="font-sans text-[15px] text-yvaga-dark/80 leading-snug">Educación ambiental para niños, escuelas y comunidades</p>
+                <div className="flex flex-col items-center text-center border-l bg-[#3A4E33]/5 rounded-r-xl p-4 border-[#3A4E33]/20 h-full">
+                  <BookOpen className="w-11 h-11 text-[#598420] mb-4" />
+                  <p className="font-sans text-[21px] text-yvaga-dark/80 leading-snug">Educación ambiental para niños, escuelas y comunidades</p>
                 </div>
 
-                <div className="flex flex-col items-center text-center border-l bg-[#3A4E33]/5 rounded-r-xl p-3 border-[#3A4E33]/20 h-full">
-                  <HandHeart className="w-8 h-8 text-[#598420] mb-3" />
-                  <p className="font-sans text-[15px] text-yvaga-dark/80 leading-snug">Rescate y rehabilitación de animales vulnerables</p>
+                <div className="flex flex-col items-center text-center border-l bg-[#3A4E33]/5 rounded-r-xl p-4 border-[#3A4E33]/20 h-full">
+                  <HandHeart className="w-11 h-11 text-[#598420] mb-4" />
+                  <p className="font-sans text-[21px] text-yvaga-dark/80 leading-snug">Rescate y rehabilitación de animales vulnerables</p>
                 </div>
 
               </div>
             </div>
 
-            {/* 5 Columnas: Formas de donar */}
-            <div className="lg:col-span-5 flex flex-col pt-4 lg:pl-10 lg:border-l border-[#3A4E33]/20">
-              <h3 className="font-sans font-bold text-lg text-[#3A4E33] mb-6 text-center">Formas de donar</h3>
-              <div className="grid grid-cols-3 gap-3">
+            {/* Formas de donar */}
+            <div className="flex flex-col items-center w-full">
+              <h3 className="font-sans font-bold text-[28px] text-[#3A4E33] mb-8 text-center">Formas de donar</h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full md:max-w-4xl mx-auto">
                 
-                <div className="flex flex-col items-center text-center border-l bg-[#3A4E33]/5 rounded-r-xl p-3 border-[#3A4E33]/20 h-full justify-start">
-                  <Landmark className="w-8 h-8 text-[#598420] mb-3" />
-                  <p className="font-sans text-[15px] text-yvaga-dark/80 leading-snug">Transferencia bancaria</p>
+                <div className="flex flex-col items-center text-center border-l bg-[#3A4E33]/5 rounded-r-xl p-4 border-[#3A4E33]/20 h-full justify-start">
+                  <Landmark className="w-11 h-11 text-[#598420] mb-4" />
+                  <p className="font-sans text-[21px] text-yvaga-dark/80 leading-snug">Transferencia bancaria</p>
                 </div>
 
-                <div className="flex flex-col items-center text-center border-l bg-[#3A4E33]/5 rounded-r-xl p-3 border-[#3A4E33]/20 h-full justify-start">
-                  <CreditCard className="w-8 h-8 text-[#598420] mb-3" />
-                  <p className="font-sans text-[15px] text-yvaga-dark/80 leading-snug">Mercado Pago</p>
+                <div className="flex flex-col items-center text-center border-l bg-[#3A4E33]/5 rounded-r-xl p-4 border-[#3A4E33]/20 h-full justify-start">
+                  <CreditCard className="w-11 h-11 text-[#598420] mb-4" />
+                  <p className="font-sans text-[21px] text-yvaga-dark/80 leading-snug">Mercado Pago</p>
                 </div>
 
-                <div className="flex flex-col items-center text-center border-l bg-[#3A4E33]/5 rounded-r-xl p-3 border-[#3A4E33]/20 h-full justify-start">
-                  <BadgeDollarSign className="w-8 h-8 text-[#598420] mb-3" />
-                  <p className="font-sans text-[15px] text-yvaga-dark/80 leading-snug">Donaciones internacionales (PayPal)</p>
+                <div className="flex flex-col items-center text-center border-l bg-[#3A4E33]/5 rounded-r-xl p-4 border-[#3A4E33]/20 h-full justify-start">
+                  <BadgeDollarSign className="w-11 h-11 text-[#598420] mb-4" />
+                  <p className="font-sans text-[21px] text-yvaga-dark/80 leading-snug">Donaciones internacionales (PayPal)</p>
                 </div>
 
               </div>
@@ -301,66 +317,23 @@ export default function Donaciones() {
               <Heart className="w-10 h-10 text-[#598420]" />
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="flex flex-col items-start max-w-md">
               
-              {/* Testimonial 1 */}
-              <div className="border border-[#598420]/30 rounded-[32px] p-6 lg:p-8 relative">
+              {/* Testimonial */}
+              <div className="border border-[#598420]/30 rounded-[32px] p-6 lg:p-8 relative w-full">
                 <div className="flex flex-col gap-4 mb-6">
-                  <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-[#598420]">
-                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Vanesa R." className="w-full h-full object-cover" />
-                  </div>
                   <div className="flex text-[#FFB800]">
                     <Star className="w-4 h-4 fill-current" />
                     <Star className="w-4 h-4 fill-current" />
                     <Star className="w-4 h-4 fill-current" />
                     <Star className="w-4 h-4 fill-current" />
-                    <Star className="w-4 h-4 fill-current text-white/20" />
+                    <Star className="w-4 h-4 fill-current" />
                   </div>
                 </div>
-                <p className="text-white/80 text-sm leading-relaxed mb-6 font-light">
-                  "Un lugar mágico, se siente la paz y el amor por los animales y las plantas."
+                <p className="text-white/80 text-[22px] italic leading-relaxed mb-6 font-light">
+                  "Profe Profe, nunca pensé que la NATURALEZA fuera tan bella"
                 </p>
-                <span className="text-[#598420] font-sans text-sm">— Vanesa R.</span>
-              </div>
-
-              {/* Testimonial 2 */}
-              <div className="border border-[#598420]/30 rounded-[32px] p-6 lg:p-8 relative">
-                <div className="flex flex-col gap-4 mb-6">
-                  <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-[#598420]">
-                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Martín G." className="w-full h-full object-cover" />
-                  </div>
-                  <div className="flex text-[#FFB800]">
-                    <Star className="w-4 h-4 fill-current" />
-                    <Star className="w-4 h-4 fill-current" />
-                    <Star className="w-4 h-4 fill-current" />
-                    <Star className="w-4 h-4 fill-current" />
-                    <Star className="w-4 h-4 fill-current text-white/20" />
-                  </div>
-                </div>
-                <p className="text-white/80 text-sm leading-relaxed mb-6 font-light">
-                  "Mis hijos aprendieron jugando y conectaron con la naturaleza."
-                </p>
-                <span className="text-[#598420] font-sans text-sm">— Martín G.</span>
-              </div>
-
-              {/* Testimonial 3 */}
-              <div className="border border-[#598420]/30 rounded-[32px] p-6 lg:p-8 relative">
-                <div className="flex flex-col gap-4 mb-6">
-                  <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-[#598420]">
-                    <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Laura B." className="w-full h-full object-cover" />
-                  </div>
-                  <div className="flex text-[#FFB800]">
-                    <Star className="w-4 h-4 fill-current" />
-                    <Star className="w-4 h-4 fill-current" />
-                    <Star className="w-4 h-4 fill-current" />
-                    <Star className="w-4 h-4 fill-current" />
-                    <Star className="w-4 h-4 fill-current text-white/20" />
-                  </div>
-                </div>
-                <p className="text-white/80 text-sm leading-relaxed mb-6 font-light">
-                  "Una experiencia que te cambia. Volveremos siempre."
-                </p>
-                <span className="text-[#598420] font-sans text-sm">— Laura B.</span>
+                <span className="text-[#598420] font-sans text-[18px]">— Estudiante del colegio Alemán (niña)</span>
               </div>
 
             </div>
@@ -373,25 +346,9 @@ export default function Donaciones() {
             <div className="flex items-center gap-2 mb-8">
               <Heart className="w-6 h-6 text-[#8EBC3F] opacity-70" />
             </div>
-            <p className="text-white/70 text-sm md:text-base leading-relaxed mb-8">
+            <p className="text-white/70 text-[18px] md:text-[20px] leading-relaxed mb-8">
               Tu visita ayuda a seguir rescatando, protegiendo y educando.
             </p>
-            <div className="flex items-center gap-4">
-              <a href="#" className="w-12 h-12 rounded-full bg-white flex items-center justify-center text-[#0D2012] hover:bg-[#8EBC3F] transition-colors shadow-lg">
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a href="#" className="w-12 h-12 rounded-full bg-white flex items-center justify-center text-[#0D2012] hover:bg-[#8EBC3F] transition-colors shadow-lg">
-                <Instagram className="w-5 h-5" />
-              </a>
-              <a 
-                href="https://wa.me/59170248238" 
-                target="_blank" 
-                rel="noreferrer"
-                className="w-12 h-12 rounded-full bg-white flex items-center justify-center text-[#0D2012] hover:bg-[#8EBC3F] transition-colors shadow-lg"
-              >
-                <Phone className="w-5 h-5" />
-              </a>
-            </div>
           </div>
 
         </div>

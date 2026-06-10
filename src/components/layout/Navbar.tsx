@@ -2,14 +2,14 @@ import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { cn } from "../../lib/utils";
 import { motion, AnimatePresence } from "motion/react";
-import { Home, Users, Map, HeartHandshake, Phone, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const NAV_LINKS = [
-  { path: "/", label: "Home", icon: Home },
-  { path: "/nosotros", label: "Nosotros", icon: Users },
-  { path: "/servicios", label: "Servicios", icon: Map },
-  { path: "/donaciones", label: "Donaciones", icon: HeartHandshake },
-  { path: "/contacto", label: "Contacto", icon: Phone },
+  { path: "/", label: "Home" },
+  { path: "/nosotros", label: "Nosotros" },
+  { path: "/servicios", label: "Servicios" },
+  { path: "/donaciones", label: "Donaciones" },
+  { path: "/contacto", label: "Contacto" },
 ];
 
 export default function Navbar() {
@@ -24,43 +24,50 @@ export default function Navbar() {
 
   return (
     <>
-      {/* Desktop Menu - Floating on Right */}
+      {/* Desktop Menu - Standard Top Navbar */}
       <nav
         className={cn(
-          "hidden md:flex fixed top-1/2 -translate-y-1/2 right-6 z-50 flex-col gap-4",
+          "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
+          scrolled ? "bg-yvaga-dark/95 backdrop-blur-md shadow-lg py-4" : "bg-transparent py-6"
         )}
       >
-        {NAV_LINKS.map((link) => {
-          const Icon = link.icon;
-          return (
-            <NavLink
-              key={link.path}
-              to={link.path}
-              className={({ isActive }) =>
-                cn(
-                  "group relative flex items-center p-3 rounded-full bg-yvaga-dark/60 backdrop-blur-md text-yvaga-white border border-yvaga-white/10 shadow-lg hover:bg-yvaga-sec hover:border-yvaga-light/50 transition-all duration-300",
-                  isActive && "bg-yvaga-light/90 border-transparent text-yvaga-dark shadow-md"
-                )
-              }
-            >
-              <Icon className="w-5 h-5 relative z-10 scale-110" />
-              <div className="absolute right-full mr-4 bg-yvaga-dark/90 text-white px-4 py-2 rounded-xl backdrop-blur-md border border-white/10 opacity-0 -translate-x-4 pointer-events-none group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 whitespace-nowrap shadow-xl">
-                <span className="font-sans font-light tracking-wide">{link.label}</span>
-              </div>
-            </NavLink>
-          );
-        })}
-      </nav>
+        <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
+          <div className="flex items-center">
+            {/* Logo placeholder if needed */}
+            <span className={cn("font-serif text-2xl font-bold", scrolled ? "text-white" : "text-white")}>
+              {/* Optional logo text */}
+            </span>
+          </div>
 
-      {/* Mobile Menu Toggle */}
-      <div className="md:hidden fixed top-6 right-6 z-50">
-        <button
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="p-3 bg-yvaga-dark text-white rounded-full shadow-lg backdrop-blur-md border border-white/10"
-        >
-          {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-        </button>
-      </div>
+          {/* Desktop Links */}
+          <div className="hidden md:flex items-center gap-8">
+            {NAV_LINKS.map((link) => (
+              <NavLink
+                key={link.path}
+                to={link.path}
+                className={({ isActive }) =>
+                  cn(
+                    "font-sans text-[18px] font-medium transition-colors",
+                    isActive ? "text-[#C6E5A8]" : "text-white/80 hover:text-white"
+                  )
+                }
+              >
+                {link.label}
+              </NavLink>
+            ))}
+          </div>
+
+          {/* Mobile Menu Toggle */}
+          <div className="md:hidden">
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className={cn("p-2", "text-white")}
+            >
+              {mobileMenuOpen ? <X className="w-8 h-8" /> : <Menu className="w-8 h-8" />}
+            </button>
+          </div>
+        </div>
+      </nav>
 
       {/* Mobile Menu Overflow */}
       <AnimatePresence>
@@ -71,25 +78,27 @@ export default function Navbar() {
             exit={{ opacity: 0, y: -20 }}
             className="fixed inset-0 z-40 bg-yvaga-black/95 backdrop-blur-lg flex flex-col items-center justify-center gap-8 px-6"
           >
-            {NAV_LINKS.map((link) => {
-              const Icon = link.icon;
-              return (
-                <NavLink
-                  key={link.path}
-                  to={link.path}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className={({ isActive }) =>
-                    cn(
-                      "flex items-center gap-4 text-yvaga-white text-3xl font-sans font-light tracking-wide hover:text-yvaga-acc transition-colors",
-                      isActive && "text-yvaga-acc"
-                    )
-                  }
-                >
-                  <Icon className="w-8 h-8 opacity-70" />
-                  {link.label}
-                </NavLink>
-              );
-            })}
+            <button
+              onClick={() => setMobileMenuOpen(false)}
+              className="absolute top-6 right-6 p-2 text-white"
+            >
+              <X className="w-8 h-8" />
+            </button>
+            {NAV_LINKS.map((link) => (
+              <NavLink
+                key={link.path}
+                to={link.path}
+                onClick={() => setMobileMenuOpen(false)}
+                className={({ isActive }) =>
+                  cn(
+                    "flex items-center gap-4 text-yvaga-white text-3xl font-sans font-light tracking-wide hover:text-yvaga-acc transition-colors",
+                    isActive && "text-yvaga-acc"
+                  )
+                }
+              >
+                {link.label}
+              </NavLink>
+            ))}
           </motion.div>
         )}
       </AnimatePresence>

@@ -132,7 +132,7 @@ export default function Nosotros() {
       <section className="py-24 px-6 bg-yvaga-beige">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <span className="inline-block border border-yvaga-sec text-yvaga-sec px-6 py-2 rounded-full font-sans font-semibold mb-6 tracking-wide text-sm bg-yvaga-sec/5">
+            <span className="inline-block border border-yvaga-sec text-yvaga-sec px-8 py-3 rounded-full font-sans font-semibold mb-6 tracking-wide text-[21px] bg-yvaga-sec/5">
               Porque lo que se ama... se cuida.
             </span>
             <h2 className="font-serif text-4xl md:text-5xl text-yvaga-dark mb-12">Detalles que dejan huella</h2>
@@ -172,7 +172,7 @@ export default function Nosotros() {
       {/* BLOQUE 5 – CIERRE VISUAL NOSOTROS */}
       <section className="relative py-32 px-6 overflow-hidden flex items-center justify-center min-h-[70vh]">
         <div className="absolute inset-0 z-0">
-          <img src="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?q=80&w=2676&auto=format&fit=crop" alt="Naturaleza vida" className="w-full h-full object-cover" />
+          <img src="/huella_bosque.png" alt="Naturaleza vida" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-yvaga-dark via-yvaga-dark/50 to-transparent"></div>
         </div>
 
@@ -185,22 +185,22 @@ export default function Nosotros() {
            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-yvaga-dark mb-6">
              Cada paso que das aquí, deja una huella que transforma.
            </h2>
-           <p className="font-sans text-lg md:text-xl text-yvaga-dark/70 mb-12 max-w-2xl mx-auto">
+           <p className="font-sans text-[20px] md:text-[22px] text-yvaga-dark/70 mb-12 max-w-2xl mx-auto">
              Visítanos, apóyanos y sé parte de este refugio que protege la naturaleza y da esperanza a quienes más lo necesitan.
            </p>
 
            <div className="flex flex-wrap justify-center gap-6 md:gap-12 mb-12 border-y border-yvaga-dark/10 py-8">
              <div className="flex flex-col items-center opacity-70">
-               <Heart className="w-8 h-8 mb-2 text-yvaga-sec" />
-               <span className="font-serif text-sm uppercase tracking-widest">Misión</span>
+               <Heart className="w-10 h-10 mb-2 text-yvaga-sec" />
+               <span className="font-serif text-lg uppercase tracking-widest">Misión</span>
              </div>
              <div className="flex flex-col items-center opacity-70">
-               <Globe className="w-8 h-8 mb-2 text-yvaga-sec" />
-               <span className="font-serif text-sm uppercase tracking-widest">Refugio</span>
+               <Globe className="w-10 h-10 mb-2 text-yvaga-sec" />
+               <span className="font-serif text-lg uppercase tracking-widest">Refugio</span>
              </div>
              <div className="flex flex-col items-center opacity-70">
-               <Trees className="w-8 h-8 mb-2 text-yvaga-sec" />
-               <span className="font-serif text-sm uppercase tracking-widest">Conservación</span>
+               <Trees className="w-10 h-10 mb-2 text-yvaga-sec" />
+               <span className="font-serif text-lg uppercase tracking-widest">Conservación</span>
              </div>
            </div>
 

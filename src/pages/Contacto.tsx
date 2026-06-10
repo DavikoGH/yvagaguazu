@@ -134,7 +134,7 @@ export default function Contacto() {
                   <h1 className="font-serif text-yvaga-white tracking-wide uppercase leading-none">
                     <span className="block text-2xl md:text-3xl font-medium tracking-widest mb-2">Ponte en</span>
                     <span className="block text-6xl md:text-8xl xl:text-9xl font-bold mb-2">Contacto</span>
-                    <span className="block font-writing text-5xl md:text-7xl xl:text-8xl text-[#FFD700] lowercase tracking-normal">con nosotros</span>
+                    <span className="block font-sans italic text-5xl md:text-7xl xl:text-8xl text-[#FFD700] lowercase tracking-normal">con nosotros</span>
                   </h1>
                   <div className="w-24 h-1 bg-yvaga-acc/50 mt-6 mb-8"></div>
                   <p className="font-sans text-[20.5px] md:text-[22px] text-yvaga-white/90 leading-relaxed col-span-11 w-11/12">
@@ -250,16 +250,16 @@ export default function Contacto() {
               
               {/* Columna Izquierda: Texto */}
               <div className="w-full md:w-1/2 p-6 md:p-8 flex flex-col justify-center items-center text-center relative z-10">
-                <p className="font-cursive text-4xl md:text-5xl text-white mb-2">
+                <p className="font-sans italic text-4xl md:text-5xl text-white mb-2">
                   No vienes
                 </p>
-                <p className="font-cursive text-4xl md:text-5xl text-white mb-2">
+                <p className="font-sans italic text-4xl md:text-5xl text-white mb-2">
                   a ver...
                 </p>
-                <p className="font-cursive text-4xl md:text-5xl text-white mb-2">
+                <p className="font-sans italic text-4xl md:text-5xl text-white mb-2">
                   vienes a
                 </p>
-                <h3 className="font-cursive text-6xl md:text-8xl font-bold text-[#8EBC3F]">
+                <h3 className="font-sans italic text-6xl md:text-8xl font-bold text-[#8EBC3F]">
                   sentir
                 </h3>
               </div>

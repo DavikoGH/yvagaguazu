@@ -8,6 +8,7 @@ import Servicios from "./pages/Servicios";
 import Donaciones from "./pages/Donaciones";
 import Contacto from "./pages/Contacto";
 import ScrollToTop from "./components/ScrollToTop";
+import ScrollUpButton from "./components/layout/ScrollUpButton";
 
 // I'm using the lucide-react MessageCircle or similar, wait, better yet, just a simple WhatsApp icon 
 // But since I don't import icons here, let's just make an SVG.
@@ -41,7 +42,7 @@ export default function App() {
           href="https://wa.me/59176325400" 
           target="_blank" 
           rel="noopener noreferrer"
-          className="fixed bottom-6 right-6 md:bottom-8 md:right-auto md:left-8 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-lg shadow-black/20 hover:scale-110 transition-transform duration-300 flex items-center justify-center group"
+          className="fixed bottom-24 right-6 md:bottom-8 md:right-auto md:left-8 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-lg shadow-black/20 hover:scale-110 transition-transform duration-300 flex items-center justify-center group"
           aria-label="Chat en WhatsApp"
         >
           <WhatsAppIcon className="w-8 h-8" />
@@ -50,6 +51,9 @@ export default function App() {
             Chatea con nosotros
           </span>
         </a>
+
+        {/* Scroll Up Button */}
+        <ScrollUpButton />
       </div>
     </BrowserRouter>
   );

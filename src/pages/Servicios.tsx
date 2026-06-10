@@ -89,20 +89,20 @@ export default function Servicios() {
         
         <div className="flex flex-col gap-12 md:gap-14">
           {/* Fila 1: Recorridos Guiados */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            <div className="lg:col-span-3">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            <div className="lg:col-span-5">
               <div className="aspect-[4/3] md:aspect-video lg:aspect-[4/3] w-full rounded-3xl overflow-hidden shadow-lg border border-yvaga-sec/10">
                  <img src="/servicio_guia.jpg" alt="Tour Guiado" className="w-full h-full object-cover" />
               </div>
             </div>
-            <div className="lg:col-span-9 flex flex-col justify-center text-left">
-              <h2 className="font-sans text-sm font-bold uppercase tracking-wider text-yvaga-sec mb-1">
+            <div className="lg:col-span-7 flex flex-col justify-center text-left">
+              <h2 className="font-sans text-base md:text-[17px] font-bold uppercase tracking-wider text-yvaga-sec mb-2">
                 RECORRIDOS GUIADOS
               </h2>
-              <h3 className="font-serif text-2xl md:text-3xl text-yvaga-dark mb-4">
+              <h3 className="font-serif text-3xl md:text-4xl text-yvaga-dark mb-4">
                 Explora la naturaleza con nosotros
               </h3>
-              <p className="font-sans text-base md:text-lg text-yvaga-black/80 leading-relaxed max-w-4xl">
+              <p className="font-sans text-[19px] md:text-[22px] text-yvaga-black/80 leading-relaxed max-w-4xl">
                 Recorre nuestras 14 hectáreas a través de recorridos con guías especializados, con quienes podrás descubrir en nuestro bosque y conocer la gran biodiversidad que tenemos en YVAGA GUAZÚ y conectar con la naturaleza de una forma real y consciente.<br/><br/>
                 <span className="font-medium text-yvaga-dark">No es solo un recorrido… es una experiencia que transforma tu forma de ver el entorno.</span>
               </p>
@@ -124,20 +124,20 @@ export default function Servicios() {
           <div className="w-full h-px bg-yvaga-sec/10 mt-6"></div>
 
           {/* Fila 2: Restaurante y Snack */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            <div className="lg:col-span-3">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            <div className="lg:col-span-5">
               <div className="aspect-[4/3] md:aspect-video lg:aspect-[4/3] w-full rounded-3xl overflow-hidden shadow-lg border border-yvaga-sec/10">
                  <img src="/servicio_snack.jpg" alt="Restaurante y Snack" className="w-full h-full object-cover" />
               </div>
             </div>
-            <div className="lg:col-span-9 flex flex-col justify-center text-left">
-              <h2 className="font-sans text-sm font-bold uppercase tracking-wider text-yvaga-sec mb-1">
+            <div className="lg:col-span-7 flex flex-col justify-center text-left">
+              <h2 className="font-sans text-base md:text-[17px] font-bold uppercase tracking-wider text-yvaga-sec mb-2">
                 RESTAURANTE Y SNACK
               </h2>
-              <h3 className="font-serif text-2xl md:text-3xl text-yvaga-dark mb-4">
+              <h3 className="font-serif text-3xl md:text-4xl text-yvaga-dark mb-4">
                 Disfruta de nuestros sabores en la naturaleza
               </h3>
-              <p className="font-sans text-base md:text-lg text-yvaga-black/80 leading-relaxed max-w-4xl">
+              <p className="font-sans text-[19px] md:text-[22px] text-yvaga-black/80 leading-relaxed max-w-4xl">
                 Contamos con un restaurant de arquitectura costumbrista donde puedes relajarte, compartir y degustar de deliciosos platos en un entorno natural único.<br/><br/>
                 El lugar perfecto para desconectarte del ritmo diario y vivir un momento diferente.
               </p>
@@ -159,20 +159,20 @@ export default function Servicios() {
           <div className="w-full h-px bg-yvaga-sec/10 mt-6"></div>
 
           {/* Fila 3: Vivero con Propósito */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            <div className="lg:col-span-3">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            <div className="lg:col-span-5">
               <div className="aspect-[4/3] md:aspect-video lg:aspect-[4/3] w-full rounded-3xl overflow-hidden shadow-lg border border-yvaga-sec/10">
                  <img src="/servicio_ventas.jpg" alt="Vivero con Propósito" className="w-full h-full object-cover" />
               </div>
             </div>
-            <div className="lg:col-span-9 flex flex-col justify-center text-left">
-              <h2 className="font-sans text-sm font-bold uppercase tracking-wider text-yvaga-sec mb-1">
+            <div className="lg:col-span-7 flex flex-col justify-center text-left">
+              <h2 className="font-sans text-base md:text-[17px] font-bold uppercase tracking-wider text-yvaga-sec mb-2">
                 VIVERO CON PROPÓSITO
               </h2>
-              <h3 className="font-serif text-2xl md:text-3xl text-yvaga-dark mb-4">
+              <h3 className="font-serif text-3xl md:text-4xl text-yvaga-dark mb-4">
                 Llévate vida, salva una vida
               </h3>
-              <p className="font-sans text-base md:text-lg text-yvaga-black/80 leading-relaxed max-w-4xl">
+              <p className="font-sans text-[19px] md:text-[22px] text-yvaga-black/80 leading-relaxed max-w-4xl">
                 Nuestro vivero está lleno de hermosas plantas que puedes llevar contigo para darle vida a tu hogar.<br/><br/>
                 Cada compra tiene un propósito mayor:<br/>
                 los ingresos del vivero ayudan directamente al cuidado y mantenimiento de YVAGA GUAZÚ y para la alimentación de los más de 300 animales rescatados.
