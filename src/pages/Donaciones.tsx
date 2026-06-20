@@ -164,18 +164,21 @@ export default function Donaciones() {
         <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row items-center justify-between min-h-[500px]">
           {/* Text Area */}
           <div className="w-full md:w-1/2 p-8 md:p-16 lg:p-24 relative z-10 bg-gradient-to-r from-[#F9F7F2] via-[#F9F7F2]/90 to-transparent">
-            <div className="flex items-center gap-3 mb-6">
-              <h2 className="font-serif text-[42px] md:text-[54px] leading-tight text-yvaga-dark">
-                Tu apoyo <span className="text-[#436715] font-bold">hace la diferencia</span>
+            <div className="flex flex-wrap items-center gap-3 mb-6">
+              <h2 className="font-serif text-[42px] md:text-[54px] leading-[0.9] text-yvaga-dark">
+                Tu apoyo <br className="hidden md:block"/>
+                <span className="block font-oregano font-bold italic text-[52px] md:text-[64px] text-[#436715] mt-2">
+                  hace la diferencia
+                </span>
               </h2>
-              <Heart className="w-10 h-10 text-[#436715]" />
+              <Heart className="w-10 h-10 text-[#436715] self-start mt-2" />
             </div>
             
             <p className="font-sans text-[20px] md:text-[22px] text-yvaga-dark/80 leading-relaxed mb-6">
-              Yvaga Guazú no recibe ningún tipo de ayuda gubernamental ni de instituciones. Nos sostenemos gracias a personas como tú, que creen en la NATURALEZA y en la importancia de protegerla.
+              Tu visita es importante para nosotros, porque no contamos con ayuda gubernamental ni de instituciones. Nos sostenemos gracias a personas como tu, que creen en la NATURALEZA y en la importancia de protegerla.
             </p>
             <p className="font-sans text-[20px] md:text-[22px] text-yvaga-dark/80 leading-relaxed">
-              Cada donación nos permite seguir rescatando animales, cuidando el parque, educando a más personas y manteniendo este refugio vivo.
+              Y es así que cada donación nos permite seguir cuidando y protegiendo nuestros bosques, seguir rescatando animales y manteniendo este refugio vivo.
             </p>
           </div>
 
@@ -193,25 +196,67 @@ export default function Donaciones() {
       </section>
 
       {/* SECCIÓN 4: Unidos por la naturaleza (Banner) */}
-      <section className="relative py-32 md:py-48 px-6 w-full flex items-center justify-center overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0 z-0">
+      <section className="relative py-24 md:py-32 px-6 w-full flex items-center justify-center overflow-hidden bg-white min-h-[400px] md:min-h-[500px]">
+        {/* Background Image - Nature */}
+        <div className="absolute inset-0 z-0 opacity-90">
           <img 
             src="/fondonaturaleza.jpg" 
             alt="Naturaleza" 
             className="w-full h-full object-cover object-center"
           />
-          <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px]"></div>
         </div>
 
+        {/* Capiguara (Left) */}
+        <div className="absolute inset-y-0 left-0 z-0 w-[50%] md:w-[40%] lg:w-[35%] opacity-90">
+          <img 
+            src="/animal_capiguara_1.jpg" 
+            alt="Capiguara" 
+            className="w-full h-full object-cover object-right"
+            style={{ WebkitMaskImage: 'linear-gradient(to right, black 40%, transparent 100%)', maskImage: 'linear-gradient(to right, black 40%, transparent 100%)' }}
+          />
+        </div>
+
+        {/* Tucán (Right) */}
+        <div className="absolute inset-y-0 right-0 z-0 w-[50%] md:w-[40%] lg:w-[35%] flex justify-end items-center opacity-90">
+          <img 
+            src="/tucansilueta.png" 
+            alt="Tucán" 
+            className="h-[90%] md:h-[110%] lg:h-[130%] max-w-none object-contain object-left translate-x-4 md:translate-x-12 translate-y-4 md:translate-y-8"
+          />
+        </div>
+
+        {/* Radial gradient to create a bright center and fade to the sides */}
+        <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#F9F7F2]/95 via-[#F9F7F2]/80 to-transparent"></div>
+
         {/* Content */}
-        <div className="relative z-10 text-center max-w-3xl mx-auto px-4">
-          <h2 className="font-serif text-4xl md:text-6xl text-white mb-6 drop-shadow-lg">
-            Unidos por la NATURALEZA
+        <div className="relative z-10 text-center max-w-5xl mx-auto px-4">
+          <div className="flex items-center justify-center gap-3 mb-2">
+            <Leaf className="w-8 h-8 md:w-10 md:h-10 text-white stroke-[1.5]" />
+            <span 
+              className="font-sans font-bold text-[46px] md:text-[58px] lg:text-[70px] text-white"
+              style={{ textShadow: "1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 0px 1px 0 #000, 1px 0px 0 #000, 0px -1px 0 #000, -1px 0px 0 #000, 0.5rem 0 10px rgba(0,0,0,0.5)" }}
+            >
+              Unidos por la
+            </span>
+          </div>
+          <h2 
+            className="font-caveat-brush text-[70px] md:text-[110px] lg:text-[140px] text-[#15341C] uppercase leading-[0.9] tracking-wide mb-6"
+            style={{ textShadow: "2px 2px 0 #5E9C43, -2px -2px 0 #5E9C43, 2px -2px 0 #5E9C43, -2px 2px 0 #5E9C43, 0px 2px 0 #5E9C43, 2px 0px 0 #5E9C43, 0px -2px 0 #5E9C43, -2px 0px 0 #5E9C43, 0.5rem 0 10px rgba(0,0,0,0.5)" }}
+          >
+            NATURALEZA
           </h2>
-          <p className="font-sans text-white/90 text-[22px] md:text-[24px] drop-shadow-md">
-            Gracias a las donaciones, visitas y compras solidarias, hacemos posible la conservación.
+          <p 
+            className="font-sans text-white text-[20px] md:text-[24px] font-medium max-w-3xl mx-auto mt-6 md:mt-10 tracking-wide"
+            style={{ textShadow: "0.5rem 0 10px rgba(0,0,0,0.5)" }}
+          >
+            Gracias a las donaciones, visitas y compras solidarias, <br className="hidden md:block" /> hacemos posible la <span className="font-bold">conservación.</span>
           </p>
+          
+          <div className="flex items-center justify-center gap-4 mt-8">
+            <div className="h-[2px] w-12 md:w-20 bg-[#15341C]/30"></div>
+            <Leaf className="w-5 h-5 text-[#15341C]" />
+            <div className="h-[2px] w-12 md:w-20 bg-[#15341C]/30"></div>
+          </div>
         </div>
       </section>
 
@@ -233,13 +278,13 @@ export default function Donaciones() {
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 w-full">
                 
                 <div className="flex flex-col items-center text-center border-l bg-[#3A4E33]/5 rounded-r-xl p-4 border-[#3A4E33]/20 h-full">
-                  <PawPrint className="w-11 h-11 text-[#598420] mb-4" />
-                  <p className="font-sans text-[21px] text-yvaga-dark/80 leading-snug">Alimentación y cuidado de los animales rescatados</p>
+                  <Leaf className="w-11 h-11 text-[#598420] mb-4" />
+                  <p className="font-sans text-[21px] text-yvaga-dark/80 leading-snug">Mantenimiento y conservación de las 14 hectáreas</p>
                 </div>
                 
                 <div className="flex flex-col items-center text-center border-l bg-[#3A4E33]/5 rounded-r-xl p-4 border-[#3A4E33]/20 h-full">
-                  <Leaf className="w-11 h-11 text-[#598420] mb-4" />
-                  <p className="font-sans text-[21px] text-yvaga-dark/80 leading-snug">Mantenimiento y conservación de las 14 hectáreas</p>
+                  <PawPrint className="w-11 h-11 text-[#598420] mb-4" />
+                  <p className="font-sans text-[21px] text-yvaga-dark/80 leading-snug">Alimentación y cuidado de los animales rescatados</p>
                 </div>
 
                 <div className="flex flex-col items-center text-center border-l bg-[#3A4E33]/5 rounded-r-xl p-4 border-[#3A4E33]/20 h-full">

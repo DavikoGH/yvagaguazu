@@ -5,6 +5,7 @@ import Footer from "./components/layout/Footer";
 import Home from "./pages/Home";
 import Nosotros from "./pages/Nosotros";
 import Servicios from "./pages/Servicios";
+import CentroCustodia from "./pages/CentroCustodia";
 import Donaciones from "./pages/Donaciones";
 import Contacto from "./pages/Contacto";
 import ScrollToTop from "./components/ScrollToTop";
@@ -31,6 +32,7 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/nosotros" element={<Nosotros />} />
             <Route path="/servicios" element={<Servicios />} />
+            <Route path="/centro-custodia" element={<CentroCustodia />} />
             <Route path="/donaciones" element={<Donaciones />} />
             <Route path="/contacto" element={<Contacto />} />
           </Routes>

@@ -2,7 +2,7 @@ import { Facebook, Instagram, Youtube, Mail, Smartphone } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="bg-yvaga-sec text-yvaga-beige py-16 px-6 border-t border-yvaga-white/10">
+    <footer className="bg-[#1B4D2A] text-yvaga-beige py-16 px-6 border-t border-yvaga-white/10">
       <div className="max-w-7xl mx-auto flex flex-col gap-12">
         {/* Row 1: Contactos */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 text-center justify-items-center">

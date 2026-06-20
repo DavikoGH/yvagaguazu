@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Leaf, Phone, Mail, Instagram, MessageCircle, MapPin, Sprout, PawPrint, HeartHandshake, Heart, Map, Clock, CalendarCheck, Baby, Users, Search } from "lucide-react";
 import { cn } from "../lib/utils";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 // Icono simple de TikTok
 function TikTokIcon(props: React.ComponentProps<"svg">) {
@@ -105,41 +106,59 @@ const faqs = [
 
 export default function Contacto() {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
+  
+  const heroRef = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ["start start", "end end"]
+  });
+
+  const imgObjectPosition = useTransform(scrollYProgress, [0, 1], ["50% 0%", "50% 100%"]);
 
   const toggleFaq = (index: number) => {
     setOpenFaqIndex(openFaqIndex === index ? null : index);
   };
 
   return (
-    <div className="min-h-screen bg-yvaga-beige">
+    <div className="min-h-screen bg-yvaga-beige relative z-0">
       {/* 1. HERO CON IMAGEN */}
-      <section className="relative">
-        <div className="relative z-0 w-full overflow-hidden">
-          <img 
-            src="/portada_contacto.jpg?v=2" 
+      <section ref={heroRef} className="relative w-full h-[200vh]">
+        <div className="sticky top-0 w-full h-screen overflow-hidden">
+          <motion.img 
+            src="/contacto_gomero.jpg" 
             alt="Contacto" 
-            className="w-full h-auto min-h-[100vh] object-cover object-top"
+            className="absolute inset-0 w-full h-full object-cover -z-20"
+            style={{ objectPosition: imgObjectPosition }}
           />
-        </div>
 
-        <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
-          <div className="sticky top-0 left-0 w-full h-[100dvh] flex items-center z-10 pointer-events-auto">
-            {/* Overlay to ensure text readability that stays with the text */}
-            <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent -z-10"></div>
-            
-            <div className="w-full max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
-              <div className="w-full grid grid-cols-12">
-                <div className="col-span-12 lg:col-span-12">
-                  <Leaf className="w-12 h-12 md:w-16 md:h-16 text-yvaga-acc mb-6" />
-                  <h1 className="font-serif text-yvaga-white tracking-wide uppercase leading-none">
-                    <span className="block text-2xl md:text-3xl font-medium tracking-widest mb-2">Ponte en</span>
-                    <span className="block text-6xl md:text-8xl xl:text-9xl font-bold mb-2">Contacto</span>
-                    <span className="block font-sans italic text-5xl md:text-7xl xl:text-8xl text-[#FFD700] lowercase tracking-normal">con nosotros</span>
-                  </h1>
-                  <div className="w-24 h-1 bg-yvaga-acc/50 mt-6 mb-8"></div>
-                  <p className="font-sans text-[20.5px] md:text-[22px] text-yvaga-white/90 leading-relaxed col-span-11 w-11/12">
-                    Estamos aquí para escucharte, resolver tus dudas y brindarte toda la información que necesites sobre conservación, nuestras actividades y cómo puedes ser parte de esta misión.
-                  </p>
+          <div className="absolute inset-0 w-full h-full pointer-events-none">
+            <div className="w-full h-full flex items-center z-10 pointer-events-auto mt-16 md:mt-0">
+              {/* Overlay sólido - color verde #1B4D2A */}
+              <div className="absolute inset-0 bg-[#1B4D2A]/70 -z-10 mix-blend-normal"></div>
+              
+              <div className="w-full max-w-7xl mx-auto px-6 lg:px-12 relative z-10 flex flex-col justify-center">
+                <div className="w-full grid grid-cols-12">
+                  <div className="col-span-12 lg:col-span-12">
+                    <h1 className="font-serif tracking-wide uppercase leading-none drop-shadow-sm">
+                      <span className="block text-[#8DC63F] text-2xl md:text-3xl font-medium tracking-widest mb-2">Ponte en</span>
+                      <span 
+                        className="block text-white text-6xl md:text-8xl xl:text-9xl font-bold mb-0"
+                        style={{ textShadow: "0.5rem 0.5rem 10px rgba(0,0,0,0.5)" }}
+                      >
+                        Contacto
+                      </span>
+                      <span 
+                        className="block font-oregano font-bold italic text-[96px] md:text-[120px] xl:text-[144px] text-[#8DC63F] tracking-normal normal-case -mt-2 md:-mt-4 relative"
+                        style={{ textShadow: "3px 3px 0 #1B4D2A, -3px -3px 0 #1B4D2A, 3px -3px 0 #1B4D2A, -3px 3px 0 #1B4D2A, 0px 3px 0 #1B4D2A, 3px 0px 0 #1B4D2A, 0px -3px 0 #1B4D2A, -3px 0px 0 #1B4D2A, 0.5rem 0.5rem 10px rgba(0,0,0,0.5)" }}
+                      >
+                        con nosotros
+                      </span>
+                    </h1>
+                    <div className="w-24 h-1 bg-white/50 mt-6 mb-8 shadow-sm"></div>
+                    <p className="font-sans text-[20.5px] md:text-[22px] text-white font-medium leading-relaxed col-span-11 w-11/12 drop-shadow-sm">
+                      Estamos aquí para escucharte, resolver tus dudas y brindarte toda la información que necesites sobre conservación, nuestras actividades y cómo puedes ser parte de esta misión.
+                    </p>
+
 
                   {/* Redes Sociales en el Hero */}
                   <div className="flex gap-6 mt-12 flex-wrap">
@@ -147,7 +166,7 @@ export default function Contacto() {
                   href="https://www.facebook.com/yvagaguazu" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="p-3 bg-yvaga-white/10 border border-yvaga-white/20 rounded-full hover:bg-yvaga-acc hover:border-yvaga-acc hover:text-yvaga-dark transition-all duration-300 text-yvaga-white backdrop-blur-md flex items-center justify-center w-12 h-12"
+                  className="p-3 bg-white border border-white/20 rounded-full hover:bg-white/90 hover:scale-105 transition-all duration-300 text-[#1B4D2A] shadow-lg flex items-center justify-center w-12 h-12"
                   aria-label="Facebook"
                 >
                   <FacebookIcon className="w-5 h-5" />
@@ -156,7 +175,7 @@ export default function Contacto() {
                   href="https://www.instagram.com/oficialyvagaguazu" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="p-3 bg-yvaga-white/10 border border-yvaga-white/20 rounded-full hover:bg-yvaga-acc hover:border-yvaga-acc hover:text-yvaga-dark transition-all duration-300 text-yvaga-white backdrop-blur-md flex items-center justify-center w-12 h-12"
+                  className="p-3 bg-white border border-white/20 rounded-full hover:bg-white/90 hover:scale-105 transition-all duration-300 text-[#1B4D2A] shadow-lg flex items-center justify-center w-12 h-12"
                   aria-label="Instagram"
                 >
                   <Instagram className="w-5 h-5" />
@@ -165,23 +184,24 @@ export default function Contacto() {
                   href="https://www.tiktok.com/@yvagaguazu" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="p-3 bg-yvaga-white/10 border border-yvaga-white/20 rounded-full hover:bg-yvaga-acc hover:border-yvaga-acc hover:text-yvaga-dark transition-all duration-300 text-yvaga-white backdrop-blur-md flex items-center justify-center w-12 h-12"
+                  className="p-3 bg-white border border-white/20 rounded-full hover:bg-white/90 hover:scale-105 transition-all duration-300 text-[#1B4D2A] shadow-lg flex items-center justify-center w-12 h-12"
                   aria-label="TikTok"
                 >
                   <TikTokIcon className="w-5 h-5" />
                 </a>
                 <a 
                   href="mailto:parqueyvagaguazu@hotmail.com" 
-                  className="p-3 bg-yvaga-white/10 border border-yvaga-white/20 rounded-full hover:bg-yvaga-acc hover:border-yvaga-acc hover:text-yvaga-dark transition-all duration-300 text-yvaga-white backdrop-blur-md flex items-center justify-center w-12 h-12"
+                  className="p-3 bg-white border border-white/20 rounded-full hover:bg-white/90 hover:scale-105 transition-all duration-300 text-[#1B4D2A] shadow-lg flex items-center justify-center w-12 h-12"
                   aria-label="Email"
                 >
                   <Mail className="w-5 h-5" />
                 </a>
               </div>
               </div>
+              </div>
+            </div>
             </div>
           </div>
-        </div>
         </div>
       </section>
 
@@ -223,7 +243,7 @@ export default function Contacto() {
                       <faq.icon className="w-6 h-6 text-yvaga-sec" />
                     </div>
                     <div className="flex-grow flex justify-between items-center pr-2 pt-2.5">
-                      <span className="font-sans font-bold text-[13px] md:text-sm text-yvaga-dark pr-6">{faq.question}</span>
+                      <span className="font-sans font-bold text-[17px] md:text-[18px] text-yvaga-dark pr-6">{faq.question}</span>
                       <span className="text-yvaga-dark/60 font-light text-3xl leading-none transition-transform duration-300 transform">
                         {openFaqIndex === idx ? "−" : "+"}
                       </span>
@@ -235,7 +255,7 @@ export default function Contacto() {
                       openFaqIndex === idx ? "max-h-[500px] opacity-100 pb-6" : "max-h-0 opacity-0 pb-0"
                     )}
                   >
-                    <div className="font-sans text-base text-yvaga-dark/70 leading-relaxed pt-2">
+                    <div className="font-sans text-[20px] text-yvaga-dark/70 leading-relaxed pt-2">
                       {faq.answer}
                     </div>
                   </div>
@@ -243,39 +263,7 @@ export default function Contacto() {
               ))}
             </div>
 
-            {/* Banner "No vienes a ver... vienes a sentir" */}
-            <div className="mt-12 md:mt-16 lg:mt-auto bg-[#0D2012] rounded-[32px] overflow-hidden flex flex-col md:flex-row items-stretch shadow-2xl relative">
-              {/* Decoración de hojas */}
-              <Leaf className="w-6 h-6 md:w-10 md:h-10 text-[#719B36] absolute bottom-4 right-4 opacity-70" />
-              
-              {/* Columna Izquierda: Texto */}
-              <div className="w-full md:w-1/2 p-6 md:p-8 flex flex-col justify-center items-center text-center relative z-10">
-                <p className="font-sans italic text-4xl md:text-5xl text-white mb-2">
-                  No vienes
-                </p>
-                <p className="font-sans italic text-4xl md:text-5xl text-white mb-2">
-                  a ver...
-                </p>
-                <p className="font-sans italic text-4xl md:text-5xl text-white mb-2">
-                  vienes a
-                </p>
-                <h3 className="font-sans italic text-6xl md:text-8xl font-bold text-[#8EBC3F]">
-                  sentir
-                </h3>
-              </div>
 
-              {/* Columna Derecha: Foto */}
-              <div className="w-full md:w-1/2 p-4 md:p-6 flex items-center justify-center relative z-10">
-                <div className="w-full aspect-[4/3] relative transform md:rotate-3 transition-transform hover:rotate-0 duration-500">
-                  <div className="absolute inset-0 bg-white rounded-2xl shadow-xl transform -rotate-2"></div>
-                  <img 
-                    src="/contacto_tortugas.jpg" 
-                    alt="Experiencia en la naturaleza" 
-                    className="w-full h-full object-cover rounded-xl border-[6px] md:border-8 border-white relative z-10 shadow-lg" 
-                  />
-                </div>
-              </div>
-            </div>
 
           </div>
 
@@ -307,65 +295,38 @@ export default function Contacto() {
               </div>
               
               <div className="grid grid-cols-2 gap-x-6 gap-y-10 w-full">
-                <div className="flex flex-col items-center">
+                <div className="flex flex-col items-center text-center">
                   <div className="w-16 h-16 rounded-full bg-[#E8EFE1] flex items-center justify-center mb-4">
                     <Leaf className="w-8 h-8 text-[#2C4A22]" />
                   </div>
-                  <h4 className="font-sans font-bold text-[#2C4A22] text-sm md:text-base mb-2">Conversemos</h4>
-                  <p className="font-sans text-xs md:text-[13px] leading-relaxed text-[#2C4A22]/80">Responderemos tus consultas lo antes posible.</p>
+                  <h4 className="font-sans font-bold text-[#2C4A22] text-[20px] md:text-[22px] mb-2">Conversemos</h4>
+                  <p className="font-sans text-[18px] md:text-[19px] leading-relaxed text-[#2C4A22]/80">Responderemos tus consultas lo antes posible.</p>
                 </div>
                 
-                <div className="flex flex-col items-center">
+                <div className="flex flex-col items-center text-center">
                   <div className="w-16 h-16 rounded-full bg-[#E8EFE1] flex items-center justify-center mb-4">
                     <Sprout className="w-8 h-8 text-[#2C4A22]" />
                   </div>
-                  <h4 className="font-sans font-bold text-[#2C4A22] text-sm md:text-base mb-2">Te orientamos</h4>
-                  <p className="font-sans text-xs md:text-[13px] leading-relaxed text-[#2C4A22]/80">Te ayudamos a planificar tu visita o actividad.</p>
+                  <h4 className="font-sans font-bold text-[#2C4A22] text-[20px] md:text-[22px] mb-2">Te orientamos</h4>
+                  <p className="font-sans text-[18px] md:text-[19px] leading-relaxed text-[#2C4A22]/80">Te ayudamos a planificar tu visita o actividad.</p>
                 </div>
 
-                <div className="flex flex-col items-center">
+                <div className="flex flex-col items-center text-center">
                   <div className="w-16 h-16 rounded-full bg-[#E8EFE1] flex items-center justify-center mb-4">
                     <PawPrint className="w-8 h-8 text-[#2C4A22]" />
                   </div>
-                  <h4 className="font-sans font-bold text-[#2C4A22] text-sm md:text-base mb-2">Súmate</h4>
-                  <p className="font-sans text-xs md:text-[13px] leading-relaxed text-[#2C4A22]/80">Descubre cómo apoyar nuestra misión y hacer la diferencia.</p>
+                  <h4 className="font-sans font-bold text-[#2C4A22] text-[20px] md:text-[22px] mb-2">Súmate</h4>
+                  <p className="font-sans text-[18px] md:text-[19px] leading-relaxed text-[#2C4A22]/80">Descubre cómo apoyar nuestra misión y hacer la diferencia.</p>
                 </div>
 
-                <div className="flex flex-col items-center">
+                <div className="flex flex-col items-center text-center">
                   <div className="w-16 h-16 rounded-full bg-[#E8EFE1] flex items-center justify-center mb-4">
                     <Heart className="w-8 h-8 text-[#2C4A22]" />
                   </div>
-                  <h4 className="font-sans font-bold text-[#2C4A22] text-sm md:text-base mb-2">Cuidemos juntos</h4>
-                  <p className="font-sans text-xs md:text-[13px] leading-relaxed text-[#2C4A22]/80">Cada acción cuenta para proteger la vida.</p>
+                  <h4 className="font-sans font-bold text-[#2C4A22] text-[20px] md:text-[22px] mb-2">Cuidemos juntos</h4>
+                  <p className="font-sans text-[18px] md:text-[19px] leading-relaxed text-[#2C4A22]/80">Cada acción cuenta para proteger la vida.</p>
                 </div>
               </div>
-            </div>
-
-            <div className="bg-white p-8 md:p-10 rounded-[32px] shadow-xl shadow-yvaga-dark/5 border border-yvaga-dark/5">
-              <h3 className="font-serif text-3xl text-yvaga-dark mb-2">Envíanos un mensaje</h3>
-              <p className="font-sans text-yvaga-dark/60 mb-8">Completando este formulario o a través de WhatsApp.</p>
-              
-              <form className="flex flex-col gap-6" onSubmit={(e) => e.preventDefault()}>
-                <div className="flex flex-col gap-2">
-                  <label className="text-sm font-bold uppercase tracking-wider text-yvaga-sec">Nombre</label>
-                  <input type="text" className="border-b-2 border-yvaga-dark/10 py-3 focus:outline-none focus:border-yvaga-sec transition-colors bg-transparent text-yvaga-dark placeholder:text-yvaga-dark/30" placeholder="Tu nombre completo" />
-                </div>
-                <div className="flex flex-col gap-2">
-                  <label className="text-sm font-bold uppercase tracking-wider text-yvaga-sec">Teléfono</label>
-                  <input type="tel" className="border-b-2 border-yvaga-dark/10 py-3 focus:outline-none focus:border-yvaga-sec transition-colors bg-transparent text-yvaga-dark placeholder:text-yvaga-dark/30" placeholder="Tu número de contacto" />
-                </div>
-                <div className="flex flex-col gap-2">
-                  <label className="text-sm font-bold uppercase tracking-wider text-yvaga-sec">Correo</label>
-                  <input type="email" className="border-b-2 border-yvaga-dark/10 py-3 focus:outline-none focus:border-yvaga-sec transition-colors bg-transparent text-yvaga-dark placeholder:text-yvaga-dark/30" placeholder="tu@email.com" />
-                </div>
-                <div className="flex flex-col gap-2">
-                  <label className="text-sm font-bold uppercase tracking-wider text-yvaga-sec">Mensaje</label>
-                  <textarea className="border-b-2 border-yvaga-dark/10 py-3 min-h-[120px] resize-none focus:outline-none focus:border-yvaga-sec transition-colors bg-transparent text-yvaga-dark placeholder:text-yvaga-dark/30" placeholder="¿En qué podemos ayudarte?"></textarea>
-                </div>
-                <button className="mt-6 bg-yvaga-dark hover:bg-yvaga-sec text-white py-4 rounded-xl font-serif text-xl tracking-wide transition-colors shadow-md">
-                  Enviar mensaje
-                </button>
-              </form>
             </div>
 
             {/* Imagen de seguridad */}
@@ -375,6 +336,36 @@ export default function Contacto() {
                 alt="Pago Seguro" 
                 className="w-full h-auto object-cover" 
               />
+            </div>
+
+            {/* Banner "No vienes a ver... vienes a sentir" con Foto */}
+            <div className="bg-[#0D2012] rounded-[32px] overflow-hidden flex flex-col items-center justify-center p-8 md:p-10 text-center shadow-2xl relative">
+              <Leaf className="w-8 h-8 md:w-10 md:h-10 text-[#719B36] absolute bottom-6 right-6 opacity-70 z-0" />
+              
+              <div className="relative z-10 w-full flex flex-col items-center mb-6">
+                <p className="font-oregano text-[54px] md:text-[62px] text-white leading-[1]">
+                  No vienes a ver...
+                </p>
+                <p className="font-oregano text-[54px] md:text-[62px] text-white leading-[1]">
+                  vienes a
+                </p>
+                <h3 className="font-caveat-brush text-[84px] md:text-[112px] text-[#8EBC3F] font-normal leading-[0.9] drop-shadow-md">
+                  sentir
+                </h3>
+              </div>
+
+              <div className="relative z-10 w-full flex items-center justify-center">
+                <div className="w-full max-w-[360px] aspect-[4/3] relative transform rotate-[-2deg] transition-all duration-500 group">
+                  <div className="absolute inset-0 bg-[#F9F7F2] rounded-2xl shadow-xl transform rotate-3 transition-transform duration-500 group-hover:rotate-4"></div>
+                  <div className="w-full h-full rounded-xl border-[6px] md:border-8 border-white relative z-10 shadow-lg overflow-hidden flex">
+                    <img 
+                      src="/contacto_tortugas.jpg" 
+                      alt="Niña con tortugas" 
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
 
           </div>

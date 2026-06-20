@@ -221,7 +221,7 @@ export default function Servicios() {
             <p className="font-sans font-bold text-sm tracking-widest uppercase text-yvaga-dark w-full justify-center flex items-center gap-2 mb-4">
               <Leaf className="w-4 h-4 text-yvaga-acc" /> NUESTROS PAQUETES PROMOCIONALES
             </p>
-            <h2 className="font-serif text-4xl md:text-5xl text-yvaga-dark mb-4">Experiencias diseñadas<br/><i className="text-yvaga-acc font-light">para cada grupo</i></h2>
+            <h2 className="font-serif text-4xl md:text-5xl text-yvaga-dark mb-4">Experiencias diseñadas<br/><i className="font-oregano text-yvaga-acc text-[50px] md:text-[62px] font-bold">para cada grupo</i></h2>
             <p className="font-sans text-lg text-yvaga-black/70">
               Elige la opción ideal y vive una experiencia única en la naturaleza.
             </p>
