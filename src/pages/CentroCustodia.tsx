@@ -96,21 +96,16 @@ export default function CentroCustodia() {
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-12 items-center">
           <div className="w-full lg:w-1/3">
             <h2 className="font-serif text-[34px] md:text-[40px] text-[#3B4D2F] font-bold uppercase mb-2">
-              Historias que merecen
+              Historias que merecen UNA
             </h2>
             <div className="flex items-center gap-2 mb-6">
               <span className="font-oregano text-[40px] md:text-[44px] font-bold text-[#789B3A] italic">
-                una segunda oportunidad
+                segunda oportunidad
               </span>
               <Leaf className="w-6 h-6 md:w-8 md:h-8 text-[#789B3A]" />
             </div>
             <p className="text-gray-700 text-lg leading-relaxed mb-6">
-              Cada animal que llega a nuestro Centro de Custodia tiene una
-              historia única. Muchos han sufrido cautiverio, maltrato o
-              manipulación humana. Por eso, algunos requieren protección
-              permanente, mientras que otros logran recuperar habilidades que
-              les permiten vivir con mayor libertad dentro de espacios naturales
-              controlados.
+              Cada animalito que llega es tratado con el mayor cariño y profesionalismo. Al haber tomado el compromiso, recibirlos en nuestro Centro de Custodia es nuestro objetivo darles la MEJOR CALIDAD DE VIDA, aunque merecen estar libres, pero las circunstancias hacen difícil su reintegración a su hábitat natural. La Libertad.
             </p>
             <p className="text-[#3B4D2F] font-bold text-lg leading-relaxed">
               Cada avance representa una nueva oportunidad y una esperanza para
@@ -187,11 +182,11 @@ export default function CentroCustodia() {
             {/* Habitante Items */}
             {[
               {
-                name: "CAPIBARA",
+                name: "CAPIGUARA",
                 img: "/animal_capiguara_1.jpg",
               },
               {
-                name: "LOROS",
+                name: "LORO AMAZÓNICO",
                 img: "/animal_loro_1.jpg",
               },
               {
@@ -203,7 +198,7 @@ export default function CentroCustodia() {
                 img: "/animal_tucan_3.jpg",
               },
               {
-                name: "ARASARÍ",
+                name: "TUCANCILLO COLLAREJO",
                 img: "/animal_arasari_1.jpg",
               },
               {
@@ -211,15 +206,15 @@ export default function CentroCustodia() {
                 img: "/animal_chunia_4.jpg",
               },
               {
-                name: "NINFAS",
+                name: "CACATÚA NINFA",
                 img: "/animal_ninfa_2.jpg",
               },
               {
-                name: "ARMADILLO",
+                name: "CORECHI",
                 img: "/animal_armadillo_1.jpg",
               },
               {
-                name: "PEREZOSO",
+                name: "OSO PEREZOSO",
                 img: "/animal_perezoso.jpg",
               },
               {
@@ -254,18 +249,18 @@ export default function CentroCustodia() {
                 </div>
               </div>
             ))}
+          </div>
 
-            {/* Final Text Box */}
-            <div className="flex flex-col rounded-[20px] overflow-hidden shadow-lg bg-[#2A4420] group h-full relative p-6 justify-between lg:col-span-1 lg:col-start-3 md:col-span-2 col-span-2 border-[2px] border-[#9ACD32]/40">
-              <Heart className="w-6 h-6 text-[#9ACD32] mx-auto" />
-              <p className="text-white text-[18px] leading-relaxed mt-4 text-center">
+          {/* Final Text Box */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 w-full mt-10">
+            <div className="flex flex-col md:flex-row items-center rounded-[20px] overflow-hidden shadow-lg bg-[#2e6b3a] group relative p-6 md:p-8 lg:col-span-8 lg:col-start-3 border-[2px] border-[#9ACD32]/40 gap-6">
+              <Heart className="w-8 h-8 md:w-10 md:h-10 text-[#9ACD32] shrink-0" />
+              <p className="text-white text-[18px] md:text-[20px] leading-relaxed text-center flex-1 m-0">
                 Muchas de estas especies permanecen bajo cuidado especializado,
                 mientras que otras viven con mayor libertad dentro de los
                 espacios naturales del parque.
               </p>
-              <div className="mx-auto mt-4">
-                <Leaf className="w-8 h-8 text-[#9ACD32]" fill="currentColor" />
-              </div>
+              <Leaf className="w-10 h-10 md:w-12 md:h-12 text-[#9ACD32] shrink-0" fill="currentColor" />
             </div>
           </div>
         </div>
@@ -430,9 +425,9 @@ export default function CentroCustodia() {
           <img
             src="/proteger_tucan_4.jpg"
             alt="Tucán"
-            className="w-full h-full object-cover opacity-60 bg-[#A5C05B]/20"
+            className="w-full h-full object-cover opacity-80 bg-[#A5C05B]/20"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto w-full flex flex-col md:flex-row gap-8 justify-between items-center text-white">
@@ -441,7 +436,7 @@ export default function CentroCustodia() {
               Ayúdanos a proteger
             </h2>
             <div className="flex items-center gap-3 mb-6">
-              <span className="font-oregano text-[64px] md:text-[82px] text-[#A5C05B] italic leading-tight">
+              <span className="font-oregano text-[69px] md:text-[87px] text-[#A5C05B] italic leading-tight">
                 sus historias
               </span>
             </div>

@@ -1,6 +1,6 @@
 import { ArrowRight, CheckCircle2, Leaf, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const PhotoGallery = ({ images }: { images: string[] }) => {
   const loopImages = [...images, ...images, ...images];
@@ -54,23 +54,45 @@ const AccordionGallery = ({ images, title }: { images: string[], title: string }
   );
 };
 
+const heroImages = [
+  "/restaurant_1.jpg",
+  "/restaurant_2.jpg",
+  "/restaurant_3.jpg"
+];
+
 export default function Servicios() {
+  const [currentHeroIndex, setCurrentHeroIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentHeroIndex((prev) => (prev + 1) % heroImages.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <div className="flex flex-col min-h-screen bg-yvaga-beige">
       
       {/* SECCIÓN HERO: EXPERIENCIAS */}
       <section className="relative min-h-[100dvh] flex flex-col items-center justify-center px-6">
-        <div className="absolute inset-0 z-0">
-          <img 
-            src="/portada_servicios.jpg" 
-            alt="Vive la experiencia Yvaga Guazú" 
-            className="w-full h-full object-cover object-top"
-          />
-          <div className="absolute inset-0 bg-black/40"></div>
+        <div className="absolute inset-0 z-0 bg-yvaga-dark overflow-hidden">
+          <AnimatePresence>
+            <motion.img 
+              key={currentHeroIndex}
+              src={heroImages[currentHeroIndex]} 
+              alt="Vive la experiencia Yvaga Guazú" 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 1 }}
+              className="absolute inset-0 w-full h-full object-cover object-top"
+            />
+          </AnimatePresence>
+          <div className="absolute inset-0 bg-black/40 z-10"></div>
         </div>
 
-        <div className="relative z-10 text-center flex flex-col items-center">
-          <div className="flex items-center gap-3 justify-center mb-6">
+        <div className="relative z-20 text-center flex flex-col items-center -translate-y-[15vh]">
+          <div className="flex items-center gap-3 justify-center mb-4">
             <span className="w-12 md:w-24 h-[2px] bg-white/60"></span>
             <p className="font-sans font-bold text-sm tracking-widest uppercase text-white flex items-center gap-2 drop-shadow-md">
               <Leaf className="w-5 h-5 text-yvaga-acc" />
@@ -78,8 +100,15 @@ export default function Servicios() {
             </p>
             <span className="w-12 md:w-24 h-[2px] bg-white/60"></span>
           </div>
-          <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl text-white mb-4 drop-shadow-lg">
-            Vive la experiencia Yvaga Guazú
+          <h1 className="text-center mb-4 flex flex-col items-center justify-center -space-y-2">
+            <span className="font-caveat-brush text-[#8DC63F] tracking-wide uppercase text-[63px] md:text-[75px] lg:text-[87px] drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)] leading-[0.9]">
+              Vive la experiencia
+            </span>
+            <span 
+              className="font-serif text-5xl md:text-7xl lg:text-8xl text-white font-bold tracking-tight drop-shadow-xl leading-[0.9]"
+            >
+              Yvaga Guazu
+            </span>
           </h1>
         </div>
       </section>
@@ -92,7 +121,7 @@ export default function Servicios() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             <div className="lg:col-span-5">
               <div className="aspect-[4/3] md:aspect-video lg:aspect-[4/3] w-full rounded-3xl overflow-hidden shadow-lg border border-yvaga-sec/10">
-                 <img src="/servicio_guia.jpg" alt="Tour Guiado" className="w-full h-full object-cover" />
+                 <img src="/servicios_recorrido.jpg" alt="Tour Guiado" className="w-full h-full object-cover" />
               </div>
             </div>
             <div className="lg:col-span-7 flex flex-col justify-center text-left">
@@ -103,8 +132,8 @@ export default function Servicios() {
                 Explora la naturaleza con nosotros
               </h3>
               <p className="font-sans text-[19px] md:text-[22px] text-yvaga-black/80 leading-relaxed max-w-4xl">
-                Recorre nuestras 14 hectáreas a través de recorridos con guías especializados, con quienes podrás descubrir en nuestro bosque y conocer la gran biodiversidad que tenemos en YVAGA GUAZÚ y conectar con la naturaleza de una forma real y consciente.<br/><br/>
-                <span className="font-medium text-yvaga-dark">No es solo un recorrido… es una experiencia que transforma tu forma de ver el entorno.</span>
+                Recorre las 14 hectáreas del Parque Ecológico YVAGA GUAZÚ acompañado por guías especializados que compartirán contigo la historia, la biodiversidad y los secretos de nuestro bosque.<br/><br/>
+                <span className="font-bold text-yvaga-dark">No es solo un recorrido… es una experiencia que transforma tu forma de ver el entorno.</span>
               </p>
             </div>
           </div>
@@ -127,7 +156,7 @@ export default function Servicios() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             <div className="lg:col-span-5">
               <div className="aspect-[4/3] md:aspect-video lg:aspect-[4/3] w-full rounded-3xl overflow-hidden shadow-lg border border-yvaga-sec/10">
-                 <img src="/servicio_snack.jpg" alt="Restaurante y Snack" className="w-full h-full object-cover" />
+                 <img src="/servicios_restaurant.jpg" alt="Restaurante y Snack" className="w-full h-full object-cover" />
               </div>
             </div>
             <div className="lg:col-span-7 flex flex-col justify-center text-left">
@@ -135,11 +164,11 @@ export default function Servicios() {
                 RESTAURANTE Y SNACK
               </h2>
               <h3 className="font-serif text-3xl md:text-4xl text-yvaga-dark mb-4">
-                Disfruta de nuestros sabores en la naturaleza
+                Sabores que se disfrutan mejor en la NATURALEZA
               </h3>
               <p className="font-sans text-[19px] md:text-[22px] text-yvaga-black/80 leading-relaxed max-w-4xl">
-                Contamos con un restaurant de arquitectura costumbrista donde puedes relajarte, compartir y degustar de deliciosos platos en un entorno natural único.<br/><br/>
-                El lugar perfecto para desconectarte del ritmo diario y vivir un momento diferente.
+                Vive una experiencia gastronómica única en nuestro restaurante, con un menú especial a la carta preparado por un chef profesional y rodeado de exuberante NATURALEZA.<br/><br/>
+                <span className="font-bold">El lugar perfecto para desconectarte del ritmo diario y vivir un momento diferente.</span>
               </p>
             </div>
           </div>
@@ -162,7 +191,7 @@ export default function Servicios() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             <div className="lg:col-span-5">
               <div className="aspect-[4/3] md:aspect-video lg:aspect-[4/3] w-full rounded-3xl overflow-hidden shadow-lg border border-yvaga-sec/10">
-                 <img src="/servicio_ventas.jpg" alt="Vivero con Propósito" className="w-full h-full object-cover" />
+                 <img src="/servicios_vivero.jpg" alt="Vivero con Propósito" className="w-full h-full object-cover" />
               </div>
             </div>
             <div className="lg:col-span-7 flex flex-col justify-center text-left">
@@ -170,12 +199,11 @@ export default function Servicios() {
                 VIVERO CON PROPÓSITO
               </h2>
               <h3 className="font-serif text-3xl md:text-4xl text-yvaga-dark mb-4">
-                Llévate vida, salva una vida
+                Llévate vida y protege la vida
               </h3>
               <p className="font-sans text-[19px] md:text-[22px] text-yvaga-black/80 leading-relaxed max-w-4xl">
-                Nuestro vivero está lleno de hermosas plantas que puedes llevar contigo para darle vida a tu hogar.<br/><br/>
-                Cada compra tiene un propósito mayor:<br/>
-                los ingresos del vivero ayudan directamente al cuidado y mantenimiento de YVAGA GUAZÚ y para la alimentación de los más de 300 animales rescatados.
+                Descubre un vivero único con más de 1.200 variedades de plantas ornamentales, exóticas, nativas, de interior y exterior, cuidadosamente seleccionadas para llenar de vida y color tu hogar, jardín, oficina, empresa, condominio o cualquier espacio que desees transformar con la belleza de la NATURALEZA.<br/><br/>
+                <span className="font-bold">Y lo mejor de todo: cada planta que llevas contribuye directamente al cuidado de nuestro bosque y de más de 350 animales silvestres rescatados. Aquí, cada compra tiene un propósito.</span>
               </p>
 
             </div>
@@ -195,16 +223,19 @@ export default function Servicios() {
       </section>
 
       {/* SECCIÓN BANNER VIVERO */}
-      <section className="relative w-full py-24 px-6 flex items-center justify-center overflow-hidden">
+      <section className="relative w-full py-36 px-6 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img src="/ventadeplantas.jpg" alt="Fondo vive natural" className="w-full h-full object-cover" />
+          <img src="/servicios_plantas.jpg" alt="Fondo vive natural" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-yvaga-dark/30"></div>
         </div>
         <div className="relative z-10 max-w-6xl mx-auto w-full flex justify-center">
           <div className="bg-yvaga-light/80 backdrop-blur-md border border-yvaga-sec/20 p-6 md:p-10 rounded-[2rem] shadow-xl inline-flex items-center justify-center max-w-max">
-            <p className="font-serif font-bold text-yvaga-dark text-xl md:text-3xl lg:text-4xl flex items-center gap-4 text-center">
+            <p className="font-serif font-bold text-xl md:text-3xl lg:text-4xl flex items-center gap-4 text-center">
               <Leaf className="w-8 h-8 md:w-10 md:h-10 text-yvaga-sec shrink-0" />
-              <span>Cuando compras una planta, estás ayudando a proteger una vida.</span>
+              <span className="flex flex-wrap justify-center items-baseline gap-x-2">
+                <span className="text-[#8DC63F] text-[25px] md:text-[35px] lg:text-[41px]">Cuando compras una planta,</span>
+                <span className="font-oregano text-[40px] md:text-[60px] lg:text-[70px] text-[#1B4D2A] font-bold italic drop-shadow-md">estás ayudando a proteger una vida.</span>
+              </span>
             </p>
           </div>
         </div>
@@ -243,7 +274,7 @@ export default function Servicios() {
                 <div className="absolute -top-8 left-1/2 -translate-x-1/2 w-16 h-16 bg-yvaga-sec rounded-full border-4 border-yvaga-white flex items-center justify-center text-white shadow-md z-10">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                 </div>
-                <h3 className="font-serif text-xl font-bold text-yvaga-dark text-center mb-2 uppercase tracking-wide">1. Paquete Empresas</h3>
+                <h3 className="font-serif text-xl font-bold text-yvaga-dark text-center mb-2 uppercase tracking-wide">Paquete Empresas</h3>
                 <div className="w-8 h-[2px] bg-yvaga-sec/50 mx-auto mb-4"></div>
                 <p className="text-center text-sm md:text-base text-yvaga-black/80 mb-8 min-h-[48px]">
                   Fortalece la conexión de tu equipo en un entorno natural único.
@@ -283,7 +314,7 @@ export default function Servicios() {
                 <div className="absolute -top-8 left-1/2 -translate-x-1/2 w-16 h-16 bg-yvaga-sec rounded-full border-4 border-yvaga-white flex items-center justify-center text-white shadow-md z-10">
                   <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
                 </div>
-                <h3 className="font-serif text-xl font-bold text-yvaga-dark text-center mb-2 uppercase tracking-wide">2. Paquete Colegios</h3>
+                <h3 className="font-serif text-xl font-bold text-yvaga-dark text-center mb-2 uppercase tracking-wide">Paquete Colegios</h3>
                 <div className="w-8 h-[2px] bg-yvaga-sec/50 mx-auto mb-4"></div>
                 <p className="text-center text-sm md:text-base text-yvaga-black/80 mb-8 min-h-[48px]">
                   Una experiencia que sensibiliza y conecta a los estudiantes con la naturaleza.
@@ -323,7 +354,7 @@ export default function Servicios() {
                 <div className="absolute -top-8 left-1/2 -translate-x-1/2 w-16 h-16 bg-yvaga-sec rounded-full border-4 border-yvaga-white flex items-center justify-center text-white shadow-md z-10">
                   <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                 </div>
-                <h3 className="font-serif text-xl font-bold text-yvaga-dark text-center mb-2 uppercase tracking-wide">3. Paquetes Grupales</h3>
+                <h3 className="font-serif text-xl font-bold text-yvaga-dark text-center mb-2 uppercase tracking-wide">Paquetes Grupales</h3>
                 <div className="w-8 h-[2px] bg-yvaga-sec/50 mx-auto mb-4"></div>
                 <p className="text-center text-sm md:text-base text-yvaga-black/80 mb-8 min-h-[48px]">
                   Comparte momentos únicos con familia o amigos en un entorno natural.

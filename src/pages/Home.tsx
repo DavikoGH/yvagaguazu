@@ -129,50 +129,50 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {/* Bloque 1 */}
-            <div className="bg-white p-8 md:p-10 rounded-[32px] shadow-sm border border-yvaga-dark/5 flex flex-col items-center text-center hover:-translate-y-1 transition-all duration-300">
-              <div className="font-serif text-6xl xl:text-7xl text-yvaga-sec mb-2">
+            <div className="bg-[#1b4d2a] p-8 md:p-10 rounded-[32px] shadow-sm border border-[#1b4d2a] flex flex-col items-center text-center hover:-translate-y-1 transition-all duration-300">
+              <div className="font-serif text-6xl xl:text-7xl text-[#5e9c43] mb-2">
                  <Counter value={14} />
               </div>
-              <h3 className="font-sans text-lg md:text-xl font-bold text-yvaga-dark uppercase tracking-wide mb-3">Hectáreas</h3>
-              <div className="w-10 h-px bg-yvaga-sec/30 mb-4"></div>
-              <p className="font-serif text-yvaga-dark/80 text-lg md:text-xl leading-relaxed">
-                Un extraordinario espacio de <span className="text-yvaga-acc italic">NATURALEZA</span> exuberante donde la belleza del bosque invita a descubrir, admirar y disfrutar cada recorrido.
+              <h3 className="font-sans text-lg md:text-xl font-bold text-white uppercase tracking-wide mb-3">Hectáreas</h3>
+              <div className="w-10 h-px bg-[#5e9c43] mb-4"></div>
+              <p className="font-serif text-white/90 text-lg md:text-xl leading-relaxed">
+                Un extraordinario espacio de <span className="text-white font-bold italic">NATURALEZA</span> exuberante donde la belleza del bosque invita a descubrir, admirar y disfrutar cada recorrido.
               </p>
             </div>
             
             {/* Bloque 2 */}
-            <div className="bg-white p-8 md:p-10 rounded-[32px] shadow-sm border border-yvaga-dark/5 flex flex-col items-center text-center hover:-translate-y-1 transition-all duration-300">
-              <div className="font-serif text-6xl xl:text-7xl text-yvaga-sec mb-2">
+            <div className="bg-[#1b4d2a] p-8 md:p-10 rounded-[32px] shadow-sm border border-[#1b4d2a] flex flex-col items-center text-center hover:-translate-y-1 transition-all duration-300">
+              <div className="font-serif text-6xl xl:text-7xl text-[#5e9c43] mb-2">
                  <Counter value={6300} />
               </div>
-              <h3 className="font-sans text-lg md:text-xl font-bold text-yvaga-dark uppercase tracking-wide mb-3">Árboles inventariados</h3>
-              <div className="w-10 h-px bg-yvaga-sec/30 mb-4"></div>
-              <p className="font-serif text-yvaga-dark/80 text-lg md:text-xl leading-relaxed">
-                Árboles extraordinarios resguardan un valioso patrimonio natural vivo.
+              <h3 className="font-sans text-lg md:text-xl font-bold text-white uppercase tracking-wide mb-3">Árboles inventariados</h3>
+              <div className="w-10 h-px bg-[#5e9c43] mb-4"></div>
+              <p className="font-serif text-white/90 text-lg md:text-xl leading-relaxed">
+                Que son guardianes de nuestro bosque, son refugio de vidas y más que árboles son un legado de vida.
               </p>
             </div>
 
             {/* Bloque 3 */}
-            <div className="bg-white p-8 md:p-10 rounded-[32px] shadow-sm border border-yvaga-dark/5 flex flex-col items-center text-center hover:-translate-y-1 transition-all duration-300">
-              <div className="font-serif text-6xl xl:text-7xl text-yvaga-sec mb-2">
+            <div className="bg-[#1b4d2a] p-8 md:p-10 rounded-[32px] shadow-sm border border-[#1b4d2a] flex flex-col items-center text-center hover:-translate-y-1 transition-all duration-300">
+              <div className="font-serif text-6xl xl:text-7xl text-[#5e9c43] mb-2">
                  <Counter value={1200} prefix="+" />
               </div>
-              <h3 className="font-sans text-lg md:text-xl font-bold text-yvaga-dark uppercase tracking-wide mb-3">Especies de flora</h3>
-              <div className="w-10 h-px bg-yvaga-sec/30 mb-4"></div>
-              <p className="font-serif text-yvaga-dark/80 text-lg md:text-xl leading-relaxed">
-                Una extraordinaria riqueza botánica que inspira admiración en cada recorrido.
+              <h3 className="font-sans text-lg md:text-xl font-bold text-white uppercase tracking-wide mb-3">VARIEDADES DE PLANTAS</h3>
+              <div className="w-10 h-px bg-[#5e9c43] mb-4"></div>
+              <p className="font-serif text-white/90 text-lg md:text-xl leading-relaxed">
+                Entre ornamentales, exóticas y especies nativas. Que embellecen y dan vida a nuestro Jardín Botánico.
               </p>
             </div>
 
             {/* Bloque 4 */}
-            <div className="bg-white p-8 md:p-10 rounded-[32px] shadow-sm border border-yvaga-dark/5 flex flex-col items-center text-center hover:-translate-y-1 transition-all duration-300">
-              <div className="font-serif text-6xl xl:text-7xl text-yvaga-sec mb-2">
+            <div className="bg-[#1b4d2a] p-8 md:p-10 rounded-[32px] shadow-sm border border-[#1b4d2a] flex flex-col items-center text-center hover:-translate-y-1 transition-all duration-300">
+              <div className="font-serif text-6xl xl:text-7xl text-[#5e9c43] mb-2">
                  <Counter value={350} prefix="+" />
               </div>
-              <h3 className="font-sans text-lg md:text-xl font-bold text-yvaga-dark uppercase tracking-wide mb-3">Animales rescatados</h3>
-              <div className="w-10 h-px bg-yvaga-sec/30 mb-4"></div>
-              <p className="font-serif text-yvaga-dark/80 text-lg md:text-xl leading-relaxed">
-                Protección, cuidado y bienestar para especies bajo resguardo responsable.
+              <h3 className="font-sans text-lg md:text-xl font-bold text-white uppercase tracking-wide mb-3">Animales rescatados</h3>
+              <div className="w-10 h-px bg-[#5e9c43] mb-4"></div>
+              <p className="font-serif text-white/90 text-lg md:text-xl leading-relaxed">
+                Que encontraron una segunda oportunidad y hoy en día están a salvo con cuidado profesional en todo momento.
               </p>
             </div>
           </div>
@@ -198,7 +198,7 @@ export default function Home() {
               icon={Leaf}
               title="Conexión real con la naturaleza"
               image="/conexion.jpg"
-              backText="YVAGA GUAZU transforma cada visita en una experiencia significativa, donde la majestuosidad de la NATURALEZA inspira, cautiva y deja una huella duradera en quienes la descubren, despertando una profunda admiración por su belleza y un genuino deseo de cuidarla, preservarla y amarla."
+              backText="En este Paraíso Grande, cada recorrido es una invitación a detener el tiempo, respirar profundamente y volver a conectarte con la belleza de la NATURALEZA."
             />
             {/* Tarjeta 2 */}
             <FlipCard 
@@ -206,7 +206,7 @@ export default function Home() {
               icon={Navigation}
               title="Experiencias que transforman"
               image="/experiencias.jpg"
-              backText="Recorre senderos rodeados de exuberante NATURALEZA, respira aire puro y descubre la extraordinaria belleza de bosques, jardines y paisajes que cautivan los sentidos. Cada visita es una experiencia que inspira admiración, tranquilidad y una nueva forma de valorar el mundo natural que nos rodea."
+              backText="Visita nuestros hermosos senderos rodeados de vida, respira aire puro y descubre la maravilla de jardines y paisajes que cautivan los sentidos y sobre todo nuestro hermoso bosque lleno de vida silvestre."
             />
             {/* Tarjeta 3 */}
             <FlipCard 
@@ -214,7 +214,7 @@ export default function Home() {
               icon={Heart}
               title="Refugio de vida"
               image="/refugio.jpg"
-              backText="Experiencias únicas que despiertan tus sentidos al conectar con la NATURALEZA, y dejan huella en tu corazón."
+              backText="Cada animalito que llega es tratado con el mayor cariño y profesionalismo. Al haber tomado el compromiso, recibirlos en nuestro Centro de Custodia es nuestro objetivo darles la MEJOR CALIDAD DE VIDA, aunque merecen estar libres, pero las circunstancias hacen difícil su reintegración a su hábitat natural. La Libertad."
             />
             {/* Tarjeta 4 */}
             <FlipCard 
@@ -222,75 +222,78 @@ export default function Home() {
               icon={Users}
               title="Experiencias para equipos y empresas"
               image="/equipos.jpg"
-              backText="Rodeados de exuberante NATURALEZA, los equipos encuentran mucho más que un lugar de encuentro: descubren un espacio que inspira bienestar, fortalece vínculos y crea experiencias memorables."
+              backText="En este Paraíso tenemos un entorno natural ideal donde empresas que buscan realizar actividades recreativas, coaching e integración de equipos, donde cada experiencia inspira nuevas perspectivas y fortalece los vínculos entre compañeros y equipos."
             />
           </div>
         </div>
       </section>
 
       {/* 4. BLOQUE DE CONEXIÓN Y MISIÓN */}
-      <section className="py-24 px-6 relative bg-yvaga-dark text-yvaga-white overflow-hidden">
+      <section className="py-12 md:py-16 px-6 relative bg-yvaga-dark text-yvaga-white overflow-hidden min-h-[100dvh] flex flex-col justify-center">
         {/* Background Image with heavy overlay */}
-        <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 z-0 bg-black">
           <img
-            src="/arboles_atardecer.jpg"
+            src="/mision_fondo.jpg"
             alt="Bosque"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover opacity-70"
           />
-          <div className="absolute inset-0 bg-black/30 backdrop-blur-[2px]"></div>
+          <div className="absolute inset-0 bg-black/30"></div>
         </div>
 
-        <div className="relative z-10 max-w-5xl mx-auto flex flex-col items-center text-center">
+        <div className="relative z-10 max-w-5xl mx-auto flex flex-col items-center text-center w-full">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-16"
+            className="mb-8 md:mb-10"
           >
-            <p className="font-caveat-brush text-[31px] md:text-[45px] font-normal max-w-4xl leading-[1.45]">
+            <p className="font-caveat-brush text-[26px] md:text-[38px] font-normal max-w-4xl leading-[1.3] px-4">
               "Este es un espacio para detenerte, observar y conectar. Buscamos sensibilizar a cada visitante, despertando respeto, empatía y una nueva forma de relacionarse con la NATURALEZA."
             </p>
           </motion.div>
 
-          <div className="bg-yvaga-white text-yvaga-dark p-8 md:p-12 lg:p-16 rounded-[40px] shadow-2xl max-w-4xl w-full">
-            <h3 className="font-oregano font-bold text-[56px] md:text-[68px] mb-6">Únete a nuestra misión</h3>
-            <p className="font-sans text-lg text-yvaga-dark/80 mb-12 max-w-2xl mx-auto">
+          <div className="relative bg-yvaga-white text-yvaga-dark pt-1 pb-6 px-6 md:pt-2 md:pb-8 md:px-12 lg:pt-3 lg:pb-10 lg:px-14 rounded-[30px] md:rounded-[40px] shadow-2xl max-w-4xl w-full z-10">
+            <h3 className="font-oregano font-bold text-[46px] md:text-[60px] mt-6 md:mt-8 mb-3 md:mb-4 leading-none">Únete a nuestra misión</h3>
+            <p className="font-sans text-[15px] md:text-[17px] text-yvaga-dark/80 mb-6 md:mb-8 max-w-3xl mx-auto leading-tight md:leading-snug">
               Nos sostenemos gracias a las personas que creen en la <span className="font-bold text-yvaga-sec">NATURALEZA</span> y deciden amarla. No contamos con apoyo externo, por eso cada visita y cada aporte tuyo contribuyen directamente a proteger nuestro bosque y mantener este refugio activo.
             </p>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-5 md:mb-7">
               {[
-                { icon: Trees, text: "Protegemos la naturaleza" },
-                { icon: Heart, text: "Rescatamos vidas" },
-                { icon: ShieldCheck, text: "Cuidamos este refugio" },
-                { icon: MapPin, text: "Construimos un futuro mejor" }
+                { icon: Heart, text: "Rescatamos vidas", desc: "Damos una segunda oportunidad a la fauna silvestre." },
+                { icon: Trees, text: "Protegemos la naturaleza", desc: "Cuidamos y conservamos nuestro bosque y su biodiversidad." },
+                { icon: ShieldCheck, text: "Cuidamos este refugio", desc: "Brindamos atención, bienestar y seguridad a cada animal." },
+                { icon: MapPin, text: "Construimos un futuro mejor", desc: "Educamos, inspiramos y trabajamos por un mundo más consciente." }
               ].map((item, i) => (
-                <div key={i} className="flex flex-col items-center text-center gap-3">
-                  <div className="w-16 h-16 rounded-full bg-yvaga-light/50 flex items-center justify-center text-yvaga-sec scale-110 mb-1 mt-1">
-                    <item.icon className="w-8 h-8" strokeWidth={1.5} />
+                <div key={i} className="flex flex-col items-center text-center gap-2 md:gap-3">
+                  <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-yvaga-light/50 flex items-center justify-center text-yvaga-sec scale-110 mb-1">
+                    <item.icon className="w-7 h-7 md:w-8 md:h-8" strokeWidth={1.5} />
                   </div>
-                  <span className="font-serif text-lg font-medium">{item.text}</span>
+                  <div className="flex flex-col gap-1">
+                    <span className="font-serif text-[15px] md:text-lg font-bold leading-tight">{item.text}</span>
+                    <span className="font-sans text-[12px] md:text-[13.5px] text-yvaga-dark/70 leading-snug">{item.desc}</span>
+                  </div>
                 </div>
               ))}
             </div>
 
-            <div className="flex justify-center w-full mt-4">
+            <div className="flex justify-center w-full mt-0">
               <Link 
                 to="/contacto" 
-                className="relative bg-[#0d220e] text-white px-6 md:px-11 py-3 md:py-4 rounded-[50px] w-full sm:w-auto inline-flex items-center justify-center gap-3 md:gap-4 shadow-[0_8px_30px_rgba(0,0,0,0.2)] border border-[#9bc82d]/50 overflow-hidden transform hover:-translate-y-1 hover:shadow-[0_15px_40px_-10px_rgba(155,200,45,0.4)] transition-all duration-300"
+                className="relative bg-[#0d220e] text-white px-6 md:px-10 py-2.5 rounded-[50px] w-full sm:w-auto inline-flex items-center justify-center gap-3 shadow-[0_8px_30px_rgba(0,0,0,0.2)] border border-[#9bc82d]/50 overflow-hidden transform hover:-translate-y-1 hover:shadow-[0_15px_40px_-10px_rgba(155,200,45,0.4)] transition-all duration-300"
               >
                 <div className="absolute inset-[2px] rounded-[50px] shadow-[inset_0_4px_12px_1px_rgba(155,200,45,0.9),inset_0_-4px_12px_1px_rgba(155,200,45,0.6)] pointer-events-none border border-[#77a113]/30" />
                 
-                <Heart className="w-8 h-8 md:w-[37px] md:h-[37px] text-white z-10 flex-shrink-0" strokeWidth={2} />
+                <Heart className="w-7 h-7 md:w-[32px] md:h-[32px] text-white z-10 flex-shrink-0" strokeWidth={2} />
                 
                 <div className="flex flex-col items-start z-10 text-left">
-                  <span className="font-bold font-sans text-[19px] md:text-[25px] tracking-[0.06em] leading-[1.1] uppercase drop-shadow-md">QUIERO SUMARME</span>
-                  <span className="font-sans text-[10px] md:text-[12px] font-medium tracking-[0.14em] text-white/90 uppercase drop-shadow-md">TU APOYO TRANSFORMA VIDAS</span>
+                  <span className="font-bold font-sans text-[18px] md:text-[22px] tracking-[0.06em] leading-[1.1] uppercase drop-shadow-md">QUIERO SUMARME</span>
+                  <span className="font-sans text-[9px] md:text-[11px] font-medium tracking-[0.14em] text-white/90 uppercase drop-shadow-md">TU APOYO TRANSFORMA VIDAS</span>
                 </div>
               </Link>
             </div>
 
-            <div className="mt-14 pt-10 border-t border-yvaga-dark/10 relative flex flex-col justify-center items-center min-h-[180px]">
+            <div className="mt-4 md:mt-6 pt-4 md:pt-6 border-t border-yvaga-dark/10 relative flex flex-col justify-center items-center min-h-[140px] md:min-h-[160px]">
               <svg width="0" height="0" className="absolute" aria-hidden="true">
                 <filter id="brush-roughness">
                   <feTurbulence type="fractalNoise" baseFrequency="0.04 0.1" numOctaves="3" result="noise" />
@@ -298,19 +301,19 @@ export default function Home() {
                 </filter>
               </svg>
 
-              <div className="absolute inset-y-0 inset-x-[-20px] md:inset-x-[-50px] flex justify-center items-center pointer-events-none mt-10">
-                <div className="w-full h-[150px] md:h-[170px] relative" style={{ filter: "url(#brush-roughness)" }}>
+              <div className="absolute inset-y-0 inset-x-[-10px] md:inset-x-[-30px] flex justify-center items-center pointer-events-none mt-2 md:mt-3">
+                <div className="w-full h-[120px] md:h-[140px] relative" style={{ filter: "url(#brush-roughness)" }}>
                    <div className="absolute inset-0 bg-[#162f14] transform -rotate-1 scale-y-[0.8] scale-x-[1.05] opacity-90" style={{ clipPath: "polygon(2% 15%, 98% 5%, 100% 50%, 98% 95%, 2% 85%, 0% 50%)" }} />
                    <div className="absolute inset-y-3 inset-x-[-15px] bg-[#1F3D1E] transform rotate-[1deg] scale-x-[1.03] scale-y-[0.85]" style={{ clipPath: "polygon(0% 0%, 99% 10%, 100% 60%, 98% 100%, 2% 90%, 1% 40%)" }} />
                    <div className="absolute inset-y-5 inset-x-[-25px] bg-[#1c381b] transform -rotate-[0.5deg] scale-y-[0.75] scale-x-[1.06]" style={{ clipPath: "polygon(3% 20%, 100% 0%, 98% 45%, 100% 100%, 1% 80%, 0% 55%)" }} />
                 </div>
               </div>
 
-              <div className="relative z-10 w-full text-center px-4 mt-2">
-                <p className="font-caveat-brush text-[36px] md:text-[42px] font-normal leading-[1.15] drop-shadow-lg">
+              <div className="relative z-10 w-full text-center px-2 -mt-3 md:-mt-4">
+                <p className="font-caveat-brush text-[30px] md:text-[38px] font-normal leading-[1.15] drop-shadow-lg">
                   <span className="text-white">"Cada pequeña acción hace una gran diferencia.</span><br />
                   <span className="text-[#AED33C]">Gracias por ser parte de esta misión."</span>
-                  <span className="inline-block relative w-8 h-8 md:w-9 md:h-9 ml-3 align-middle -mt-2">
+                  <span className="inline-block relative w-7 h-7 md:w-8 md:h-8 ml-2 align-middle -mt-2">
                      <Heart className="absolute inset-0 w-full h-full text-[#AED33C] stroke-[3px]" fill="transparent" />
                      <Heart className="absolute inset-0 w-full h-full text-[#AED33C] stroke-0 transform scale-[0.6] translate-y-[-1px] translate-x-[-1px]" fill="#AED33C" opacity="0.8"/>
                   </span>
@@ -318,6 +321,30 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Capa superpuesta con máscara para simular que las hojas están por encima del cuadro */}
+        <div 
+          className="absolute inset-0 z-20 pointer-events-none" 
+          style={{ 
+            maskImage: "linear-gradient(to right, black 0%, black 10%, transparent 23%)", 
+            WebkitMaskImage: "-webkit-linear-gradient(left, black 0%, black 10%, transparent 23%)" 
+          }}
+        >
+          <img
+            src="/mision_fondo.jpg"
+            alt=""
+            className="w-full h-full object-cover opacity-100"
+          />
+        </div>
+
+        {/* Animal silueteado (derecha) */}
+        <div className="absolute top-[55%] right-[-10%] md:right-[-5%] transform -translate-y-1/2 z-20 pointer-events-none">
+          <img 
+            src="/tucansilueta.png" 
+            alt="Tucan" 
+            className="w-[280px] md:w-[400px] lg:w-[500px] object-contain drop-shadow-2xl scale-x-[-1]"
+          />
         </div>
       </section>
 
@@ -330,7 +357,7 @@ export default function Home() {
             <h2 className="font-serif text-[40px] md:text-[52px] text-yvaga-sec mb-4">
               CERTIFICACIÓN INTERNACIONAL GREEN GLOBE
             </h2>
-            <h3 className="font-sans text-[23px] md:text-[23px] font-bold text-yvaga-sec/80 mb-6 tracking-wide">
+            <h3 className="font-sans text-[27px] md:text-[27px] font-bold text-yvaga-sec/80 mb-6 tracking-wide">
               Somos parte de la élite del turismo sostenible en el mundo.
             </h3>
             

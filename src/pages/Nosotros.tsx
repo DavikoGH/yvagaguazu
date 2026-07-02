@@ -12,6 +12,17 @@ export default function Nosotros() {
           <div className="absolute inset-0 bg-black/30"></div>
         </div>
         
+        <div className="absolute top-6 left-[calc(1.5rem+7%)] md:top-10 md:left-[calc(3rem+7%)] z-20">
+          <motion.img 
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            src="/YvagaGuazuLogoPNG.png" 
+            alt="Yvaga Guazú Logo" 
+            className="w-[196px] md:w-[250px] lg:w-[286px] drop-shadow-xl" 
+          />
+        </div>
+
         <div className="relative z-10 text-center text-white px-6 w-full flex flex-col items-center mt-16">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -74,8 +85,8 @@ export default function Nosotros() {
             <span className="flex items-center gap-2 font-sans text-yvaga-sec font-semibold tracking-widest uppercase text-sm mb-4">
               <Leaf className="w-5 h-5" /> Nuestra propuesta única
             </span>
-            <h2 className="font-serif text-5xl md:text-7xl text-yvaga-dark mb-6 flex flex-wrap justify-center items-baseline gap-x-3 md:gap-x-4">
-              <span>Descubre lo que</span>
+            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl mb-6 flex flex-wrap justify-center items-baseline gap-x-3 md:gap-x-4">
+              <span className="text-[#5e9c43]">Descubre lo que</span>
               <span className="font-oregano text-[58px] md:text-[88px] text-[#1B4D2A] font-bold italic drop-shadow-md">nos hace únicos</span>
             </h2>
           </div>
@@ -110,10 +121,10 @@ export default function Nosotros() {
                  En nuestras 14 hectáreas de exuberante NATURALEZA conviven miles de árboles, más de 1.200 especies de flora, colecciones botánicas, bosques temáticos, senderos ecológicos y espacios diseñados para el aprendizaje, la contemplación y la conexión con el entorno natural.
                </p>
                <p className="mb-5">
-                 A la majestuosidad de nuestros bosques, senderos y colecciones botánicas se suma nuestro Centro de Custodia de fauna silvestre, donde brindamos protección y cuidado a animales que fueron víctimas del tráfico ilegal y el mascotismo, contribuyendo activamente a su bienestar y conservación.
+                 A la majestuosidad de nuestro bosque, senderos y colecciones botánicas se suma nuestro Centro de Custodia de fauna silvestre, donde brindamos protección y cuidado a animales que fueron víctimas del tráfico ilegal y el mascotismo, contribuyendo activamente a su bienestar y conservación.
                </p>
                <p>
-                 Esta unión entre bosque, biodiversidad, conservación, educación ambiental y bienestar animal convierte a <span className="font-bold">YVAGA GUAZU</span> en un espacio verdaderamente único, donde cada visita inspira admiración, genera conciencia y fortalece el vínculo entre las personas y la NATURALEZA.
+                 Esta unión entre bosque, biodiversidad, conservación, educación ambiental y bienestar animal convierte a <span className="font-bold">YVAGA GUAZU (Paraíso Grande)</span> en un espacio verdaderamente único, donde cada visita inspira admiración, genera conciencia y fortalece el vínculo entre las personas y la NATURALEZA.
                </p>
              </div>
           </div>
@@ -154,23 +165,23 @@ export default function Nosotros() {
             {/* Mission & Vision Cards */}
             <div className="flex flex-col md:flex-row gap-8 md:gap-6 mb-12 lg:mb-0">
               {/* Mision */}
-              <div className="flex-1 bg-[#102414]/90 backdrop-blur-md border border-[#3b593f]/50 rounded-2xl p-6 text-center drop-shadow-2xl pt-8 relative mt-6 lg:mt-0">
+              <div className="flex-1 bg-[#102414]/90 backdrop-blur-md border border-[#3b593f]/50 rounded-2xl p-6 text-center drop-shadow-2xl pt-8 relative mt-6 lg:mt-0 h-auto min-h-max">
                 <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-[#8DC63F] rounded-full flex items-center justify-center shadow-lg border-4 border-[#102414]">
                   <Leaf className="w-5 h-5 text-white" />
                 </div>
-                <h3 className="font-sans font-bold text-[#8DC63F] text-[18px] mb-3 mt-2 uppercase">Nuestra Misión</h3>
-                <p className="font-sans text-[14px] md:text-[15px] text-gray-200 leading-relaxed font-light">
+                <h3 className="font-sans font-bold text-[#8DC63F] text-[22px] mb-3 mt-2 uppercase">Nuestra Misión</h3>
+                <p className="font-sans text-[18px] md:text-[19px] text-gray-200 leading-relaxed font-light">
                   Generar una conexión real entre el ser humano y la naturaleza, sensibilizando a cada visitante para que valore, respete, proteja y ame nuestro entorno natural.
                 </p>
               </div>
 
               {/* Vision */}
-              <div className="flex-1 bg-[#102414]/90 backdrop-blur-md border border-[#3b593f]/50 rounded-2xl p-6 text-center drop-shadow-2xl pt-8 relative mt-6 lg:mt-0">
+              <div className="flex-1 bg-[#102414]/90 backdrop-blur-md border border-[#3b593f]/50 rounded-2xl p-6 text-center drop-shadow-2xl pt-8 relative mt-6 lg:mt-0 h-auto min-h-max">
                 <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-[#8DC63F] rounded-full flex items-center justify-center shadow-lg border-4 border-[#102414]">
                   <Globe className="w-5 h-5 text-white" />
                 </div>
-                <h3 className="font-sans font-bold text-[#8DC63F] text-[18px] mb-3 mt-2 uppercase">Nuestra Visión</h3>
-                <p className="font-sans text-[14px] md:text-[15px] text-gray-200 leading-relaxed font-light">
+                <h3 className="font-sans font-bold text-[#8DC63F] text-[22px] mb-3 mt-2 uppercase">Nuestra Visión</h3>
+                <p className="font-sans text-[18px] md:text-[19px] text-gray-200 leading-relaxed font-light">
                   Lograr que cada persona que nos visita viva la naturaleza con otros ojos y decida amarla, entenderla y cuidarla, generando un impacto positivo en la vida y en el futuro del planeta.
                 </p>
               </div>
@@ -178,55 +189,14 @@ export default function Nosotros() {
           </div>
 
           {/* Right Column (Quote at the bottom) */}
-          <div className="mt-12 lg:mt-auto lg:self-end lg:max-w-[420px] w-full flex justify-end z-20">
+          <div className="mt-12 lg:mt-auto lg:self-end lg:max-w-[560px] w-full flex justify-end z-20 translate-x-[7%]">
             <div className="relative p-6 px-8 pt-5 pb-5 bg-gradient-to-r from-[#020502]/80 to-transparent backdrop-blur-sm rounded-l-3xl border-l-[6px] border-[#8DC63F] shadow-2xl">
-               <p className="font-caveat-brush text-[24px] md:text-[28px] text-white leading-snug drop-shadow-md text-left inline-block">
-                 <span className="text-[#8DC63F] text-3xl leading-none italic font-serif">" </span> 
+               <p className="font-caveat-brush text-[30px] md:text-[34px] text-white leading-snug drop-shadow-md text-left inline-block">
+                 <span className="text-[#8DC63F] text-4xl md:text-5xl leading-none italic font-serif">" </span> 
                  La naturaleza puede vivir sin el hombre, pero el hombre no puede vivir sin <span className="text-[#8DC63F]">la naturaleza.</span>
-                 <span className="text-[#8DC63F] text-3xl leading-none italic font-serif"> "</span>
+                 <span className="text-[#8DC63F] text-4xl md:text-5xl leading-none italic font-serif"> "</span>
                </p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* BLOQUE 4 – DIFERENCIALES */}
-      <section className="py-24 px-6 bg-yvaga-beige">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <span className="inline-block border border-yvaga-sec text-yvaga-sec px-8 py-3 rounded-full font-sans font-semibold mb-6 tracking-wide text-[21px] bg-yvaga-sec/5">
-              Porque lo que se ama... se cuida.
-            </span>
-            <h2 className="font-serif text-4xl md:text-5xl text-yvaga-dark mb-12">Detalles que dejan huella</h2>
-          </div>
-
-          {/* Zig zag list of differentials */}
-          <div className="flex flex-col gap-12">
-             <DifferentialCard 
-               icon={Trees}
-               title="Más de 6.000 especies de árboles"
-               desc="Un entorno lleno de vida donde puedes descubrir la riqueza natural en cada recorrido."
-             />
-             <DifferentialCard 
-               icon={Heart}
-               title="Refugio de más de 350 animales rescatados"
-               desc="Brindamos un hogar seguro a animales que han sufrido maltrato o abandono, dándoles una segunda oportunidad."
-             />
-             <DifferentialCard 
-               icon={Bird}
-               title="El orquideario más grande de Bolivia"
-               desc="Un espacio único donde podrás admirar más de 600 especies de orquídeas nativas o silvestres, llenas de color, belleza y vida."
-             />
-             <DifferentialCard 
-               icon={Bug} // Leaf/Bug metaphor for bonsai/small nature
-               title="Gran colección de bonsáis con más de 20 años"
-               desc="Un sector especial con verdaderas obras vivas de la naturaleza, que reflejan paciencia, cuidado y tradición."
-             />
-             <DifferentialCard 
-               icon={Leaf}
-               title="Experiencias que sensibilizan"
-               desc="Más que visitar, aquí conectas, sientes y desarrollas una nueva forma de ver, valorar y amar la NATURALEZA."
-             />
           </div>
         </div>
       </section>
@@ -234,7 +204,7 @@ export default function Nosotros() {
       {/* BLOQUE 5 – CIERRE VISUAL NOSOTROS */}
       <section className="relative py-32 px-6 overflow-hidden flex items-center justify-center min-h-[70vh]">
         <div className="absolute inset-0 z-0">
-          <img src="/nosotros_paso.jpg" alt="Naturaleza vida" className="w-full h-full object-cover" />
+          <img src="/huella_bosque.jpg" alt="Naturaleza vida" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-yvaga-dark via-yvaga-dark/50 to-transparent"></div>
         </div>
 
@@ -244,8 +214,9 @@ export default function Nosotros() {
           viewport={{ once: true }}
           className="relative z-10 w-full max-w-4xl bg-yvaga-white p-10 md:p-16 rounded-[40px] text-center shadow-2xl"
         >
-           <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-yvaga-dark mb-6">
-             Cada paso que das aquí, deja una huella que transforma.
+           <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl mb-6 leading-tight">
+             <span className="text-[#5e9c43]">Cada paso que das aquí,</span> <br />
+             <span className="font-oregano text-[48px] md:text-[68px] lg:text-[76px] text-[#1B4D2A] font-bold italic drop-shadow-md mt-2 inline-block">deja una huella que transforma</span>
            </h2>
            <p className="font-sans text-[20px] md:text-[22px] text-yvaga-dark/70 mb-12 max-w-2xl mx-auto">
              Visítanos, apóyanos y sé parte de este refugio que protege la naturaleza y da esperanza a quienes más lo necesitan.
@@ -270,22 +241,17 @@ export default function Nosotros() {
              Sé parte de nuestra misión
            </button>
         </motion.div>
+
+        {/* Palmeras Superpuestas */}
+        <div className="absolute inset-0 z-20 pointer-events-none overflow-hidden">
+          <svg viewBox="0 0 1920 2033" preserveAspectRatio="xMidYMid slice" className="absolute inset-0 w-full h-full">
+            <image href="/palmera_silueta_1.png" x="-60" y="643" width="677" height="864" />
+            <image href="/palmera_silueta_2.png" x="1175" y="764" width="778" height="941" />
+          </svg>
+        </div>
       </section>
 
     </div>
   );
 }
 
-function DifferentialCard({ icon: Icon, title, desc }: { icon: any, title: string, desc: string }) {
-  return (
-    <div className="flex flex-col md:flex-row items-start gap-6 bg-white p-8 md:p-10 rounded-[32px] shadow-sm border border-yvaga-dark/5 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-      <div className="w-16 h-16 rounded-full bg-yvaga-light flex items-center justify-center shrink-0">
-        <Icon className="w-8 h-8 text-yvaga-dark" />
-      </div>
-      <div>
-        <h3 className="font-serif text-2xl md:text-3xl text-yvaga-dark mb-3 leading-tight">{title}</h3>
-        <p className="font-sans text-lg text-yvaga-dark/70">{desc}</p>
-      </div>
-    </div>
-  )
-}

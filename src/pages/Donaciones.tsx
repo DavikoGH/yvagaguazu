@@ -140,7 +140,7 @@ export default function Donaciones() {
           <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start px-6 md:px-12 lg:pl-0 lg:pr-20 mt-8 lg:mt-0 text-center lg:text-left">
             <div className="flex flex-col lg:flex-row items-center gap-4 mb-4">
               <h2 className="font-serif text-3xl md:text-5xl text-yvaga-dark leading-tight">
-                Un refugio para<br/>quienes <strong className="text-[#598420] font-bold">no tienen voz</strong>
+                Un refugio para<br/>quienes <strong className="font-oregano text-[38px] md:text-[55px] text-[#598420] italic font-bold">no tienen voz</strong>
               </h2>
               <Heart className="w-10 h-10 md:w-12 md:h-12 text-[#598420] opacity-80 lg:mt-auto hidden lg:block" />
             </div>
@@ -324,21 +324,21 @@ export default function Donaciones() {
             </div>
           </div>
 
-          {/* Cuadro verde: 4 Columnas Centrado Abajo */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 w-full mt-4">
-            <div className="lg:col-start-5 lg:col-span-4">
-              <div className="bg-[#1E3316] rounded-3xl p-8 text-white flex flex-col justify-center h-full shadow-2xl relative overflow-hidden text-center">
+          {/* Cuadro verde: 6 Columnas Centrado Abajo */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 w-full mt-10">
+            <div className="lg:col-start-4 lg:col-span-6">
+              <div className="bg-[#1E3316] rounded-3xl p-8 md:p-10 text-white flex flex-col justify-center h-full shadow-2xl relative overflow-hidden text-center">
                 <Leaf className="w-32 h-32 text-white/5 absolute -bottom-8 -right-8 transform rotate-12" />
-                <h3 className="font-sans text-xl md:text-2xl leading-snug mb-8 relative z-10 font-normal">
-                  Gracias a ti,<br/>podemos seguir<br/>protegiendo<br/>vidas.
+                <h3 className="font-sans text-xl md:text-[26px] leading-snug mb-8 relative z-10 font-normal">
+                  Gracias a ti, podemos seguir <span className="font-oregano italic text-[40px] md:text-[50px] font-bold text-[#A5C05B] block mt-2">protegiendo vidas.</span>
                 </h3>
                 <a 
                   href="https://wa.me/59170248238"
                   target="_blank"
                   rel="noreferrer" 
-                  className="inline-flex items-center justify-center gap-2 bg-white text-[#1E3316] font-sans font-medium py-3 px-6 rounded-xl hover:bg-[#F9F7F2] transition-colors relative z-10 shadow-lg w-full text-sm md:text-base"
+                  className="inline-flex items-center justify-center gap-2 bg-white text-[#1E3316] font-sans font-medium py-4 px-8 rounded-xl hover:bg-[#F9F7F2] transition-colors relative z-10 shadow-lg w-max mx-auto text-base md:text-lg"
                 >
-                  <Heart className="w-4 h-4" />
+                  <Heart className="w-5 h-5" />
                   Quiero donar ahora
                 </a>
               </div>
