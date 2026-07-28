@@ -19,21 +19,21 @@ export default function Donaciones() {
   return (
     <div className="bg-[#F9F7F2] min-h-screen">
       {/* SECCIÓN 1: PORTADA "Únete a nuestra misión" */}
-      <section className="relative h-[150vh] md:h-[180vh] w-full">
+      <section className="relative w-full bg-[#0D2012] mt-[80px]">
         {/* Fondo Imagen */}
-        <div className="absolute inset-0 z-0 overflow-hidden">
+        <div className="relative w-full">
           <img
-            src="/portadadonaciones.jpeg"
+            src="/header_donaciones.jpg"
             alt="Animales en Yvaga Guazú"
-            className="w-full h-full object-cover object-center"
+            className="w-full h-auto block"
           />
           {/* Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0d2012]/80 via-[#0d2012]/20 to-black/30"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0d2012]/80 via-[#0d2012]/20 to-black/30 pointer-events-none"></div>
         </div>
 
-        {/* Contenido fijo (Sticky) */}
-        <div className="sticky top-0 left-0 w-full h-[100dvh] flex flex-col justify-center items-center z-10 px-4 md:px-8">
-          <div className="relative z-10 w-full max-w-[1400px] flex flex-col xl:flex-row items-end justify-center gap-6 mt-12 md:mt-0">
+        {/* Contenido */}
+        <div className="relative w-full flex flex-col justify-center items-center z-10 px-4 md:px-8 py-12 lg:-mt-24">
+          <div className="relative z-10 w-full max-w-[1400px] flex flex-col xl:flex-row items-center justify-center gap-6 mt-6 md:mt-0">
              
              {/* CUADRO IZQUIERDO (Desktop) */}
              <div className="hidden xl:flex bg-[#0D2012]/80 rounded-[24px] p-6 lg:p-8 max-w-[280px] shadow-2xl border border-white/10 items-center justify-center mb-0 relative">
@@ -128,7 +128,7 @@ export default function Donaciones() {
       <section className="relative z-20 bg-[#F9F7F2] rounded-t-[40px] md:rounded-t-[80px] -mt-10 md:-mt-20 pt-16 md:pt-20 pb-24 w-full shadow-[0_-20px_50px_rgba(0,0,0,0.15)] flex flex-col items-center">
         <div className="w-full max-w-[1920px] mx-auto flex flex-col lg:flex-row items-center">
           {/* Foto tucansilueta (Pisa hacia arriba la portada y apegada a la izquierda) */}
-          <div className="w-full lg:w-1/2 relative z-30 flex justify-start lg:justify-start -mt-20 sm:-mt-32 md:-mt-40 lg:-mt-[200px] xl:-mt-[280px] 2xl:-mt-[340px]">
+          <div className="w-full lg:w-1/2 relative z-30 flex justify-start lg:justify-start -mt-10 sm:-mt-16 md:-mt-20 lg:-mt-[80px] xl:-mt-[120px] 2xl:-mt-[150px]">
             <img 
               src="/tucansilueta.png" 
               alt="Silueta de tucán" 

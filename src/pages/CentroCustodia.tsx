@@ -17,75 +17,62 @@ import { motion } from "motion/react";
 export default function CentroCustodia() {
   return (
     <div className="min-h-screen bg-[#F0EBE1] flex flex-col font-sans text-yvaga-dark">
+      
       {/* SECTION 1: HERO */}
-      <section className="relative w-full min-h-screen flex items-center bg-[#3B4D2F] lg:py-8 overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <img
-            src="/Portadita_CentroDeCustodia_saimiri_9.jpg"
-            alt="Monito Saimiri Centro de Custodia"
-            className="w-full h-full object-cover object-[center_30%] md:object-[center_20%]"
-          />
-          {/* subtle gradient removed or lightened so black text is visible */}
-          <div className="absolute inset-0 bg-white/10 lg:bg-transparent pointer-events-none" />
+      <section className="relative w-full bg-yvaga-dark mt-[80px]">
+        <div className="relative w-full">
+          <img src="/header_centrodecustodia.jpg" alt="Portada Centro de Custodia" className="w-full h-auto block" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-transparent pointer-events-none"></div>
         </div>
+      </section>
 
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 py-8 lg:py-0 flex flex-col lg:flex-row items-center">
-          {/* Spacer column to keep the left side (monkey) visible on desktop */}
-          <div className="hidden lg:block lg:w-[45%] xl:w-1/2"></div>
+      {/* TEXTO INTRODUCTORIO (movido desde el hero anterior) */}
+      <section className="bg-white py-16 px-6">
+        <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
+          <h1 className="font-oregano text-[48px] md:text-[56px] font-bold text-[#5E9C43] italic leading-tight mb-6">
+            Donde la protección se transforma en esperanza
+          </h1>
+          <p className="text-black text-[18px] md:text-[20px] font-medium leading-relaxed mb-10">
+            En <span className="font-bold">YVAGA GUAZU</span> (Paraíso
+            Grande), brindamos refugio, cuidado y nuevas oportunidades a
+            animales silvestres que fueron víctimas del tráfico ilegal, el
+            mascotismo y otras situaciones que los alejaron de la vida para la
+            que nacieron.
+          </p>
 
-          <div className="w-full lg:w-[55%] xl:w-1/2 lg:pl-12 flex flex-col justify-center">
-            <div className="flex items-center gap-3 mb-4">
-              <span 
-                className="font-oregano text-[58px] md:text-[64px] font-bold text-[#5E9C43] italic leading-[0.9]"
-                style={{ textShadow: "2px 2px 0 #1B4D2A, -2px -2px 0 #1B4D2A, 2px -2px 0 #1B4D2A, -2px 2px 0 #1B4D2A, 0px 2px 0 #1B4D2A, 2px 0px 0 #1B4D2A, 0px -2px 0 #1B4D2A, -2px 0px 0 #1B4D2A, 0.5rem 0.5rem 10px rgba(0,0,0,0.5)" }}
-              >
-                Donde la protección se
-                <br />
-                transforma en esperanza
-              </span>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6 divide-y md:divide-y-0 md:divide-x divide-[#A5C05B]/40 text-left">
+            <div className="flex flex-col pt-6 md:pt-0 px-0 md:px-6 items-center text-center">
+              <div className="w-12 h-12 rounded-full flex items-center justify-center border-2 border-[#1B4D2A] text-[#1B4D2A] mb-4 bg-[#3B4D2F]/10">
+                <ShieldCheck className="w-6 h-6 text-[#1B4D2A]" />
+              </div>
+              <h4 className="font-bold uppercase mb-2 tracking-wide text-sm text-black">
+                Protección
+              </h4>
+              <p className="text-black text-[16px] font-medium leading-relaxed">
+                Entorno seguro y bajo cuidado especializado
+              </p>
             </div>
-            <p className="text-black text-[18px] md:text-[20px] font-medium leading-relaxed mb-6 drop-shadow-[0_1px_1px_rgba(255,255,255,0.7)]">
-              En <span className="font-bold">YVAGA GUAZU</span> (Paraíso
-              Grande), brindamos refugio, cuidado y nuevas oportunidades a
-              animales silvestres que fueron víctimas del tráfico ilegal, el
-              mascotismo y otras situaciones que los alejaron de la vida para la
-              que nacieron.
-            </p>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 divide-y md:divide-y-0 md:divide-x divide-[#A5C05B]/40">
-              <div className="flex flex-col py-4 md:py-0 px-0 md:px-4">
-                <div className="w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center border-2 border-[#1B4D2A] text-[#1B4D2A] mb-2 md:mb-3 bg-[#3B4D2F]/10 backdrop-blur-sm">
-                  <ShieldCheck className="w-5 h-5 md:w-6 md:h-6 text-[#1B4D2A]" />
-                </div>
-                <h4 className="font-bold uppercase mb-2 tracking-wide text-sm drop-shadow-[0_1px_1px_rgba(255,255,255,0.7)] text-black">
-                  Protección
-                </h4>
-                <p className="text-black text-[17px] md:text-[18px] font-medium leading-relaxed drop-shadow-[0_1px_1px_rgba(255,255,255,0.7)]">
-                  Entorno seguro y bajo cuidado especializado
-                </p>
+            <div className="flex flex-col pt-6 md:pt-0 px-0 md:px-6 items-center text-center">
+              <div className="w-12 h-12 rounded-full flex items-center justify-center border-2 border-[#1B4D2A] text-[#1B4D2A] mb-4 bg-[#3B4D2F]/10">
+                <Plus className="w-6 h-6 text-[#1B4D2A]" strokeWidth={4} />
               </div>
-              <div className="flex flex-col py-4 md:py-0 px-0 md:px-4">
-                <div className="w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center border-2 border-[#1B4D2A] text-[#1B4D2A] mb-2 md:mb-3 bg-[#3B4D2F]/10 backdrop-blur-sm">
-                  <Plus className="w-5 h-5 md:w-6 md:h-6 text-[#1B4D2A]" strokeWidth={4} />
-                </div>
-                <h4 className="font-bold uppercase mb-2 tracking-wide text-sm drop-shadow-[0_1px_1px_rgba(255,255,255,0.7)] text-black">
-                  Bienestar
-                </h4>
-                <p className="text-black text-[17px] md:text-[18px] font-medium leading-relaxed drop-shadow-[0_1px_1px_rgba(255,255,255,0.7)]">
-                  Atención permanente para su recuperación y desarrollo
-                </p>
+              <h4 className="font-bold uppercase mb-2 tracking-wide text-sm text-black">
+                Bienestar
+              </h4>
+              <p className="text-black text-[16px] font-medium leading-relaxed">
+                Atención permanente para su recuperación y desarrollo
+              </p>
+            </div>
+            <div className="flex flex-col pt-6 md:pt-0 px-0 md:px-6 items-center text-center">
+              <div className="w-12 h-12 rounded-full flex items-center justify-center border-2 border-[#1B4D2A] text-[#1B4D2A] mb-4 bg-[#3B4D2F]/10">
+                <Leaf className="w-6 h-6 text-[#1B4D2A]" />
               </div>
-              <div className="flex flex-col py-4 md:py-0 px-0 md:px-4">
-                <div className="w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center border-2 border-[#1B4D2A] text-[#1B4D2A] mb-2 md:mb-3 bg-[#3B4D2F]/10 backdrop-blur-sm">
-                  <Leaf className="w-5 h-5 md:w-6 md:h-6 text-[#1B4D2A]" />
-                </div>
-                <h4 className="font-bold uppercase mb-2 tracking-wide text-sm drop-shadow-[0_1px_1px_rgba(255,255,255,0.7)] text-black">
-                  Esperanza
-                </h4>
-                <p className="text-black text-[17px] md:text-[18px] font-medium leading-relaxed drop-shadow-[0_1px_1px_rgba(255,255,255,0.7)]">
-                  Apoyamos su proceso para volver a una vida más natural
-                </p>
-              </div>
+              <h4 className="font-bold uppercase mb-2 tracking-wide text-sm text-black">
+                Esperanza
+              </h4>
+              <p className="text-black text-[16px] font-medium leading-relaxed">
+                Apoyamos su proceso para volver a una vida más natural
+              </p>
             </div>
           </div>
         </div>

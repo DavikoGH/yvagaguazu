@@ -1,77 +1,158 @@
 import { motion } from "motion/react";
-import { Leaf, Trees, Heart, Bird, Bug, Globe, ArrowRight } from "lucide-react";
+import { Leaf, Trees, Heart, Bird, Bug, Globe, ArrowRight, Calendar, DoorOpen, Flower2, PawPrint } from "lucide-react";
 
 export default function Nosotros() {
   return (
     <div className="flex flex-col min-h-screen">
       
       {/* BLOQUE 1 – HERO PORTADA */}
-      <section className="relative w-full h-[100dvh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <img src="/nosotros_portada.jpg" alt="Portada NOSOTROS" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-black/30"></div>
-        </div>
-        
-        <div className="absolute top-6 left-[calc(1.5rem+7%)] md:top-10 md:left-[calc(3rem+7%)] z-20">
-          <motion.img 
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            src="/YvagaGuazuLogoPNG.png" 
-            alt="Yvaga Guazú Logo" 
-            className="w-[196px] md:w-[250px] lg:w-[286px] drop-shadow-xl" 
-          />
-        </div>
-
-        <div className="relative z-10 text-center text-white px-6 w-full flex flex-col items-center mt-16">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="flex flex-col items-center drop-shadow-lg">
-              <span className="font-serif text-4xl md:text-5xl lg:text-6xl mb-2 lg:mb-4">
-                Conoce nuestra
-              </span>
-              <span 
-                className="font-oregano text-[80px] md:text-[120px] lg:text-[140px] text-[#1B4D2A] font-bold italic leading-none drop-shadow-xl"
-                style={{ WebkitTextStroke: "1px white" }}
-              >
-                HISTORIA
-              </span>
-            </h1>
-          </motion.div>
+      <section className="relative w-full bg-yvaga-dark mt-[80px]">
+        <div className="relative w-full">
+          <img src="/header_nosotros.jpg" alt="Portada NOSOTROS" className="w-full h-auto block" />
+          {/* Subtle gradient to ensure navbar is visible if needed, but no dark overlay across the whole image as requested */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-transparent pointer-events-none"></div>
         </div>
       </section>
 
-      {/* BLOQUE 1.5 – HISTORIA TEXTO */}
-      <section className="py-24 px-6 bg-yvaga-beige relative overflow-hidden">
-        <div className="max-w-6xl mx-auto w-full relative z-10">
+      {/* BLOQUE 1.5 – HISTORIA TEXTO & COLLAGE */}
+      <section className="pt-16 pb-20 px-6 bg-yvaga-white relative overflow-hidden">
+        <div className="max-w-7xl mx-auto w-full relative z-10">
           <motion.div 
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="flex flex-col justify-center"
+            className="flex flex-col"
           >
-            <div className="font-sans text-[16px] md:text-[18px] lg:text-[20px] text-yvaga-dark/90 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 leading-relaxed text-justify">
-              <div className="space-y-6 md:space-y-8">
-                <p>
-                  El parque Ecológico <span className="font-bold">YVAGA GUAZU</span>, que en lengua guaraní significa "Paraíso Grande", nació el 18 de septiembre de 2003 gracias a la visión y pasión de Rebeca Rozenman y Francisco Hubsch, quienes soñaron con crear un espacio donde la NATURALEZA pudiera ser protegida, valorada y compartida con las futuras generaciones.
-                </p>
-                <p>
-                  Lo que alguna vez fue un terreno de campo y monte, con escasa cobertura arbórea, comenzó a transformarse con dedicación, paciencia y un profundo amor por la vida. Árbol tras árbol, sendero tras sendero y especie tras especie, fue tomando forma este extraordinario Parque Ecológico y Jardín Botánico que hoy alberga 14 hectáreas de exuberante NATURALEZA.
-                </p>
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12">
+              {/* Left Side: Title and Text */}
+              <div className="lg:col-span-5 flex flex-col">
+                <div className="mb-6 md:mb-10">
+                  <h1 className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                    <span className="font-sans text-4xl md:text-5xl lg:text-[54px] text-[#2c5234] font-light tracking-wide">
+                      Nuestra
+                    </span>
+                    <span className="font-oregano text-[60px] md:text-[80px] lg:text-[100px] text-[#1B4D2A] font-bold italic leading-none drop-shadow-sm">
+                      historia
+                    </span>
+                  </h1>
+                </div>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-[15px] md:text-[16px] text-yvaga-dark/90 leading-relaxed text-justify">
+                  <div className="space-y-6">
+                    <p>
+                      El Parque Ecológico <span className="font-bold">YVAGA GUAZÚ</span>, que en lengua guaraní significa "Paraíso Grande", nació del sueño de sus fundadores Rebeca Rozenman y Francisco Hubsch, quienes en 1979 iniciaron un extraordinario proyecto de restauración y conservación de la NATURALEZA.
+                    </p>
+                    <p>
+                      Lo que en aquel entonces era un terreno con escasa cobertura vegetal comenzó a transformarse, árbol por árbol, sendero por sendero y especie por especie, gracias a décadas de esfuerzo, dedicación y un profundo compromiso con la vida.
+                    </p>
+                    <p>
+                      Fueron años de trabajo constante para convertir este espacio en un verdadero refugio para la biodiversidad.
+                    </p>
+                  </div>
+                  <div className="space-y-6">
+                    <p>
+                      Después de más de dos décadas de desarrollo, el parque abrió oficialmente sus puertas al público el 17 de septiembre de 2003, permitiendo que miles de personas conocieran y disfrutaran este gran patrimonio natural.
+                    </p>
+                    <p>
+                      Hoy, con más de 47 años de historia, <span className="font-bold">YVAGA GUAZÚ</span> alberga 14 hectáreas de exuberante NATURALEZA, más de 6.300 árboles inventariados, más de 1.200 variedades de plantas, el orquideario más grande de Bolivia, importantes colecciones botánicas y un Centro de Custodia que protege a cientos de animales silvestres rescatados.
+                    </p>
+                  </div>
+                </div>
               </div>
-              <div className="space-y-6 md:space-y-8">
-                <p>
-                  Durante más de dos décadas, Parque Ecológico <span className="font-bold">YVAGA GUAZU</span> ha crecido hasta convertirse en un espacio único donde la conservación, la biodiversidad y la belleza natural conviven en armonía. Miles de árboles, colecciones botánicas, bosques temáticos y paisajes cuidadosamente preservados forman parte de este legado que continúa inspirando a quienes lo visitan.
-                </p>
-                <p>
-                  Más que un parque, somos el reflejo de una visión que demuestra que cuando existe amor por la NATURALEZA, es posible transformar un sueño en un verdadero Paraíso Grande.
-                </p>
+
+              {/* Right Side: Photos Collage */}
+              <div className="lg:col-span-7 relative h-[400px] md:h-[500px] lg:h-auto">
+                <div className="absolute inset-0 grid grid-cols-12 grid-rows-2 gap-2 md:gap-3 h-full">
+                  <div className="col-span-8 row-span-1 overflow-hidden">
+                    <img src="/recorrido_1.jpg" alt="Naturaleza" className="w-full h-full object-cover transition-transform duration-700 hover:scale-110" />
+                  </div>
+                  <div className="col-span-4 row-span-1 overflow-hidden">
+                    <img src="/orquidea_5.jpeg" alt="Orquídeas" className="w-full h-full object-cover transition-transform duration-700 hover:scale-110" />
+                  </div>
+                  <div className="col-span-6 row-span-1 overflow-hidden">
+                    <img src="/restaurant.jpg" alt="Instalaciones" className="w-full h-full object-cover transition-transform duration-700 hover:scale-110" />
+                  </div>
+                  <div className="col-span-3 row-span-1 overflow-hidden">
+                    <img src="/animal_paraba_3.jpg" alt="Paraba" className="w-full h-full object-cover transition-transform duration-700 hover:scale-110" />
+                  </div>
+                  <div className="col-span-3 row-span-1 overflow-hidden">
+                    <img src="/animal_armadillo_1.jpg" alt="Animal" className="w-full h-full object-cover transition-transform duration-700 hover:scale-110" />
+                  </div>
+                </div>
               </div>
             </div>
+
+            {/* Middle text banner */}
+            <div className="mt-20 md:mt-24 flex flex-col items-center text-center relative px-4">
+              <div className="absolute top-0 left-0 text-[#E0C642] opacity-80"><Leaf className="w-12 h-12 -rotate-12" /></div>
+              <div className="absolute bottom-0 right-0 text-[#E0C642] opacity-80"><Leaf className="w-12 h-12 rotate-45" /></div>
+              
+              <h2 className="text-[#3b593f] font-sans font-bold text-2xl md:text-3xl lg:text-[34px] leading-snug uppercase max-w-4xl mx-auto">
+                <span className="font-extrabold">YVAGA GUAZÚ</span> es el mejor destino TURÍSTICO, <br />
+                <span className="font-oregano normal-case text-[#c8a143] text-4xl md:text-5xl lg:text-[60px] italic">es un regalo para Santa Cruz,</span>
+              </h2>
+              <p className="mt-4 font-serif text-[16px] md:text-[18px] text-yvaga-dark/80 max-w-3xl mx-auto font-medium">
+                un legado de los fundadores Rebeca Rozemman y Francisco Hubsch, <br className="hidden md:block" />
+                quienes con amor y visión hicieron posible este Paraíso Grande.
+              </p>
+            </div>
+
+            {/* Infographic / Icons Section */}
+            <div className="mt-20 border-t border-yvaga-dark/10 pt-16">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 md:gap-4 text-center">
+                {/* 1 */}
+                <div className="flex flex-col items-center">
+                  <div className="mb-4 text-[#2c5234]">
+                    <Calendar className="w-10 h-10" strokeWidth={1.5} />
+                  </div>
+                  <h4 className="font-bold text-sm uppercase text-yvaga-dark tracking-wide mb-1">Inicio del proyecto</h4>
+                  <p className="font-bold text-lg text-yvaga-dark">1979</p>
+                </div>
+                {/* 2 */}
+                <div className="flex flex-col items-center">
+                  <div className="mb-4 text-[#2c5234]">
+                    <DoorOpen className="w-10 h-10" strokeWidth={1.5} />
+                  </div>
+                  <h4 className="font-bold text-sm uppercase text-yvaga-dark tracking-wide mb-1">Apertura al público</h4>
+                  <p className="font-medium text-[13px] text-yvaga-dark/80">17 de septiembre<br/>de 2003</p>
+                </div>
+                {/* 3 */}
+                <div className="flex flex-col items-center">
+                  <div className="mb-4 text-[#2c5234]">
+                    <Leaf className="w-10 h-10" strokeWidth={1.5} />
+                  </div>
+                  <h4 className="font-bold text-sm uppercase text-yvaga-dark tracking-wide mb-1">Más de</h4>
+                  <p className="font-bold text-lg text-yvaga-dark">47 años</p>
+                  <p className="font-bold text-sm uppercase text-yvaga-dark">de historia</p>
+                </div>
+                {/* 4 */}
+                <div className="flex flex-col items-center">
+                  <div className="mb-4 text-[#2c5234]">
+                    <Trees className="w-10 h-10" strokeWidth={1.5} />
+                  </div>
+                  <h4 className="font-bold text-sm uppercase text-yvaga-dark tracking-wide mb-1">14 hectáreas</h4>
+                  <p className="font-medium text-[13px] text-yvaga-dark/80 uppercase">de exuberante<br/>naturaleza</p>
+                </div>
+                {/* 5 */}
+                <div className="flex flex-col items-center">
+                  <div className="mb-4 text-[#2c5234]">
+                    <Flower2 className="w-10 h-10" strokeWidth={1.5} />
+                  </div>
+                  <h4 className="font-bold text-sm uppercase text-yvaga-dark tracking-wide mb-1">El orquideario</h4>
+                  <p className="font-bold text-[13px] text-yvaga-dark uppercase">más grande<br/>de Bolivia</p>
+                </div>
+                {/* 6 */}
+                <div className="flex flex-col items-center">
+                  <div className="mb-4 text-[#2c5234]">
+                    <PawPrint className="w-10 h-10" strokeWidth={1.5} />
+                  </div>
+                  <h4 className="font-bold text-sm uppercase text-yvaga-dark tracking-wide mb-1">Centro de custodia</h4>
+                  <p className="font-medium text-[13px] text-yvaga-dark/80">Protegemos a cientos<br/>de animales silvestres</p>
+                </div>
+              </div>
+            </div>
+
           </motion.div>
         </div>
       </section>

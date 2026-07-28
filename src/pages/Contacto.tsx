@@ -1,7 +1,6 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import { Leaf, Phone, Mail, Instagram, MessageCircle, MapPin, Sprout, PawPrint, HeartHandshake, Heart, Map, Clock, CalendarCheck, Baby, Users, Search } from "lucide-react";
 import { cn } from "../lib/utils";
-import { motion, useScroll, useTransform } from "framer-motion";
 
 // Icono simple de TikTok
 function TikTokIcon(props: React.ComponentProps<"svg">) {
@@ -107,14 +106,6 @@ const faqs = [
 export default function Contacto() {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
   
-  const heroRef = useRef<HTMLElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: heroRef,
-    offset: ["start start", "end end"]
-  });
-
-  const imgObjectPosition = useTransform(scrollYProgress, [0, 1], ["50% 0%", "50% 100%"]);
-
   const toggleFaq = (index: number) => {
     setOpenFaqIndex(openFaqIndex === index ? null : index);
   };
@@ -122,46 +113,42 @@ export default function Contacto() {
   return (
     <div className="min-h-screen bg-yvaga-beige relative z-0">
       {/* 1. HERO CON IMAGEN */}
-      <section ref={heroRef} className="relative w-full h-[200vh]">
-        <div className="sticky top-0 w-full h-screen overflow-hidden">
-          <motion.img 
-            src="/contacto_gomero.jpg" 
+      <section className="relative w-full bg-yvaga-dark mt-[80px]">
+        <div className="relative w-full">
+          <img 
+            src="/header_contacto.jpg" 
             alt="Contacto" 
-            className="absolute inset-0 w-full h-full object-cover -z-20"
-            style={{ objectPosition: imgObjectPosition }}
+            className="w-full h-auto block"
           />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-transparent pointer-events-none"></div>
+        </div>
+      </section>
 
-          <div className="absolute inset-0 w-full h-full pointer-events-none">
-            <div className="w-full h-full flex items-center z-10 pointer-events-auto mt-16 md:mt-0">
-              {/* Overlay sólido - color verde #1B4D2A */}
-              <div className="absolute inset-0 bg-[#1B4D2A]/70 -z-10 mix-blend-normal"></div>
-              
-              <div className="w-full max-w-7xl mx-auto px-6 lg:px-12 relative z-10 flex flex-col justify-center">
-                <div className="w-full grid grid-cols-12">
-                  <div className="col-span-12 lg:col-span-12">
-                    <h1 className="font-serif tracking-wide uppercase leading-none drop-shadow-sm">
-                      <span className="block text-[#8DC63F] text-2xl md:text-3xl font-medium tracking-widest mb-2">Ponte en</span>
-                      <span 
-                        className="block text-white text-6xl md:text-8xl xl:text-9xl font-bold mb-0"
-                        style={{ textShadow: "0.5rem 0.5rem 10px rgba(0,0,0,0.5)" }}
-                      >
-                        Contacto
-                      </span>
-                      <span 
-                        className="block font-oregano font-bold italic text-[96px] md:text-[120px] xl:text-[144px] text-[#8DC63F] tracking-normal normal-case -mt-2 md:-mt-4 relative"
-                        style={{ textShadow: "3px 3px 0 #1B4D2A, -3px -3px 0 #1B4D2A, 3px -3px 0 #1B4D2A, -3px 3px 0 #1B4D2A, 0px 3px 0 #1B4D2A, 3px 0px 0 #1B4D2A, 0px -3px 0 #1B4D2A, -3px 0px 0 #1B4D2A, 0.5rem 0.5rem 10px rgba(0,0,0,0.5)" }}
-                      >
-                        con nosotros
-                      </span>
-                    </h1>
-                    <div className="w-24 h-1 bg-white/50 mt-6 mb-8 shadow-sm"></div>
-                    <p className="font-sans text-[20.5px] md:text-[22px] text-white font-medium leading-relaxed col-span-11 w-11/12 drop-shadow-sm">
-                      Estamos aquí para escucharte, resolver tus dudas y brindarte toda la información que necesites sobre conservación, nuestras actividades y cómo puedes ser parte de esta misión.
-                    </p>
+      {/* TEXTO INTRODUCTORIO DEL HERO */}
+      <section className="bg-yvaga-beige text-yvaga-dark py-16 px-6 relative z-10 w-full overflow-hidden">
+        <div className="w-full max-w-7xl mx-auto flex flex-col justify-center">
+          <div className="w-full grid grid-cols-12">
+            <div className="col-span-12 lg:col-span-12">
+              <h1 className="font-serif tracking-wide uppercase leading-none drop-shadow-sm">
+                <span className="block text-[#5E9C43] text-2xl md:text-3xl font-medium tracking-widest mb-2">Ponte en</span>
+                <span 
+                  className="block text-yvaga-dark text-6xl md:text-8xl xl:text-9xl font-bold mb-0"
+                >
+                  Contacto
+                </span>
+                <span 
+                  className="block font-oregano font-bold italic text-[96px] md:text-[120px] xl:text-[144px] text-[#5E9C43] tracking-normal normal-case -mt-2 md:-mt-4 relative"
+                >
+                  con nosotros
+                </span>
+              </h1>
+              <div className="w-24 h-1 bg-yvaga-dark/20 mt-6 mb-8 shadow-sm"></div>
+              <p className="font-sans text-[20.5px] md:text-[22px] text-yvaga-dark font-medium leading-relaxed col-span-11 w-11/12 drop-shadow-sm">
+                Estamos aquí para escucharte, resolver tus dudas y brindarte toda la información que necesites sobre conservación, nuestras actividades y cómo puedes ser parte de esta misión.
+              </p>
 
-
-                  {/* Redes Sociales en el Hero */}
-                  <div className="flex gap-6 mt-12 flex-wrap">
+              {/* Redes Sociales en el Hero */}
+              <div className="flex gap-6 mt-12 flex-wrap">
                 <a 
                   href="https://www.facebook.com/yvagaguazu" 
                   target="_blank" 
@@ -197,9 +184,6 @@ export default function Contacto() {
                   <Mail className="w-5 h-5" />
                 </a>
               </div>
-              </div>
-              </div>
-            </div>
             </div>
           </div>
         </div>

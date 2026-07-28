@@ -54,62 +54,15 @@ const AccordionGallery = ({ images, title }: { images: string[], title: string }
   );
 };
 
-const heroImages = [
-  "/restaurant_1.jpg",
-  "/restaurant_2.jpg",
-  "/restaurant_3.jpg"
-];
-
 export default function Servicios() {
-  const [currentHeroIndex, setCurrentHeroIndex] = useState(0);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentHeroIndex((prev) => (prev + 1) % heroImages.length);
-    }, 5000);
-    return () => clearInterval(timer);
-  }, []);
-
   return (
     <div className="flex flex-col min-h-screen bg-yvaga-beige">
       
       {/* SECCIÓN HERO: EXPERIENCIAS */}
-      <section className="relative min-h-[100dvh] flex flex-col items-center justify-center px-6">
-        <div className="absolute inset-0 z-0 bg-yvaga-dark overflow-hidden">
-          <AnimatePresence>
-            <motion.img 
-              key={currentHeroIndex}
-              src={heroImages[currentHeroIndex]} 
-              alt="Vive la experiencia Yvaga Guazú" 
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 1 }}
-              className="absolute inset-0 w-full h-full object-cover object-top"
-            />
-          </AnimatePresence>
-          <div className="absolute inset-0 bg-black/40 z-10"></div>
-        </div>
-
-        <div className="relative z-20 text-center flex flex-col items-center -translate-y-[15vh]">
-          <div className="flex items-center gap-3 justify-center mb-4">
-            <span className="w-12 md:w-24 h-[2px] bg-white/60"></span>
-            <p className="font-sans font-bold text-sm tracking-widest uppercase text-white flex items-center gap-2 drop-shadow-md">
-              <Leaf className="w-5 h-5 text-yvaga-acc" />
-              NUESTROS SERVICIOS / EXPERIENCIAS
-            </p>
-            <span className="w-12 md:w-24 h-[2px] bg-white/60"></span>
-          </div>
-          <h1 className="text-center mb-4 flex flex-col items-center justify-center -space-y-2">
-            <span className="font-caveat-brush text-[#8DC63F] tracking-wide uppercase text-[63px] md:text-[75px] lg:text-[87px] drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)] leading-[0.9]">
-              Vive la experiencia
-            </span>
-            <span 
-              className="font-serif text-5xl md:text-7xl lg:text-8xl text-white font-bold tracking-tight drop-shadow-xl leading-[0.9]"
-            >
-              Yvaga Guazu
-            </span>
-          </h1>
+      <section className="relative w-full bg-yvaga-dark mt-[80px]">
+        <div className="relative w-full">
+          <img src="/header_servicios.jpg" alt="Portada Servicios" className="w-full h-auto block" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-transparent pointer-events-none"></div>
         </div>
       </section>
 
