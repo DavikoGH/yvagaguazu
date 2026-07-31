@@ -38,26 +38,22 @@ export default function Nosotros() {
                   </h1>
                 </div>
                 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-[15px] md:text-[16px] text-yvaga-dark/90 leading-relaxed text-justify">
-                  <div className="space-y-6">
-                    <p>
-                      El Parque Ecológico <span className="font-bold">YVAGA GUAZÚ</span>, que en lengua guaraní significa "Paraíso Grande", nació del sueño de sus fundadores Rebeca Rozenman y Francisco Hubsch, quienes en 1979 iniciaron un extraordinario proyecto de restauración y conservación de la NATURALEZA.
-                    </p>
-                    <p>
-                      Lo que en aquel entonces era un terreno con escasa cobertura vegetal comenzó a transformarse, árbol por árbol, sendero por sendero y especie por especie, gracias a décadas de esfuerzo, dedicación y un profundo compromiso con la vida.
-                    </p>
-                    <p>
-                      Fueron años de trabajo constante para convertir este espacio en un verdadero refugio para la biodiversidad.
-                    </p>
-                  </div>
-                  <div className="space-y-6">
-                    <p>
-                      Después de más de dos décadas de desarrollo, el parque abrió oficialmente sus puertas al público el 17 de septiembre de 2003, permitiendo que miles de personas conocieran y disfrutaran este gran patrimonio natural.
-                    </p>
-                    <p>
-                      Hoy, con más de 47 años de historia, <span className="font-bold">YVAGA GUAZÚ</span> alberga 14 hectáreas de exuberante NATURALEZA, más de 6.300 árboles inventariados, más de 1.200 variedades de plantas, el orquideario más grande de Bolivia, importantes colecciones botánicas y un Centro de Custodia que protege a cientos de animales silvestres rescatados.
-                    </p>
-                  </div>
+                <div className="flex flex-col gap-6 text-[15px] md:text-[16px] text-yvaga-dark/90 leading-relaxed text-justify">
+                  <p>
+                    El Parque Ecológico <span className="font-bold">YVAGA GUAZÚ</span>, que en lengua guaraní significa "Paraíso Grande", nació del sueño de sus fundadores Rebeca Rozenman y Francisco Hubsch, quienes en 1979 iniciaron un extraordinario proyecto de restauración y conservación de la NATURALEZA.
+                  </p>
+                  <p>
+                    Lo que en aquel entonces era un terreno con escasa cobertura vegetal comenzó a transformarse, árbol por árbol, sendero por sendero y especie por especie, gracias a décadas de esfuerzo, dedicación y un profundo compromiso con la vida.
+                  </p>
+                  <p>
+                    Fueron años de trabajo constante para convertir este espacio en un verdadero refugio para la biodiversidad.
+                  </p>
+                  <p>
+                    Después de más de dos décadas de desarrollo, el parque abrió oficialmente sus puertas al público el 17 de septiembre de 2003, permitiendo que miles de personas conocieran y disfrutaran este gran patrimonio natural.
+                  </p>
+                  <p>
+                    Hoy, con más de 47 años de historia, <span className="font-bold">YVAGA GUAZÚ</span> alberga 14 hectáreas de exuberante NATURALEZA, más de 6.300 árboles inventariados, más de 1.200 variedades de plantas, el orquideario más grande de Bolivia, importantes colecciones botánicas y un Centro de Custodia que protege a cientos de animales silvestres rescatados.
+                  </p>
                 </div>
               </div>
 

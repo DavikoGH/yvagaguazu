@@ -187,7 +187,7 @@ export default function Donaciones() {
              {/* Mask image for a fade effect to left */}
             <div className="absolute inset-0 bg-gradient-to-r from-[#F9F7F2] to-transparent z-10 hidden md:block"></div>
             <img 
-              src="/contuapoyo.jpeg" 
+              src="/donaciones_tuapoyo.jpg" 
               alt="Tu apoyo hace la diferencia" 
               className="w-full h-full object-cover object-left"
             />
@@ -246,10 +246,10 @@ export default function Donaciones() {
             NATURALEZA
           </h2>
           <p 
-            className="font-sans text-white text-[20px] md:text-[24px] font-medium max-w-3xl mx-auto mt-6 md:mt-10 tracking-wide"
-            style={{ textShadow: "0.5rem 0 10px rgba(0,0,0,0.5)" }}
+            className="font-sans text-white text-[20px] md:text-[24px] font-medium max-w-3xl mx-auto mt-6 md:mt-10 tracking-wide drop-shadow-lg"
+            style={{ textShadow: "0 2px 10px rgba(0,0,0,0.8), 0 0 15px rgba(255,255,255,0.4)" }}
           >
-            Gracias a las donaciones, visitas y compras solidarias, <br className="hidden md:block" /> hacemos posible la <span className="font-bold">conservación.</span>
+            Gracias a las visitas, compras solidarias y donaciones, <br className="hidden md:block" /> hacemos posible la <span className="font-bold">conservación.</span>
           </p>
           
           <div className="flex items-center justify-center gap-4 mt-8">
