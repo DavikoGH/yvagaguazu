@@ -3,11 +3,17 @@ import { motion, AnimatePresence } from "motion/react";
 import { useState, useEffect } from "react";
 
 const PhotoGallery = ({ images }: { images: string[] }) => {
-  const loopImages = [...images, ...images, ...images];
+  // Duplicamos el array 1 sola vez para un bucle perfecto del 50%
+  const loopImages = [...images, ...images];
+  // 5 segundos por cada imagen original para que la velocidad sea constante
+  const duration = images.length * 5; 
   
   return (
     <div className="w-full mt-10 overflow-hidden relative">
-      <div className="flex animate-scroll w-max gap-4 pb-2">
+      <div 
+        className="flex animate-scroll w-max gap-4 pb-2"
+        style={{ animationDuration: `${duration}s` }}
+      >
         {loopImages.map((src, i) => (
           <div key={i} className="flex-shrink-0 w-64 h-48 md:w-80 md:h-56 rounded-2xl overflow-hidden shadow-sm border border-yvaga-sec/10 group">
             <img src={src} alt={`Galería ${i}`} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-125" />
@@ -144,7 +150,7 @@ export default function Servicios() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             <div className="lg:col-span-5">
               <div className="aspect-[4/3] md:aspect-video lg:aspect-[4/3] w-full rounded-3xl overflow-hidden shadow-lg border border-yvaga-sec/10">
-                 <img src="/servicios_vivero.jpg" alt="Vivero con Propósito" className="w-full h-full object-cover" />
+                 <img src="/plantas_principal.jpg" alt="Vivero con Propósito" className="w-full h-full object-cover" />
               </div>
             </div>
             <div className="lg:col-span-7 flex flex-col justify-center text-left">
@@ -163,12 +169,15 @@ export default function Servicios() {
           </div>
 
           <AccordionGallery title="Salvando una vida" images={[
+            '/planta_1.jpg',
             '/planta_2.jpg',
-            '/planta_7.jpg',
-            '/planta_8.jpg',
-            '/planta_9.jpg',
-            '/planta_10.jpg',
-            '/planta_11.jpg'
+            '/planta_3.jpg',
+            '/planta_4.jpg',
+            '/planta_6.jpg',
+            '/planta_12.jpg',
+            '/planta_13.jpg',
+            '/planta_14.jpg',
+            '/planta_16.jpg'
           ]} />
 
         </div>
