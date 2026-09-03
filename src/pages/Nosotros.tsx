@@ -170,7 +170,7 @@ export default function Nosotros() {
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch mt-8 text-yvaga-dark">
              {/* Left Text */}
-             <div className="order-2 lg:order-1 font-serif text-[14px] lg:text-[18px] leading-relaxed pt-2 lg:col-span-4">
+             <div className="order-2 lg:order-1 font-serif text-[15px] lg:text-[17px] leading-relaxed pt-2 lg:col-span-4">
                <p className="mb-5">
                  Somos el primer Parque Ecológico privado del país, desarrollado y sostenido íntegramente gracias al esfuerzo, la visión y el compromiso de sus fundadores y equipo de trabajo. No recibimos ayuda gubernamental ni financiamiento externo para nuestro funcionamiento, lo que convierte cada árbol plantado, cada sendero construido y cada espacio conservado en el resultado de una dedicación constante a la NATURALEZA.
                </p>
@@ -193,7 +193,7 @@ export default function Nosotros() {
              </div>
 
              {/* Right Text */}
-             <div className="order-3 lg:order-3 font-serif text-[12px] lg:text-[16px] leading-relaxed pt-2 lg:col-span-4">
+             <div className="order-3 lg:order-3 font-serif text-[15px] lg:text-[17px] leading-relaxed pt-2 lg:col-span-4">
                <p className="mb-5">
                  En nuestras 14 hectáreas de exuberante NATURALEZA conviven miles de árboles, más de 1.200 especies de flora, colecciones botánicas, bosques temáticos, senderos ecológicos y espacios diseñados para el aprendizaje, la contemplación y la conexión con el entorno natural.
                </p>
